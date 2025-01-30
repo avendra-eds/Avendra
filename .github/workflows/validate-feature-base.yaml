@@ -1,0 +1,20 @@
+name: Validate Feature Branch Base
+
+on:
+  pull_request_target:
+    branches: [stage]
+
+jobs:
+  check-branch-base:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if feature branch is based on staging branch
+        run: |
+          # Fetch all branches
+          git fetch --depth=1 origin stage
+
+          # Check if staging branch is an ancestor of the PR branch
+          git merge-base --is-ancestor origin/stage $GITHUB_SHA || {
+            echo "Error: Feature branch must be based on staging."
+            exit 1
+          }
