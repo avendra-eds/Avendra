@@ -2,6 +2,20 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 
 Fix #<gh-issue-id>
 
+Link to ADO ticket:
+
+
+
 Test URLs:
-- Before: https://main--{repo}--{owner}.aem.live/
-- After: https://<branch>--{repo}--{owner}.aem.live/
+
+- https://<branch-name>--avendra--avendra-eds.aem.page/{folder_path}
+- https://<branch-name>--avendra--avendra-eds.aem.live/{folder_path}
+
+
+Description of the changes:
+
+
+Figma URL (Optional): 
+
+
+Screenshot (Optional):
