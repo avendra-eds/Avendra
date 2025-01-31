@@ -10,8 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
- @import url('../blocks/custom/article-section/article-section.css');
- @import url('../blocks/custom/article-cards/article-cards.css');
+ @import url('../blocks/custom/brand-style.css');
  
 :root {
   font-family: 'Inter', sans-serif;
