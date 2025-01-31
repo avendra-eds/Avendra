@@ -13,7 +13,7 @@
  @import url('../blocks/custom/brand-style.css');
  
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
 
   /* colors */
   --background: white;
@@ -24,22 +24,22 @@
   /* button colors */
   --button-primary: #008fdc;
   --button-secondary: #011b2b;
-  --button-tertiary: #ffffff;
+  --button-tertiary: #fff;
   --button-hover-sky: #008fdc;
   --button-hover-midnight:#011b2b;
-  --button-hover-white:#ffffff;
+  --button-hover-white:#fff;
 
   /* icon colors */
   --icon-primary: #414141;
   --icon-secondary: #808080;
-  --icon-disabled: #aaaaaa;
-  --icon-inverse: #ffffff;
+  --icon-disabled: #aaa;
+  --icon-inverse: #fff;
 
   /* border colors */
   --border-subtle-00: #808080;
   --border-subtle-selected: #414141;
-  --borader-disabled: #aaaaaa;
-  --border-inverse: #ffffff;
+  --borader-disabled: #aaa;
+  --border-inverse: #fff;
   --border-error: #eb002a;
 
   /* brand colors */
@@ -51,10 +51,10 @@
 
   /* heading sizes */
   --heading-hero-text: 5.61rem;
-  --heading-font-xxl: 4.20875rem;
-  --heading-font-xl: 3.1575rem;
-  --heading-font-l: 2.36875rem;
-  --heading-font-m: 1.77688rem;
+  --heading-font-xxl: 4.209rem;
+  --heading-font-xl: 3.156rem;
+  --heading-font-l: 2.369rem;
+  --heading-font-m: 1.777rem;
   --heading-font-s: 1rem;
 
   /* body sizes */
@@ -73,9 +73,9 @@
   /* text colors */
   --text-primary: #414141;
   --text-secondary: #808080;
-  --text-disabled: #aaaaaa;
-  --text-inverse: #ffffff;
-  --text-helper: #555555;
+  --text-disabled: #aaa;
+  --text-inverse: #fff;
+  --text-helper: #555;
   --text-link: #0f62fe;
   --text-error: #eb002a;
 
@@ -339,7 +339,7 @@ main > .section {
 }
 
 main {
-  padding: 2.75rem 2.5rem 2.5rem 2.5rem;
+  padding: 2.75rem 2.5rem 2.5rem;
 }
 
 main > .section:first-of-type {
