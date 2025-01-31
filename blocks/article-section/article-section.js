@@ -1,6 +1,10 @@
 export default function decorate(block) {
-  const div = [block.children];
-  div.classList.add('article-section-quote');
+  const container = block.firstElementChild;
+  if (container) {
+    container.classList.add('article-section-content');
+    container.firstElementChild.classList.add('left');
+    container.lastElementChild.classList.add('right');
+  }
 
   // setup image columns
   [...block.children].forEach((row) => {
@@ -15,5 +19,5 @@ export default function decorate(block) {
       }
     });
   });
-  block.append(div);
+  block.append();
 }

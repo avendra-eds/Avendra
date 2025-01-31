@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 0 24px;
   max-width: 900px;
+  align-self: stretch;
 }
 
 @media (width >= 900px) {
@@ -10,8 +11,8 @@
   }
 }
 
-.quote blockquote .quote-quotation {
-  font-size: 120%;
+.quote blockquote .quote-quotation h4 {
+  color: var(--brand-primary-sky);
 }
 
 .quote blockquote .quote-quotation > :first-child {

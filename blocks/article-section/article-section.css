@@ -1,0 +1,21 @@
+.article-section-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6875rem;
+  align-self: stretch;
+}
+
+.left {
+  width: 30%;
+}
+
+
+.article-section-content .left picture {
+  border-radius:  3.25rem 0rem;
+  width: 30%;
+}
+
+.quote .right p:first-child {
+  color: var(--background-sky);
+  font-size: var(--heading-font-size-m); 
+}
