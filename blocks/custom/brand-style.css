@@ -1,0 +1,58 @@
+.icons-container {
+  display: flex;
+}
+
+.icons {
+  background-color: var(--background-light-sky);
+  color: var(--icon-inverse);
+}
+
+.midnight-bg {
+  background-color: var(--brand-primary-midnight);
+  color: var(--text-inverse);
+  padding: 2rem;
+  text-align: center;
+  font-weight: var(--text-bold);
+  height: 4rem;
+  width: 12rem;
+}
+
+.sky-bg {
+  background-color: var(--brand-primary-sky);
+  color: var(--text-inverse);
+  padding: 2rem;
+  text-align: center;
+  font-weight: var(--text-bold);
+  height: 4rem;
+  width: 12rem;
+}
+
+.clover-bg {
+  background-color: var(--brand-secondary-clover);
+  color: var(--text-inverse);
+  padding: 2rem;
+  text-align: center;
+  font-weight: var(--text-bold);
+  height: 4rem;
+  width: 12rem;
+}
+
+.stream-bg {
+  background-color: var(--brand-secondary-stream);
+  color: var(--text-inverse);
+  padding: 2rem;
+  text-align: center;
+  font-weight: var(--text-bold);
+  height: 4rem;
+  width: 12rem;
+}
+
+.stone-bg {
+  background-color: var(--brand-support-stone);
+  color: var(--text-inverse);
+  padding: 2rem;
+  text-align: center;
+  font-weight: var(--text-bold);
+  height: 4rem;
+  width: 12rem;
+}
