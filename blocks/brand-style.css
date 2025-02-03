@@ -27,26 +27,6 @@
   width: 12rem;
 }
 
-.clover-bg {
-  background-color: var(--brand-secondary-clover);
-  color: var(--text-inverse);
-  padding: 2rem;
-  text-align: center;
-  font-weight: var(--text-bold);
-  height: 4rem;
-  width: 12rem;
-}
-
-.stream-bg {
-  background-color: var(--brand-secondary-stream);
-  color: var(--text-inverse);
-  padding: 2rem;
-  text-align: center;
-  font-weight: var(--text-bold);
-  height: 4rem;
-  width: 12rem;
-}
-
 .stone-bg {
   background-color: var(--brand-support-stone);
   color: var(--text-inverse);

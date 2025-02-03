@@ -20,7 +20,6 @@
   /* colors */
   --background: white;
   --background-midnight: #011b2b;
-  --background-sky: #008fdc;
   --background-light-sky: #B2DDF5;
 
   /* button colors */
@@ -29,13 +28,12 @@
   --button-tertiary: #fff;
   --button-hover-sky: #008fdc;
   --button-hover-midnight:#011b2b;
-  --button-hover-white:#fff;
 
   /* icon colors */
   --icon-primary: #414141;
-  --icon-secondary: #808080;
-  --icon-disabled: #aaa;
   --icon-inverse: #fff;
+  --icon-sky: #008fdc;
+  --icon-light-sky: #b2ddf5;
 
   /* border colors */
   --border-subtle-00: #808080;
@@ -43,16 +41,16 @@
   --borader-disabled: #aaa;
   --border-inverse: #fff;
   --border-error: #eb002a;
+  --border-sky: #008fdc;
+  --border-divider: #1a4371;
 
   /* brand colors */
   --brand-primary-midnight: #011b2b;
   --brand-primary-sky: #008fdc;
-  --brand-secondary-stream: #97d0d8;
-  --brand-secondary-clover: #58b276;
   --brand-support-stone: #9fa7ae;
 
   /* heading sizes */
-  --heading-hero-text: 5.61rem;
+  --heading-hero-text: 3.25rem;
   --heading-font-xxl: 4.209rem;
   --heading-font-xl: 3.156rem;
   --heading-font-l: 2.369rem;
@@ -74,11 +72,9 @@
 
   /* text colors */
   --text-primary: #414141;
-  --text-secondary: #808080;
-  --text-disabled: #aaa;
+  --text-midnight: #011b2b;
   --text-inverse: #fff;
-  --text-helper: #555;
-  --text-link: #0f62fe;
+  --text-sky: #008fdc;
   --text-error: #eb002a;
 
   /* font weight */
@@ -87,6 +83,16 @@
   --text-regular: 400;
   --text-medium: 500;
   --text-bold: 700;
+
+  /* border-radius */
+  --border-tear-drop: 3.25rem 0rem;
+  --border-corner: 0.75rem;
+}
+
+@media (width >= 600px) {
+  :root {
+    --heading-hero-text: 5.61rem;
+  }
 }
 
 body {
@@ -150,11 +156,13 @@ h2 {
 h3 { 
   font-size: var(--heading-font-xl); 
   font-weight: var(--text-bold);
+  color: var(--text-midnight)
 }
 
 h4 { 
   font-size: var(--heading-font-l); 
   font-weight: var(--text-regular);
+  font-style: normal;
 }
 
 h5 { 
@@ -166,6 +174,8 @@ h6 {
   font-size: var(--heading-font-s); 
   font-weight: var(--text-bold);
   text-transform: uppercase;
+  font-style: normal;
+  color: var(--text-sky);
 }
 
 p,
@@ -211,7 +221,7 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--brand-primary-sky);
+  color: var(--text-sky);
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
