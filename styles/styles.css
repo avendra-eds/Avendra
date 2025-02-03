@@ -160,6 +160,7 @@ h3 {
 h4 { 
   font-size: var(--heading-font-l); 
   font-weight: var(--text-regular);
+  font-style: normal;
 }
 
 h5 { 
@@ -171,6 +172,7 @@ h6 {
   font-size: var(--heading-font-s); 
   font-weight: var(--text-bold);
   text-transform: uppercase;
+  font-style: normal;
   color: var(--text-sky);
 }
 
