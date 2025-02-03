@@ -89,18 +89,7 @@
 
 @media (width >= 600px) {
   :root {
-    /* heading sizes */
     --heading-hero-text: 5.61rem;
-    --heading-font-xxl: 4.209rem;
-    --heading-font-xl: 3.157rem;
-    --heading-font-l: 2.369rem;
-    --heading-font-m: 1.777rem;
-    --heading-font-s: 1rem;
-
-      /* body sizes */
-    --quote-text: 3.5rem;
-    --body-text: 1rem;
-    --caption-text: 0.75rem;
   }
 }
 
@@ -165,6 +154,7 @@ h2 {
 h3 { 
   font-size: var(--heading-font-xl); 
   font-weight: var(--text-bold);
+  color: var(--text-midnight)
 }
 
 h4 { 
@@ -181,6 +171,7 @@ h6 {
   font-size: var(--heading-font-s); 
   font-weight: var(--text-bold);
   text-transform: uppercase;
+  color: var(--text-sky);
 }
 
 p,
