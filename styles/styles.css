@@ -83,7 +83,6 @@
   --text-regular: 400;
   --text-medium: 500;
   --text-bold: 700;
-<<<<<<< Updated upstream
 
   /* border-radius */
   --border-tear-drop: 3.25rem 0rem;
@@ -94,9 +93,7 @@
   :root {
     --heading-hero-text: 5.61rem;
   }
-=======
   
->>>>>>> Stashed changes
 }
 
 html, body {
