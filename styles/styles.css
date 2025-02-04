@@ -56,7 +56,7 @@
   --heading-font-s: 1rem;
 
   /* body sizes */
-  --quote-text: 3.5rem;
+  --quote-text: 2.369rem;
   --body-text: 1rem;
   --caption-text: 0.75rem;
 
@@ -89,7 +89,14 @@
 
 @media (width >= 600px) {
   :root {
+    --quote-text: 1.77rem;
+  }
+}
+
+@media (width >= 992px) {
+  :root {
     --heading-hero-text: 5.61rem;
+    --quote-text: 3.5rem;
   }
 }
 
