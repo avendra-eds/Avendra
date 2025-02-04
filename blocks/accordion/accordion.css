@@ -1,0 +1,70 @@
+.accordion details summary {
+  position: relative;
+  list-style: none;
+}
+
+.accordion details summary p {
+  font-weight: var(--text-medium);
+  line-height: var(--line-height-120);
+  margin: 1.5rem 0;
+  width: 90%;
+}
+
+.accordion details div p {
+  margin: 1.25rem 0 1.5rem;
+  width: 95%;
+}
+
+.accordion details[open] summary p {
+  margin: 1.5rem 0 1.25rem;
+}
+
+.accordion details {
+  border-top: 0.063rem solid var(--border-disabled);
+}
+
+.accordion details:last-child {
+  border-bottom: 0.063rem solid var(--border-disabled);
+}
+
+.accordion details[open] summary {
+  background-color: var(--light-color);
+}
+
+.accordion details summary:focus,
+.accordion details summary:hover {
+  background-color: var(--light-color);
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details summary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1.125rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('/icons/accordion-arrow.svg');
+}
+
+.accordion details[open] summary::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.accordion details[open] .accordion-item-body {
+  background-color: var(--background-color);
+}
+
+@media (width <= 600px) {
+  .accordion details summary p {
+    width: 73%;
+  }
+
+  .accordion details div p {
+    width: 95%;
+  }
+}
