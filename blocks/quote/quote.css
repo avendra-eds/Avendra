@@ -1,18 +1,17 @@
-.quote blockquote {
-  margin: 0 auto;
-  padding: 0 24px;
-  max-width: 900px;
-  align-self: stretch;
+main .quote-container {
+  padding: 0 2.5rem;
+  margin: 1.5rem 0;
 }
 
-@media (width >= 900px) {
-  .quote blockquote {
-    padding: 0 32px;
-  }
+.quote blockquote {
+  display: block;
+  align-self: stretch;
+  margin: 0;
 }
 
 .quote blockquote .quote-quotation h4 {
   color: var(--brand-primary-sky);
+  margin: 0;
 }
 
 .quote blockquote .quote-quotation > :first-child {
@@ -39,4 +38,10 @@
 .quote blockquote .quote-attribution > :first-child::before {
   content: "—";
   padding-right: 0.5ch;
+}
+
+@media (width >= 600px) {
+  main .quote-container {
+    padding:  2.75rem 5rem 7.5rem;
+  }
 }
