@@ -1,0 +1,46 @@
+.landing-card  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 1.25rem);
+    box-sizing: border-box;
+    background-size: cover;
+    border: 1px solid #ddd;
+    border-radius: 3.25rem 0 3.25rem 0;
+    padding: 2.5rem 3rem;
+    background: linear-gradient(180deg, #011B2B 0%, rgba(0, 19, 30, 0.00) 100%);
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.card-header > p > picture > img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+
+.card:hover {
+  background-color: var(--background-midnight); 
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+.card-header > h5 {
+  color: var(--text-inverse);
+  margin: 0;
+  padding: 0;
+}
+
+.card-link-icon {
+  display: flex;
+  justify-self: flex-end;
+  cursor: pointer;
+} 
+
+
