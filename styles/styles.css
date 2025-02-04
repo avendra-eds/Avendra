@@ -93,8 +93,12 @@
   }
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
-  display: none;
   margin: 0;
   background-color: var(--background);
   color: var(--text-primary);
@@ -125,15 +129,13 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin: 0.7a5rem 0;
   font-family: var(--heading-font-family);
   line-height: var(--line-height-120);
   scroll-margin: 40px;
@@ -181,8 +183,7 @@ dl,
 ol,
 ul,
 pre {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin: 1.5rem 0;
   font-weight: var(--text-regular);
   line-height: var(--line-height-150);
 }
@@ -206,15 +207,55 @@ pre {
   white-space: pre;
 }
 
-main > div {
-  margin: 40px 16px;
-}
-
 input,
 textarea,
 select,
 button {
   font: inherit;
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin: 0;
+  max-width: 100%;
+}
+
+main .section {
+  padding: 2.75rem 2.5rem;
+}
+
+main > .section:first-of-type {
+  margin-top: 0;
+}
+
+@media (width >= 600px) {
+  main .section {
+    padding:  2.75rem 5rem 7.5rem;
+  }
+}
+
+/* section metadata */
+main .section.light,
+main .section.highlight {
+  background-color: var(--background);
+  margin: 0;
+  padding: 40px 0;
 }
 
 /* links */
@@ -325,50 +366,4 @@ button.secondary:hover {
   text-decoration: none;
   cursor: pointer;
   background-color: #EEEFEF;
-}
-
-main img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-.icon {
-  display: inline-block;
-  width: 6.25rem;
-  height: 6.25rem;
-}
-
-.icon img {
-  height: 100%;
-  width: 100%;
-}
-
-/* sections */
-main > .section {
-  margin: 40px 0;
-}
-
-main {
-  padding: 2.75rem 2.5rem 2.5rem;
-}
-
-main > .section:first-of-type {
-  margin-top: 0;
-}
-
-@media (width >= 600px) {
-  main {
-    margin: auto;
-    max-width: 1200px;
-    padding: 7.5rem 5rem;
-  }
-}
-
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--background);
-  margin: 0;
-  padding: 40px 0;
 }
