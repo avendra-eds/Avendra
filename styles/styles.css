@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+ @import url('../blocks/custom/article-section/article-section.css');
+ @import url('../blocks/custom/article-cards/article-cards.css');
  @import url('../blocks/custom/brand-style.css');
  
 :root {
@@ -86,6 +88,7 @@
   --border-tear-drop: 3.25rem 0rem;
   --border-corner: 0.75rem;
 }
+
 
 @media (width >= 600px) {
   :root {

@@ -1,5 +1,5 @@
 # Your Project's Title...
-Avendra
+Your project's description...
 
 ## Environments
 - Preview: https://main--{repo}--{owner}.aem.page/
