@@ -1,44 +1,4 @@
 /* stylelint-disable max-line-length */
-<<<<<<< Updated upstream
-@font-face { 
-  font-family: Inter;
-  font-style: normal; 
-  font-weight: 200;
-  font-display: swap; 
-  src: url("Inter-ExtraLight.woff2") format("woff2"); 
-}
-
-@font-face { 
-  font-family: Inter;
-  font-style: normal; 
-  font-weight: 300;
-  font-display: swap; 
-  src: url("Inter-Light.woff2") format("woff2"); 
-}
-
-@font-face { 
-  font-family: Inter;
-  font-style: normal; 
-  font-weight: 400;
-  font-display: swap; 
-  src: url("Inter-Regular.woff2") format("woff2"); 
-}
-
-@font-face { 
-  font-family: Inter;
-  font-style: normal; 
-  font-weight: 500;
-  font-display: swap; 
-  src: url("Inter-Medium.woff2") format("woff2"); 
-}
-
-@font-face { 
-  font-family: Inter;
-  font-style: normal; 
-  font-weight: 700;
-  font-display: swap; 
-  src: url("Inter-Bold.woff2") format("woff2"); 
-=======
 @font-face {
   font-family: Inter;
   font-style: normal;
@@ -77,5 +37,4 @@
   font-weight: 700;
   font-display: swap;
   src: url('../fonts/Inter.ttf') format('ttf');
->>>>>>> Stashed changes
 }
