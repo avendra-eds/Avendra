@@ -1,13 +1,18 @@
+.article-socials-container {
+    border-top: solid 1px #AAAAAA;
+}
 .article-socials {
     display: flex;
 }
 
 .article-socials a.button:any-link,
 .article-socials button {
-    all: unset;            /* or `all: revert;` */
-    cursor: pointer;       /* If you still want a pointer */
+    all: unset; /* Removes all stylings from the original button*/
+    cursor: pointer;   
+    padding: 0;
 }
 
 .article-socials .button-container img {
     width: 2rem;
+    height: 2rem;
 }
