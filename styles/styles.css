@@ -39,7 +39,7 @@
   /* border colors */
   --border-subtle-00: #808080;
   --border-subtle-selected: #414141;
-  --borader-disabled: #aaa;
+  --border-disabled: #aaa;
   --border-inverse: #fff;
   --border-error: #eb002a;
   --border-sky: #008fdc;
@@ -73,6 +73,7 @@
 
   /* text colors */
   --text-primary: #414141;
+  --text-secondary: #808080;
   --text-midnight: #011b2b;
   --text-inverse: #fff;
   --text-sky: #008fdc;
@@ -113,7 +114,6 @@ body {
   margin: 0;
   background-color: var(--background);
   color: var(--text-primary);
-  font-family: var(--body-font-family);
   font-size: var(--body-text);
   line-height: var(--line-height-150);
 }
