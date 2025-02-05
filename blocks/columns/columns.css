@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.columns-container {
+    padding: 0% !important;
+}
+
 .columns img {
     width: 100%;
 }
@@ -32,147 +36,288 @@
     }
 }
 
-/* Highlighted banner styles */
+@media (max-width: 768px) {
+    .button-container {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
 
+    .button {
+        display: inline-block;
+        width: 90%;
+        max-width: 100%;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Highlighted banner styles - Base */
 .highlighted-banner > div > div:first-child > picture img {
-    border-radius: 3.25rem 0rem;
+    border-radius: 3.25rem 0;
     background-color: var(--background-sky);
+    max-width: 100%;
+    height: auto;
 }
 
 .highlighted-banner > div > div:last-child > p:nth-of-type(1) {
-    color: var(--brand-primary-sky);
+    color: var(--text-sky);
     font-size: var(--heading-font-s);
-    font-style: normal;
     font-weight: var(--text-bold);
     line-height: var(--line-height-120);
     text-transform: uppercase;
 }
+.highlighted-banner > div > div:last-child > p:nth-of-type(2) > em {
+    color: var(--text-sky);
+    font-style: normal;
+}
 
 .highlighted-banner > div > div:last-child > p:nth-of-type(2) {
-    width: 39.25rem;
+    width: 100%;
+    max-width: 39.25rem;
     color: var(--text-primary);
-    margin-top: 0;
-    font-size: var(--heading-font-l);
-    font-style: normal;
+    margin: 0 0 1rem;
+    font-size: var(--heading-font-m);
     font-weight: var(--text-regular);
     line-height: var(--line-height-120);
 }
 
-.highlighted-banner > div > div:last-child > p:nth-of-type(2) > em {
-    color: var(--brand-primary-sky);
-    font-style: normal;
+/* Mobile Styles for highlighted banner */
+@media (max-width: 768px) {
+    .highlighted-banner > div {
+        flex-direction: column;
+    }
+
+    .highlighted-banner > div > div:first-child > picture img {
+        border-radius: 2rem 0;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .highlighted-banner > div > div:last-child {
+        padding: 1.5rem 0;
+    }
+
+    .highlighted-banner > div > div:last-child > p:nth-of-type(1) {
+        font-size: calc(var(--heading-font-s) * 0.9);
+        padding: 0 1rem;
+    }
+
+    .highlighted-banner > div > div:last-child > p:nth-of-type(2) {
+        font-size: var(--heading-font-m);
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .highlighted-banner > div > div:last-child > p:nth-of-type(3) {
+        padding: 0 1rem;
+        font-size: calc(var(--heading-font-s) * 0.95);
+    }
 }
 
-.highlighted-banner > div > div:last-child > p:nth-of-type(3) {
-    color: var(--text-primary);
-    font-size: var(--heading-font-s);
-    font-weight: var(--text-regular);
-    line-height: var(--line-height-150);
-}
-
-/* Simple Banner Styles */
-
+/* Simple Banner Styles - Base */
 .simple-banner > div > div:last-child > p:nth-of-type(1) {
     color: var(--text-primary);
     font-size: var(--heading-font-l);
     font-weight: var(--text-regular);
     line-height: var(--line-height-120);
-    width: 39.25rem;
+    width: 100%;
+    max-width: 39.25rem;
 }
 
 .simple-banner > div {
     padding: 2.75rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .simple-banner {
     background-color: var(--background-light-sky);
 }
 
-/* Icon Banner Styles */
-
-.icon-banner {
-    background-color: var(--background-midnight);
+.simple-banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.icon-banner > div:first-child > div > p > picture img {
-    width: 3.5rem;
-    height: 3.5rem;
+/* Mobile Styles for simple banner */
+@media (max-width: 768px) {
+    .simple-banner > div {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .simple-banner > div > div:last-child > p:nth-of-type(1) {
+        font-size: calc(var(--heading-font-l) * 0.75);
+        padding: 0 1rem;
+    }
+
+    .simple-banner img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Partnership banner styles */
+
+.partnership-banner {
+    background-image: url("../../assets/lines-background.svg");
+}
+
+.partnership-banner > div:last-child {
+    padding: 0rem 5rem;
+}
+
+.partnership-banner > div:first-child > div > p:nth-of-type(1) {
+    color: var(--text-sky);
+    font-size: var(--heading-font-s);
+    font-weight: var(--text-bold);
+    line-height: var(--line-height-120);
+    text-transform: uppercase;
+    padding: 0rem 5rem;
+}
+
+.partnership-banner > div:first-child > div > p:nth-of-type(2) {
+    color: var(--text-midnight);
+    font-size: var(--heading-font-xl);
+    font-weight: var(--text-bold);
+    line-height: var(--line-height-120);
+    padding: 0rem 5rem;
+}
+
+.partnership-banner > div:nth-of-type(2) > div > p > picture img {
+    width: 13.17644rem;
+    height: 5.9375rem;
+    object-fit: contain;
+}
+
+.partnership-banner > div:nth-of-type(2) > div > p {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 0rem 5rem;
+}
+
+@media (max-width: 768px) {
+    .partnership-banner > div:nth-of-type(2) > div > p {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .partnership-banner > div:last-child,
+    .partnership-banner > div:first-child > div > p:nth-of-type(1),
+    .partnership-banner > div:first-child > div > p:nth-of-type(2) {
+        padding: 0 1.5rem;
+    }
+}
+/* Number banner styles */
+
+.numbers-banner > div:first-child > div {
+    max-width: 73rem;
+    padding: 0rem 5rem;
+}
+
+.numbers-banner > div:last-child > div {
+    padding: 0rem 5rem;
+}
+
+.numbers-banner > div:first-child > div > p:nth-of-type(1) {
+    color: var(--text-sky);
+    font-size: var(--heading-font-s);
+    font-weight: var(--text-bold);
+    line-height: var(--line-height-120);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.numbers-banner > div:first-child > div > p:nth-of-type(2) {
+    width: 100%;
+    max-width: 48.4375rem;
+    color: var(---text-primary);
+    font-size: var(--heading-font-l);
+    font-weight: var(--text-regular);
+    line-height: var(--line-height-120);
+}
+
+.numbers-banner > div:first-child > div > p:nth-of-type(2) > em {
+    color: var(--text-sky);
+    font-style: normal;
+}
+
+.numbers-banner > div:last-child > div > p:nth-of-type(1) {
+    color: var(--text-sky);
+    font-size: var(--heading-font-xxl);
+    font-weight: var(--text-light);
+    line-height: var(--line-height-120);
+}
+
+.numbers-banner > div:last-child > div > p:nth-of-type(2) {
+    width: 13.75rem;
+    color: var(--text-primary);
+    font-size: var(--heading-font-s);
+    font-weight: var(--text-medium);
+    line-height: var(--line-height-120);
+}
+
+/* Mobile Styles for number banner*/
+@media (max-width: 768px) {
+    .numbers-banner > div:last-child {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Icon Banner Styles */
+.icon-banner {
+    background-color: var(--background-midnight);
+    padding: 2rem;
 }
 
 .icon-banner > div:first-child > div > p {
     display: flex;
     gap: 3rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+.icon-banner > div:first-child > div > p > picture img {
+    width: 3.5rem;
+    height: 3.5rem;
+    min-width: 3.5rem;
+    object-fit: contain;
 }
 
 .icon-banner > div:last-child > div > p {
     color: var(--text-inverse);
-    font-size: 4.20875rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 120%;
-    width: 73rem;
+    font-size: var(--heading-font-xxl);
+    font-weight: var(--text-light);
+    line-height: var(--line-height-120);
+    width: 100%;
+    max-width: 73rem;
 }
-
 .icon-banner > div:last-child > div > p > em {
-    color: var(--brand-primary-sky);
+    color: var(--text-sky);
     font-style: normal;
 }
 
+/* Mobile Styles for icon banner*/
+@media (max-width: 768px) {
+    .icon-banner > div:first-child > div > p {
+        gap: 1.5rem;
+        padding: 0 1rem;
+        justify-content: flex-start;
+    }
 
+    .icon-banner > div:first-child > div > p > picture img {
+        width: 2.5rem;
+        height: 2.5rem;
+        min-width: 2.5rem;
+    }
 
-/* Number banner styles */
-
-.numbers-banner > div:first-child > div > p:nth-of-type(1){
-
-  color: var(--brand-primary-sky);
-
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 120%; 
-  text-transform: uppercase;
+    .icon-banner > div:last-child > div > p {
+        font-size: calc(var(--heading-font-xxl) * 0.6);
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
 }
-
-
-
-.numbers-banner > div:first-child > div > p:nth-of-type(2){
-  width: 48.4375rem;
-  color: var(---text-primary);
-  font-size: 2.36875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; 
-}
-
-
-.numbers-banner > div:last-child > div > p:nth-of-type(1){
-  color: var(--brand-primary-sky);
-
-
-  font-size: 4.20875rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%; /* 5.0505rem */
-}
-
-.numbers-banner > div:last-child > div > p:nth-of-type(2){
-  color: blue;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
