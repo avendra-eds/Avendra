@@ -1,33 +1,178 @@
 .columns > div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .columns img {
-  width: 100%;
+    width: 100%;
 }
 
 .columns > div > div {
-  order: 1;
+    order: 1;
 }
 
 .columns > div > .columns-img-col {
-  order: 0;
+    order: 0;
 }
 
 .columns > div > .columns-img-col img {
-  display: block;
+    display: block;
 }
 
 @media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
-  }
+    .columns > div {
+        align-items: center;
+        flex-direction: unset;
+        gap: 24px;
+    }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
-  }
+    .columns > div > div {
+        flex: 1;
+        order: unset;
+    }
 }
+
+/* Highlighted banner styles */
+
+.highlighted-banner > div > div:first-child > picture img {
+    border-radius: 3.25rem 0rem;
+    background-color: var(--background-sky);
+}
+
+.highlighted-banner > div > div:last-child > p:nth-of-type(1) {
+    color: var(--brand-primary-sky);
+    font-size: var(--heading-font-s);
+    font-style: normal;
+    font-weight: var(--text-bold);
+    line-height: var(--line-height-120);
+    text-transform: uppercase;
+}
+
+.highlighted-banner > div > div:last-child > p:nth-of-type(2) {
+    width: 39.25rem;
+    color: var(--text-primary);
+    margin-top: 0;
+    font-size: var(--heading-font-l);
+    font-style: normal;
+    font-weight: var(--text-regular);
+    line-height: var(--line-height-120);
+}
+
+.highlighted-banner > div > div:last-child > p:nth-of-type(2) > em {
+    color: var(--brand-primary-sky);
+    font-style: normal;
+}
+
+.highlighted-banner > div > div:last-child > p:nth-of-type(3) {
+    color: var(--text-primary);
+    font-size: var(--heading-font-s);
+    font-weight: var(--text-regular);
+    line-height: var(--line-height-150);
+}
+
+/* Simple Banner Styles */
+
+.simple-banner > div > div:last-child > p:nth-of-type(1) {
+    color: var(--text-primary);
+    font-size: var(--heading-font-l);
+    font-weight: var(--text-regular);
+    line-height: var(--line-height-120);
+    width: 39.25rem;
+}
+
+.simple-banner > div {
+    padding: 2.75rem;
+}
+
+.simple-banner {
+    background-color: var(--background-light-sky);
+}
+
+/* Icon Banner Styles */
+
+.icon-banner {
+    background-color: var(--background-midnight);
+}
+
+.icon-banner > div:first-child > div > p > picture img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.icon-banner > div:first-child > div > p {
+    display: flex;
+    gap: 3rem;
+}
+
+.icon-banner > div:last-child > div > p {
+    color: var(--text-inverse);
+    font-size: 4.20875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    width: 73rem;
+}
+
+.icon-banner > div:last-child > div > p > em {
+    color: var(--brand-primary-sky);
+    font-style: normal;
+}
+
+
+
+/* Number banner styles */
+
+.numbers-banner > div:first-child > div > p:nth-of-type(1){
+
+  color: var(--brand-primary-sky);
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%; 
+  text-transform: uppercase;
+}
+
+
+
+.numbers-banner > div:first-child > div > p:nth-of-type(2){
+  width: 48.4375rem;
+  color: var(---text-primary);
+  font-size: 2.36875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; 
+}
+
+
+.numbers-banner > div:last-child > div > p:nth-of-type(1){
+  color: var(--brand-primary-sky);
+
+
+  font-size: 4.20875rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 5.0505rem */
+}
+
+.numbers-banner > div:last-child > div > p:nth-of-type(2){
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
