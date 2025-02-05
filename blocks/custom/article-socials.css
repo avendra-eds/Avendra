@@ -1,0 +1,13 @@
+.article-socials {
+    display: flex;
+}
+
+.article-socials a.button:any-link,
+.article-socials button {
+    all: unset;            /* or `all: revert;` */
+    cursor: pointer;       /* If you still want a pointer */
+}
+
+.article-socials .button-container img {
+    width: 2rem;
+}
