@@ -1,18 +1,22 @@
-.article-socials-container {
-    border-top: solid 1px #AAAAAA;
-}
 .article-socials {
     display: flex;
+    gap: 2rem;
+}
+
+.article-socials > div {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
 }
 
 .article-socials a.button:any-link,
 .article-socials button {
-    all: unset; /* Removes all stylings from the original button*/
+    all: unset;
     cursor: pointer;   
     padding: 0;
 }
 
 .article-socials .button-container img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
 }
