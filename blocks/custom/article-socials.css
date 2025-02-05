@@ -1,12 +1,17 @@
 .article-socials {
     display: flex;
+    padding: 0rem 0.25rem;
     gap: 2rem;
+}
+
+.article-socials > div:first-child {
+    width: 1.5rem;
+    height: 1.125rem;
 }
 
 .article-socials > div {
     width: 1.75rem;
     height: 1.75rem;
-    padding: 0;
 }
 
 .article-socials a.button:any-link,
