@@ -1,3 +1,9 @@
+h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+
 .landing-card  {
   display: flex;
   flex-wrap: wrap;
@@ -9,21 +15,17 @@
 }
 
 .card {
+  display: flex;
     flex: 1 1 calc(33.333% - 1.25rem);
+    flex-direction: column;
+    justify-content: space-between;
     box-sizing: border-box;
-    background-size: cover;
     border: 1px solid #ddd;
-    border-radius: 3.25rem 0 3.25rem 0;
+    border-radius: 3.25rem 0;
     padding: 2.5rem 3rem;
-    background: linear-gradient(180deg, #011B2B 0%, rgba(0, 19, 30, 0.00) 100%);
+    background: linear-gradient(180deg, rgba(1, 27, 43, 1) 0%, rgba(0 19 30 / 0%) 100%);
     transition: background-color 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
 }
-
-.card-header > p > picture > img {
-  width: 3.25rem;
-  height: 3.25rem;
-}
-
 
 .card:hover {
   background-color: var(--background-midnight); 
@@ -31,15 +33,28 @@
   opacity: 0.9;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap:0.75rem;
+}
+
+.card-header > p > picture > a > img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
 .card-header > h5 {
   color: var(--text-inverse);
-  margin: 0;
-  padding: 0;
+  font-size: var(--heading-font-m);
+  font-style: normal;
+  font-weight: var(--text-regular);
+  line-height: 120%;
 }
 
 .card-link-icon {
   display: flex;
-  justify-self: flex-end;
+  justify-content: flex-end;
   cursor: pointer;
 } 
 
