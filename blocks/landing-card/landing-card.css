@@ -23,7 +23,7 @@ h5, p {
     border: 1px solid #ddd;
     border-radius: 3.25rem 0;
     padding: 2.5rem 3rem;
-    background: linear-gradient(180deg, rgba(1, 27, 43, 1) 0%, rgba(0 19 30 / 0%) 100%);
+    background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
     transition: background-color 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
