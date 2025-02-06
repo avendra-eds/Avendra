@@ -1,6 +1,5 @@
 main .section.carousel-container {
   padding: 0;
-  /* TO REVIEW: Will need to PUSH this up */
 }
 
 .carousel-container {
@@ -175,7 +174,6 @@ main .section.carousel-container {
 }
 
 @media (width >= 600px) {
-
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: calc((100%) / 2);
     
