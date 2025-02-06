@@ -36,19 +36,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .button-container {
-        margin-top: 1.5rem;
-        text-align: center;
-    }
-
-    .button {
-        display: inline-block;
-        width: 90%;
-        max-width: 100%;
-        padding: 0.75rem 1.5rem;
-    }
-}
 /* ======================
    Highlighted Banner
    ====================== */
@@ -138,7 +125,7 @@
     background-color: var(--background-light-sky);
 }
 
-.simple-banner img {
+.simple-banner > div > div:first-child > picture img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -195,7 +182,7 @@
     }
 
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
-        width: 13.17644rem;
+        width: 13.1764rem;
         height: 5.9375rem;
         object-fit: contain;
     }
@@ -225,7 +212,7 @@
 
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
         width: 100%;
-        max-width: 13.17644rem;
+        max-width: 13.1764rem;
         height: auto;
         object-fit: contain;
     }
@@ -378,7 +365,7 @@
     }
 
     .icon-banner > div:first-child > div > p > picture img {
-        width: 1.60875rem;
+        width: 1.6087rem;
         height: 2.25rem;
         min-width: 2.5rem;
         padding: 0 0.5rem;
