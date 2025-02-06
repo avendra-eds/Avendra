@@ -1,4 +1,6 @@
 export default function decorate(block) {
-  const cols = [...block.firstElementChild.children];
-  block.classList.add(`columns-${cols.length}-cols`);
+  const aTags = block.querySelectorAll('a');
+  aTags.forEach((aTag) => {
+    aTag.classList.add('button', 'secondary');
+  });
 }

@@ -1,7 +1,14 @@
 .article-section-container {
-  width: 60%;
+  padding-bottom: 0;
 }
 
 .image {
   width: 100%;
+}
+
+.article-socials-container {
+  border-top: 2px solid var(--border-disabled);
+  padding-top: 1.25rem;
+  width: 75%;
+  margin: auto;
 }
