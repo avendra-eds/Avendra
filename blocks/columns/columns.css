@@ -335,7 +335,7 @@ main .columns-container {
 
 .icon-banner {
     background-color: var(--background-midnight);
-    padding: 10.75rem 5rem 7.5rem 5rem;
+    padding: 10.75rem 5rem 7.5rem;
 }
 
 .icon-banner > div:last-child > div > h2 {
