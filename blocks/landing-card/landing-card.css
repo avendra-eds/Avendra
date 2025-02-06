@@ -12,6 +12,13 @@ h5, p {
   margin: 0 auto;  
 }
 
+.industry-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
 .card {
   display: flex;
   width: 100%;
@@ -30,6 +37,11 @@ h5, p {
 .card:hover {
   background-image: url('../../assets/card-background.svg'); 
   transform: translateY(-5px);
+}
+
+.landing-card .industry-card .card {
+  width: 19.4942rem;
+  min-height: 28.67rem;
 }
 
 .card-header {
@@ -68,7 +80,7 @@ h5, p {
   height: 2.4933rem;
 }
 
-@media (768px < width <= 1024px) {
+@media (768px <= width <= 1024px) {
   .landing-card {
       flex-flow: row wrap;
       justify-content: center;
@@ -81,16 +93,31 @@ h5, p {
       padding: 1rem 1.3rem;
       min-height: auto;
   }
+
+  .industry-card .card {
+    min-height: 28.6695rem;
+  }
 }
 
-@media (width > 1024px){
+@media (width > 1024px){  
   .card {
-    width: 25.5rem;
-    height: 28.375rem;
-    max-width: 400px;
-    padding: 2.5rem 3rem;
+    max-width: 25rem;
     flex: 1 1 calc(25% - 16px);
   }
+
+  
+  .landing-card .card {
+    width: 25.5rem;
+    height: 28.375rem;
+    padding: 2.5rem 3rem;
+  }
+
+  .landing-card .industry-card .card {
+    width: 18rem;
+    height: 27rem;
+    flex-shrink: 0;
+    padding: 2.5rem;
+  } 
 
   .card-header {
     gap:0.75rem;
