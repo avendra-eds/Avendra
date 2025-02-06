@@ -15,6 +15,7 @@
  @import url('../blocks/custom/brand-style.css');
  @import url('../blocks/modal/language-modal.css');
  @import url('../blocks/custom/article-socials.css');
+ @import url('../blocks/article-banner/article-banner.css');
  
 :root {
   font-family: Inter, sans-serif;

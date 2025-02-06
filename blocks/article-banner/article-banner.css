@@ -1,0 +1,58 @@
+main .section.article-banner-container {
+    padding: 0;
+}
+
+.article-banner h4, .article-banner p {
+    color: white;
+}
+.article-banner > div {
+    position: relative;
+    height: 32.3125rem;
+}
+
+.article-banner > div > div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden; /* In case the image is larger than the container */
+}
+
+.article-banner > div > div:first-child picture::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+    background: linear-gradient(to right, black, transparent);
+    pointer-events: none; /* So that the overlay doesn't interfere with interactions */
+  }
+
+
+.article-banner > div > div:first-child picture,
+.article-banner > div > div:first-child picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-banner > div > div:first-child picture img {
+    width: 100%;
+}
+
+.article-banner > div > div:last-child {
+    position: absolute;
+    left: 80px;
+    bottom: 60px;
+    z-index: 2;
+  }
+
+.article-banner > div > div:last-child picture img {
+    width: 3rem;
+}
+
+.article-banner > div > div:last-child p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Optional: Adds space between the image and text */
+  }
