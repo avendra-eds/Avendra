@@ -10,19 +10,6 @@ export default function decorate(block) {
     const cardLinkIcon = row.querySelectorAll('div')[2];
     cardLinkIcon.classList.add('card-link-icon');
 
-    const iconLinkDiv = row.querySelectorAll('div')[row.querySelectorAll('div').length - 1];
-    const iconLink = iconLinkDiv.querySelector('a');
-    if (iconLink) {
-      const href = iconLink.getAttribute('href'); // fetching href from anchor tag
-      const image = cardLinkIcon.querySelector('img');
-      const link = document.createElement('a');
-      link.href = href;
-      link.target = '_blank';
-      image.parentNode.insertBefore(link, image);
-      link.appendChild(image);
-      iconLink.style.display = 'none'; // removing the anchor tag from DOM
-    }
-
     const backgroundDiv = row.querySelector('.card-background-image');
     const backgroundImage = backgroundDiv?.querySelector('img');
     if (backgroundImage) {
@@ -32,6 +19,14 @@ export default function decorate(block) {
       row.style.backgroundPosition = 'center';
       row.style.backgroundRepeat = 'no-repeat';
       backgroundDiv.remove();
+
+      row.addEventListener('mouseover', () => {
+        row.style.backgroundImage = "url('/assets/card-background.svg')";
+      });
+
+      row.addEventListener('mouseout', () => {
+        row.style.backgroundImage = `url('${imageUrl}')`;
+      });
     }
   });
 }
