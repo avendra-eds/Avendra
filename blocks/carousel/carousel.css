@@ -19,7 +19,7 @@ main .section.carousel-container {
 /* TO REVIEW: Contains the newly added controls */
 .carousel [aria-label="Carousel Slide Controls"] {
   position: absolute;
-  bottom: 1.875rem;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
