@@ -63,6 +63,7 @@
   --quote-text: 2.369rem;
   --body-text: 1rem;
   --caption-text: 0.75rem;
+  --link-text: 0.75rem;
 
   /* nav height */
   --nav-height: 10.3125rem;
@@ -363,8 +364,7 @@ button.secondary {
   align-items: center;
   gap: 0.625rem;
   text-align: center;
-  font-size: var(--link-text-size);
-  font-style: none;
+  font-size: var(--link-text);
   font-weight: var(--text-medium);
   line-height: var(--line-height-120);
   list-style: none;
