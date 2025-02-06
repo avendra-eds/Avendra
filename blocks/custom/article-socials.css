@@ -1,0 +1,27 @@
+.article-socials {
+    display: flex;
+    padding: 0 0.25rem;
+    gap: 2rem;
+}
+
+.article-socials > div {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.article-socials > div:first-child {
+    width: 1.5rem;
+    height: 1.125rem;
+}
+
+.article-socials a.button:any-link,
+.article-socials button {
+    all: unset;
+    cursor: pointer;   
+    padding: 0;
+}
+
+.article-socials .button-container img {
+    width: 1.75rem;
+    height: 1.75rem;
+}
