@@ -168,6 +168,15 @@
         padding: 0 5rem;
     }
 
+    .partnership-banner {
+        display: flex;
+        padding: 7.5rem 5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+
     .partnership-banner > div:first-child > div > h3,
     .partnership-banner > div:first-child > div > h6 {
         padding: 0 5rem;
@@ -189,6 +198,13 @@
 }
 
 @media (width < 768px) {
+    .partnership-banner {
+        display: flex;
+        padding: 2.5rem 0;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
     .partnership-banner > div {
         padding: 1.5rem;
         gap: 1.5rem;
