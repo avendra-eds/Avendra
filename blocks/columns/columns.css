@@ -3,8 +3,8 @@
     flex-direction: column;
 }
 
-.columns-container {
-    padding: 0% !important;
+main .columns-container {
+    padding: 0;
 }
 
 .columns img {
@@ -23,11 +23,11 @@
     display: block;
 }
 
-@media (width >= 900px) {
+@media (width >= 768px) {
     .columns > div {
         align-items: center;
         flex-direction: unset;
-        gap: 24px;
+        gap: 1.5rem;
     }
 
     .columns > div > div {
@@ -52,7 +52,7 @@
     .highlighted-banner > div > div:first-child > picture img {
         max-width: 100%;
         height: auto;
-        border-radius: 3.25rem 0;
+        border-radius: var(--border-tear-drop);
         background-color: var(--background-sky);
     }
 
@@ -86,7 +86,7 @@
 
     .highlighted-banner > div > div:first-child > picture img {
         width: 100%;
-        max-width: 500px;
+        max-width: 31.25rem;
         margin: 0 auto;
         border-radius: 2rem 0;
     }
@@ -103,12 +103,12 @@
 
     .highlighted-banner > div > div:last-child > h6 {
         padding: 0 1rem;
-        font-size: calc(var(--heading-font-s) * 0.9);
+        font-size: var(--heading-font-s);
     }
 
     .highlighted-banner > div > div:last-child > p {
         padding: 0 1rem;
-        font-size: calc(var(--heading-font-s) * 0.95);
+        font-size: var(--heading-font-s);
     }
 
     .highlighted-banner > div > div:last-child > h5 > em {
@@ -126,9 +126,10 @@
 }
 
 .simple-banner > div > div:first-child > picture img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 @media (width >= 768px) {
@@ -151,7 +152,7 @@
 
     .simple-banner > div > div:last-child > h5 {
         padding: 0 1rem;
-        font-size: calc(var(--heading-font-l) * 0.75);
+        font-size: var(--heading-font-m);
     }
 }
 
@@ -159,8 +160,9 @@
      Partnership Banner
      ====================== */
 
-.partnership-banner {
+.columns-container > .columns-wrapper > .partnership-banner {
     background-image: url("../../assets/lines-background.svg");
+
 }
 
 @media (width >= 768px) {
@@ -187,12 +189,12 @@
         flex-wrap: wrap;
         gap: 3rem;
         padding: 0 5rem;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
     }
 
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
-        width: 13.1764rem;
-        height: 5.9375rem;
+        width: 13.176rem;
+        height: 5.937rem;
         object-fit: contain;
     }
 }
@@ -205,7 +207,7 @@
         gap: 2.5rem;
         align-self: stretch;
     }
-    
+
     .partnership-banner > div {
         padding: 1.5rem;
         gap: 1.5rem;
@@ -229,8 +231,8 @@
 
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
         width: 100%;
-        max-width: 13.1764rem;
-        height: auto;
+        max-width: 13.176rem;
+        height: 5.937rem;
         object-fit: contain;
     }
 
@@ -271,7 +273,7 @@
 
     .numbers-banner > div:first-child > div > h4 {
         width: 100%;
-        max-width: 48.4375rem;
+        max-width: 48.437rem;
     }
 
     .numbers-banner > div:last-child > div {
@@ -280,9 +282,6 @@
 
     .numbers-banner > div:last-child > div > h2 {
         color: var(--text-sky);
-        font-size: var(--heading-font-xxl);
-        font-weight: var(--text-light);
-        line-height: var(--line-height-120);
     }
 
     .numbers-banner > div:last-child > div > p {
@@ -311,7 +310,7 @@
 
     .numbers-banner > div:first-child > div > h4 {
         width: 100%;
-        max-width: 19.5375rem;
+        max-width: 19.537rem;
     }
 
     .numbers-banner > div:last-child > div > h2 {
@@ -324,9 +323,9 @@
         width: 17.375rem;
     }
 
-    .numbers-banner > div:last-child > div:nth-of-type(1),
-    .numbers-banner > div:last-child > div:nth-of-type(2) {
-        border-bottom: 0.125rem solid var(--background-light-sky);
+    .numbers-banner > div:last-child > div:nth-of-type(2),
+    .numbers-banner > div:last-child > div:nth-of-type(3) {
+        border-top: 0.125rem solid var(--background-light-sky);
     }
 }
 
@@ -336,7 +335,7 @@
 
 .icon-banner {
     background-color: var(--background-midnight);
-    padding: 2rem;
+    padding: 10.75rem 5rem 7.5rem 5rem;
 }
 
 .icon-banner > div:last-child > div > h2 {
@@ -382,14 +381,14 @@
     }
 
     .icon-banner > div:first-child > div > p > picture img {
-        width: 1.6087rem;
+        width: 1.608rem;
         height: 2.25rem;
         min-width: 2.5rem;
         padding: 0 0.5rem;
     }
 
     .icon-banner > div:last-child > div > h2 {
-        font-size: calc(var(--heading-font-xxl) * 0.6);
+        font-size: var(--heading-font-l);
         margin: 1.5rem auto;
         max-width: 19.5rem;
         padding: 0 1rem;
