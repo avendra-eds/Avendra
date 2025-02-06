@@ -13,6 +13,7 @@
  @import url('../blocks/custom/article-section/article-section.css');
  @import url('../blocks/custom/article-cards/article-cards.css');
  @import url('../blocks/custom/brand-style.css');
+ @import url('../blocks/article-listing-banner/article-listing.css');
  
 :root {
   font-family: Inter, sans-serif;
