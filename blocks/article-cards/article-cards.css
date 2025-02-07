@@ -1,0 +1,80 @@
+
+/* Default: Gallery of cards */
+.article-cards.gallery > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 2.5rem; 
+}
+
+/* List of cards */
+.article-cards.list > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block; 
+}
+
+.article-cards > ul > li {
+  width: 25rem; 
+  background-color: var(--background-color);
+}
+
+.article-cards.list > ul > li {
+  margin-bottom: 2.5rem;
+}
+
+
+.article-cards h6 {
+  padding: 0;
+  margin-top: 1.75rem;
+  margin-bottom: .5rem;
+}
+
+
+.article-cards p {
+  padding: 0;
+  margin: 0;
+}
+
+.article-cards p strong {
+  display: inline-block;
+  font-size: var(--caption-text);
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.article-cards .article-cards-card-image {
+  width: 100%;      
+  height: 14.3125rem;    
+  overflow: hidden; 
+  border-radius: .75rem;
+}
+
+
+.article-cards > ul > li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-cards-card-body p.button-container:has(em) {
+  display: inline-flex;
+  align-items: center;
+  margin-right: .75rem;
+  font-size: var(--caption-text);
+}
+
+ .article-cards-card-body > .button-container:first-of-type > a.button {
+  all: unset;
+  cursor: pointer;
+}
+
+.article-cards-card-body > .button-container:first-of-type > a.button:hover {
+  text-decoration: underline;
+  color: var(--button-hover-sky);
+  cursor: pointer;
+}
