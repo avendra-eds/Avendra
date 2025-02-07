@@ -23,15 +23,6 @@ body.modal-open {
   height: 100%;
 }
 
-.modal .dark-background {
-  background-color: #000;
-  .close-button {
-    color: var(--text-inverse);
-    padding: 2rem;
-    margin: 0;
-  }
-}
-
 .modal .close-button {
   position: absolute;
   top: 0;
@@ -45,6 +36,22 @@ body.modal-open {
   background-color: transparent;
   color: var(--text-inverse);
   line-height: 0;
+}
+
+.modal .dark-background {
+  background-color: #000;
+
+  .close-button {
+    color: var(--text-inverse);
+    padding: 2rem;
+    margin: 0;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .modal .close-button .icon.icon-close {
@@ -110,6 +117,7 @@ body.modal-open {
     width: 70%;
     height: 70%;
   }
+
   .modal .close-button {
     padding: 2rem 4.5rem;
   }

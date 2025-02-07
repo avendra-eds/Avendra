@@ -2,6 +2,11 @@
   background-color: var(--background-midnight);
 }
 
+.countries p {
+  margin: .75rem 0;
+  color: var(--text-inverse);
+}
+
 .countries-container > div:first-child > p {
   color: var(--text-inverse);
   font-weight: var(--text-bold);
@@ -41,11 +46,6 @@
 
 .countries li > a > strong {
   font-weight: var(--text-medium);
-}
-
-.countries p {
-  margin: .75rem 0;
-  color: var(--text-inverse);
 }
 
 .countries div div:first-of-type p {
