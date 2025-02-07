@@ -161,14 +161,6 @@ main .columns-container {
      ====================== */
 
 @media (width >= 998px) {
-    .columns-container > .columns-wrapper > .partnership-banner {
-        background-image: url("../../assets/lines-background.png");
-        background-size: cover;
-    }
-    .partnership-banner > div:last-child {
-        padding: 0 5rem;
-    }
-
     .partnership-banner {
         display: flex;
         padding: 7.5rem 5rem;
@@ -176,6 +168,10 @@ main .columns-container {
         align-items: flex-start;
         gap: 2.5rem;
         align-self: stretch;
+    }
+
+    .partnership-banner > div:last-child {
+        padding: 0 5rem;
     }
 
     .partnership-banner > div:first-child > div > h3,
@@ -196,12 +192,14 @@ main .columns-container {
         height: auto;
         object-fit: contain;
     }
+
+    .columns-container > .columns-wrapper > .partnership-banner {
+        background-image: url("../../assets/lines-background.png");
+        background-size: c;
+    }
 }
 
 @media (width < 998px) {
-    .columns-container > .columns-wrapper > .partnership-banner {
-        background-image: none;
-    }
     .partnership-banner {
         display: flex;
         padding: 2.5rem 0;
@@ -242,7 +240,7 @@ main .columns-container {
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
         width: 100%;
         max-width: 20.75rem;
-        height: 4.05638rem;
+        height: 4.05rem;
         object-fit: contain;
     }
 
@@ -262,6 +260,10 @@ main .columns-container {
         width: 90%;
         max-width: 100%;
         padding: 0.75rem 1.5rem;
+    }
+
+    .columns-container > .columns-wrapper > .partnership-banner {
+        background-image: none;
     }
 }
 
@@ -337,7 +339,6 @@ main .columns-container {
 
     .numbers-banner > div:last-child {
         display: flex;
-
         flex-direction: column;
         gap: 2.5rem;
         align-self: stretch;
