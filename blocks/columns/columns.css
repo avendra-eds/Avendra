@@ -40,7 +40,7 @@ main .columns-container {
    Highlighted Banner
    ====================== */
 
-@media (width >= 768px) {
+@media (width >= 998px) {
     .highlighted-banner > div {
         display: flex;
         padding: 7.5rem 5rem;
@@ -74,7 +74,7 @@ main .columns-container {
     }
 }
 
-@media (width < 768px) {
+@media (width < 998px) {
     .highlighted-banner > div {
         display: flex;
         padding: 2.5rem;
@@ -160,12 +160,11 @@ main .columns-container {
      Partnership Banner
      ====================== */
 
-.columns-container > .columns-wrapper > .partnership-banner {
-    background-image: url("../../assets/lines-background.svg");
-
-}
-
-@media (width >= 768px) {
+@media (width >= 998px) {
+    .columns-container > .columns-wrapper > .partnership-banner {
+        background-image: url("../../assets/lines-background.png");
+        background-size: cover;
+    }
     .partnership-banner > div:last-child {
         padding: 0 5rem;
     }
@@ -182,35 +181,46 @@ main .columns-container {
     .partnership-banner > div:first-child > div > h3,
     .partnership-banner > div:first-child > div > h6 {
         padding: 0 5rem;
+        width: 100%;
     }
 
     .partnership-banner > div:nth-of-type(2) > div > p {
         display: flex;
-        flex-wrap: wrap;
         gap: 3rem;
         padding: 0 5rem;
         grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
     }
 
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
-        width: 13.176rem;
-        height: 5.937rem;
+        width: auto;
+        height: auto;
         object-fit: contain;
     }
 }
 
-@media (width < 768px) {
+@media (width < 998px) {
+    .columns-container > .columns-wrapper > .partnership-banner {
+        background-image: none;
+    }
     .partnership-banner {
         display: flex;
         padding: 2.5rem 0;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 2rem;
         align-self: stretch;
     }
 
     .partnership-banner > div {
         padding: 1.5rem;
         gap: 1.5rem;
+    }
+
+    .partnership-banner > div:first-child {
+        padding: 0 2rem;
+    }
+
+    .partnership-banner > div:nth-of-type(2) {
+        padding: 0 2rem;
     }
 
     .partnership-banner > div:first-child > div {
@@ -231,13 +241,27 @@ main .columns-container {
 
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
         width: 100%;
-        max-width: 13.176rem;
-        height: 5.937rem;
+        max-width: 20.75rem;
+        height: 4.05638rem;
         object-fit: contain;
     }
 
-    .button-container {
+    .partnership-banner > div:first-child > div > h3 {
+        font-size: 1.75rem;
+        font-weight: var(--text-bold);
+        line-height: var(--line-height-120);
+    }
+
+    .partnership-banner > div:last-child > .button-container {
         margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .partnership-banner > div:last-child > .button-container > p > .button {
+        display: inline-block;
+        width: 90%;
+        max-width: 100%;
+        padding: 0.75rem 1.5rem;
     }
 }
 
@@ -254,7 +278,7 @@ main .columns-container {
     font-style: normal;
 }
 
-@media (width >= 768px) {
+@media (width >= 998px) {
     .numbers-banner {
         display: flex;
         padding: 7.5rem 5rem;
@@ -278,19 +302,84 @@ main .columns-container {
 
     .numbers-banner > div:last-child > div {
         padding: 0 5rem;
+        display: flex;
+        width: 100%;
+        max-width: 18.8rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .numbers-banner > div:last-child > div > h2 {
         color: var(--text-sky);
+        width: 100%;
+        max-width: 12rem;
     }
 
     .numbers-banner > div:last-child > div > p {
-        width: 13.75rem;
+        width: 100%;
+        max-width: 13.75rem;
     }
 
     .numbers-banner > div:last-child > div:nth-of-type(2),
     .numbers-banner > div:last-child > div:nth-of-type(3) {
         border-left: 0.125rem solid var(--background-light-sky);
+    }
+}
+
+@media (width < 998px) {
+    .numbers-banner {
+        display: flex;
+        padding: 7.5rem 5rem;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+
+    .numbers-banner > div:last-child {
+        display: flex;
+
+        flex-direction: column;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+
+    .numbers-banner > div:first-child > div {
+        max-width: 73rem;
+        padding: 0 5rem;
+    }
+
+    .numbers-banner > div:first-child > div > h6 {
+        margin-bottom: 1rem;
+    }
+
+    .numbers-banner > div:first-child > div > h4 {
+        width: 100%;
+        max-width: 48.437rem;
+    }
+
+    .numbers-banner > div:last-child > div {
+        padding: 0 5rem;
+        display: flex;
+        width: 100%;
+        max-width: 18.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .numbers-banner > div:last-child > div > h2 {
+        color: var(--text-sky);
+        width: 100%;
+        max-width: 12rem;
+    }
+
+    .numbers-banner > div:last-child > div > p {
+        width: 100%;
+        max-width: 13.75rem;
+    }
+
+    .numbers-banner > div:last-child > div:nth-of-type(2),
+    .numbers-banner > div:last-child > div:nth-of-type(3) {
+        border-top: 0.125rem solid var(--background-light-sky);
     }
 }
 
@@ -306,6 +395,7 @@ main .columns-container {
 
     .numbers-banner > div:last-child {
         justify-content: center;
+        align-items: center;
     }
 
     .numbers-banner > div:first-child > div > h4 {
@@ -374,23 +464,22 @@ main .columns-container {
 @media (width < 768px) {
     .icon-banner > div:first-child > div > p {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
         flex-wrap: nowrap;
         overflow-x: auto;
-        justify-content: center;
     }
 
     .icon-banner > div:first-child > div > p > picture img {
         width: 1.608rem;
         height: 2.25rem;
         min-width: 2.5rem;
-        padding: 0 0.5rem;
+        object-fit: contain;
     }
 
     .icon-banner > div:last-child > div > h2 {
         font-size: var(--heading-font-l);
         margin: 1.5rem auto;
-        max-width: 19.5rem;
+        max-width: 32.5rem;
         padding: 0 1rem;
     }
 }
