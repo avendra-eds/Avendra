@@ -165,3 +165,7 @@
   width: 24px;
   border-radius: 50%;
 }
+
+.search-container {
+  background-color: var(--background-midnight);
+}
