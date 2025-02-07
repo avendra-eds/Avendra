@@ -220,7 +220,7 @@ function searchInput(block, config) {
   input.setAttribute('type', 'search');
   input.className = 'search-input';
 
-  const searchPlaceholder = config.placeholders.searchPlaceholder || 'Search...';
+  const searchPlaceholder = config.placeholders.searchPlaceholder || 'Search';
   input.placeholder = searchPlaceholder;
   input.setAttribute('aria-label', searchPlaceholder);
 
@@ -233,17 +233,10 @@ function searchInput(block, config) {
   return input;
 }
 
-function searchIcon() {
-  const icon = document.createElement('span');
-  icon.classList.add('icon', 'icon-search');
-  return icon;
-}
-
 function searchBox(block, config) {
   const box = document.createElement('div');
   box.classList.add('search-box');
   box.append(
-    searchIcon(),
     searchInput(block, config),
   );
 
