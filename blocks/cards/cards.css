@@ -12,12 +12,12 @@ h5, p {
  
 }
 
-.four-cards {
+/* .four-cards {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
-}
+} */
 
 .card {
   display: flex;
@@ -26,14 +26,13 @@ h5, p {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd; 
   border-radius: var(--border-tear-drop);
   padding: 2rem 2.3rem;
   background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 25rem;
   position: relative;
   overflow: hidden;
 }
@@ -42,9 +41,14 @@ h5, p {
   background-image: url("/assets/card-background.svg");
 }
 
+.three-cards .card {
+  height: 21.56rem;
+}
+
 .four-cards .card {
   width: 19.49rem;
-  min-height: 28.67rem;
+  height: 458.71px;
+  padding: 3.2rem 2.4rem  ;
 }
 
 .card-header {
@@ -56,6 +60,8 @@ h5, p {
 .card-header > h5 {
   color: var(--text-inverse);
 }
+
+
 
 .card-link-icon > p {
   display: flex;
@@ -71,12 +77,6 @@ h5, p {
   display: contents;
 }
 
-.icon-cardarrow > img {
-  width: 2.45rem;
-  height: 2.45rem;
-  cursor: pointer;
-}
-
 .card-background-image {
   position: absolute;
   top: 0;
@@ -84,6 +84,12 @@ h5, p {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.icon-cardarrow > img {
+  width: 2.45rem;
+  height: 2.45rem;
+  cursor: pointer;
 }
 
 .card-background-image > picture > img {
@@ -101,54 +107,84 @@ h5, p {
   cursor: pointer;
 }
 
-@media (768px <= width <= 992px) {
-  .cards {
-      flex-flow: row wrap;
-      justify-content: center;
-      gap: .625rem;
-  }
-
-  .card {
-      flex: 1;
-      max-width: 32%;
-      padding: 1rem 1.3rem;
-      min-height: auto;
+@media (width >= 600px) {
+  .four-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .four-cards .card {
-    flex: 1 1 calc(50% - 16px);
+    width: 32.37rem;
+    height: 48.66rem;
+    max-width: 100%;
+    padding:  4.87rem 4.2rem;
+  }
+
+  .card-header > h5 {
+    font-size: var(--heading-font-l);
+  }
+
+  .icon-cardarrow > img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+}
+
+@media (width >= 768px) {
+  .four-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .four-cards .card {
     max-width: calc(50% - 16px);
-    min-height: 28.67rem;
+    width: 20.625rem;
+    height: 31.0625rem;
+    padding: 2.7062rem;
+
+  }
+
+  .four-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m);
+  } 
+
+  .icon-cardarrow > img {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 
-@media (width > 992px){  
-  .card {
-    max-width: 25rem;
-    flex: 1 1 calc(25% - 16px);
-  }
-  
+@media (width >= 992px) {  
   .cards .card {
     width: 25.5rem;
     height: 28.38rem;
     padding: 2.5rem 3rem;
   }
 
+  .four-cards {
+    flex-direction: row;
+  }
+
   .four-cards .card {
-    width: 18rem;
-    height: 28rem;
-    padding: 2.5rem;
-    flex: 1 1 calc(25% - 16px);
-    max-width: calc(25% - 16px);
+    width: 12.37rem;
+    height: 18.66rem;
+    padding: 1.38rem 1.44rem;
   } 
 
   .card-header {
     gap:0.75rem;
   }
 
+  .four-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m-tablet);
+  }
+
   .icon-cardarrow > img {
-    width: 3.1875rem;
-    height: 3.1875rem;
+    width: 2.19rem;
+    height: 2.19rem;
   }
 
   .card-header > p > picture > a > img {
@@ -156,5 +192,38 @@ h5, p {
     height: 3.25rem;
   }
 
+}
+
+@media (width >= 1280px) {
+  .four-cards .card {
+    width: 257.273px;
+    height: 386.773px;
+    padding:31.5px 32.5px ;
+    max-width: 100%;
+    align-self: stretch;
+  }
+
+  .four-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m);
+  }
+
+  .icon-cardarrow > img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (width >= 1440px) {
+  .four-cards .card {
+    width: 288.067px;
+    height: 433.067px;
+    flex-shrink: 0;
+    padding: 2.3344rem 2.3563rem;
+  }
+
+  .icon-cardarrow > img {
+    width: 3.13rem;
+    height: 3.13rem;
+  }
 }
 
