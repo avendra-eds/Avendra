@@ -1,9 +1,9 @@
 main .section.article-banner-container {
-    position: relative; /* ensure we can use top offsets */
-    margin-top: -120px; /* adjust this value as needed */
-    z-index: 1; /* lower than the navbar */
+    padding: 0;
+    position: relative; 
+    /* margin-top: -150px; TO SHIFT IT UP*/
+    z-index: 1; 
 }
-
 
 .article-banner h4, .article-banner p {
     color: #ffffff;  
