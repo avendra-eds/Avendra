@@ -1,0 +1,10 @@
+/* Parent container styling */
+.faq-content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+.faq-container{
+    display: flex;
+}
