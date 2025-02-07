@@ -63,6 +63,7 @@
   --quote-text: 2.369rem;
   --body-text: 1rem;
   --caption-text: 0.75rem;
+  --link-text: 0.75rem;
 
   /* nav height */
   --nav-height: 10.3125rem;
@@ -333,17 +334,17 @@ button:disabled:hover {
   text-decoration: none;
 }
 
-a.button.primary,
-button.primary {
+a.button.secondary,
+button.secondary {
   background-color: var(--button-tertiary);
   color: var(--text-primary);
   cursor: pointer;
 }
 
-a.button.primary:hover,
-a.button.primary:focus,
-button.primary:hover,
-button.primary:focus {
+a.button.secondary:hover,
+a.button.secondary:focus,
+button.secondary:hover,
+button.secondary:focus {
   background-color: var(--background-light-sky);
   border: 2px solid var(--button-hover-sky);
   border-radius: 2.5rem;
@@ -351,8 +352,8 @@ button.primary:focus {
   text-decoration: none;
 }
 
-a.button.secondary,
-button.secondary {
+a.button.tertiary,
+button.tertiary {
   background-color: var(--button-tertiary);
   border: 1px solid var(--button-primary);
   color: var(--button-secondary);
@@ -363,8 +364,7 @@ button.secondary {
   align-items: center;
   gap: 0.625rem;
   text-align: center;
-  font-size: var(--link-text-size);
-  font-style: none;
+  font-size: var(--link-text);
   font-weight: var(--text-medium);
   line-height: var(--line-height-120);
   list-style: none;
@@ -374,8 +374,8 @@ button.secondary {
   white-space: nowrap;
 }
 
-a.button.secondary:hover,
-button.secondary:hover {
+a.button.tertiary:hover,
+button.tertiary:hover {
   text-decoration: none;
   cursor: pointer;
   background-color: #EEEFEF;

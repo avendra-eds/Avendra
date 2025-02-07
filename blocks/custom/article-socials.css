@@ -1,15 +1,16 @@
 .article-socials {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: 0 0.25rem;
     gap: 2rem;
 }
 
-.article-socials > div {
-    width: 1.75rem;
-    height: 1.75rem;
+.article-socials .button-container > p {
+    margin: 0;
 }
 
-.article-socials > div:first-child {
+.article-socials > div:first-child > img {
     width: 1.5rem;
     height: 1.125rem;
 }
@@ -21,7 +22,10 @@
     padding: 0;
 }
 
-.article-socials .button-container img {
+.button .icon {
     width: 1.75rem;
     height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
