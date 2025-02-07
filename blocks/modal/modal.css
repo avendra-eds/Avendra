@@ -24,6 +24,10 @@ body.modal-open {
   padding: 24px;
 }
 
+.dark-background {
+  background-color: black;
+}
+
 .modal .close-button {
   position: absolute;
   top: 0;
