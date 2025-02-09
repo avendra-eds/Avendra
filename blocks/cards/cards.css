@@ -1,27 +1,321 @@
-.cards > ul {
-  list-style: none;
+h5, p {
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .625rem;
+  margin: 0 auto;  
+ 
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid #ddd; 
+  background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+.card:hover {
+  background-image: url("/assets/card-background.svg");
 }
 
-.cards > ul > li img {
+.three-cards .card {
+  width: 19.57rem;
+  height: 21.46rem;
+  border-top-left-radius: 2.47rem;
+  border-bottom-right-radius: 2.47rem;
+  gap: .475rem;
+  padding: 1.14rem 1.89rem;
+}
+
+.four-cards .card {
+  width: 19.49rem;
+  height: 28.67rem;
+  padding: 3.2rem 2.4rem  ;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: .57rem;
+}
+
+.card-header > h5 {
+  color: var(--text-inverse);
+}
+
+.card-link-icon > p {
+  display: flex;
+  justify-content: flex-end;
+} 
+
+.card-link-icon a.button:any-link,
+.card-link-icon > p > span {
+  all:unset
+}
+
+.icon-cardarrow {
+  display: contents;
+}
+
+.card-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  z-index: -1;
+}
+
+.icon-cardarrow > img {
+  width: 2.45rem;
+  height: 2.45rem;
+  cursor: pointer;
+}
+
+.card-background-image > picture > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.card-header > p > picture > a > img {
+  width: 2.46rem;
+  height: 2.46rem;
+}
+
+.button-container .icon-cardarrow img {
+  cursor: pointer;
+}
+
+@media (width >= 600px) {
+  .four-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .four-cards .card {
+    width: 32.37rem;
+    height: 48.66rem;
+    max-width: 100%;
+    padding:  4.87rem 4.2rem;
+  }
+
+  .three-cards .card {
+    width: 32.5rem;
+    height: 35.655rem;
+    border-top-left-radius: 4.1rem;
+    border-bottom-right-radius: 4.1rem;
+    gap: .79rem;
+    padding: 1.89rem 3.16rem;
+  }
+
+  .card-header > p > picture  > img {
+    width: 4.1rem;
+    height: 4.1rem; 
+  }
+
+  .card-header > h5 {
+    font-size: var(--heading-font-l);
+  }
+
+  .icon-cardarrow > img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (width >= 768px) {
+  .four-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .three-cards {
+    flex-direction: column;
+  }
+
+  .four-cards .card {
+    max-width: calc(50% - 16px);
+    width: 20.63rem;
+    height: 31.06rem;
+    padding: 2.71rem;
+  }
+
+  .three-cards .card {
+    width: 43rem;
+    height: 47.17rem;
+  }
+
+  .three-cards .card-header {
+    gap: 1.25rem;
+  }
+
+  .card-header > p > picture  > img {
+    width: 5.4269rem;
+    height: 5.4269rem;   
+  }
+
+  .four-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m);
+  } 
+
+  .icon-cardarrow > img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .three-cards .card .button-container .icon-cardarrow > img {
+    width: 5.34rem;
+    height: 5.35rem;
+  }
+}
+
+@media (width >= 992px) {  
+  .three-cards .card {
+    width: 17.18rem;
+    height: 18.85rem;
+    border-top-left-radius: 2.17rem;
+    border-bottom-right-radius: 2.17rem;
+    gap: .417rem;
+    padding: 1.00rem 1.67rem;
+    }
+
+  .card-header > p > picture  > img {
+    width: 2.16rem;
+    height: 2.16rem;
+  }
+
+  .three-cards .card .card-header > h5 {
+    font-size: 1.25rem;
+  } 
+
+  .three-cards .card .button-container .icon-cardarrow > img {
+    width: 2.19rem;
+    height: 2.19rem;
+  }
+
+  .four-cards {
+    flex-direction: row;
+  }
+
+  .four-cards .card {
+    width: 12.37rem;
+    height: 18.66rem;
+    padding: 1.38rem 1.44rem;
+  } 
+
+  .card-header {
+    gap:0.75rem;
+  }
+
+  .four-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m-tablet);
+  }
+
+  .icon-cardarrow > img {
+    width: 2.19rem;
+    height: 2.19rem;
+  }
+
+  .card-header > p > picture > a > img {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
+@media (width >= 1280px) {
+  .three-cards .card {
+    width: 22.19rem;
+    height: 24.34rem;
+    border-top-left-radius: 2.8rem;
+    border-bottom-right-radius: 2.8rem;
+    gap: .54rem;
+    padding: 1.23rem 2.15rem;
+  }
+
+  .three-cards .card-header {
+    gap: .6438rem;
+  }
+
+  .card-header > p > picture  > img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .three-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m);
+  } 
+
+  .three-cards .card .button-container .icon-cardarrow > img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .four-cards .card {
+    width: 257.27px;
+    height: 386.77px;
+    padding:31.5px 32.5px ;
+    max-width: 100%;
+    align-self: stretch;
+  }
+
+  .four-cards .card .card-header > h5 {
+    font-size: var(--heading-font-m);
+  }
+
+  .icon-cardarrow > img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (width >= 1440px) {
+  .three-cards .card {
+    width: 25rem;
+    height: 27.43rem;
+    border-top-left-radius: 3.15rem;
+    border-bottom-right-radius: 3.15rem;
+    gap: .61rem;
+    padding: 1.45rem 2.43rem;
+  }
+
+  .three-cards .card-header {
+    gap: .73rem;
+  }
+
+  .card-header > p > picture  > img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .three-cards .card .button-container .icon-cardarrow > img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .four-cards .card {
+    width: 288.067px;
+    height: 433.067px;
+    flex-shrink: 0;
+    padding: 2.3344rem 2.3563rem;
+  }
+
+  .icon-cardarrow > img {
+    width: 3.13rem;
+    height: 3.13rem;
+  }
 }
