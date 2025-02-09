@@ -6,10 +6,7 @@ h5, p {
 .cards {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   align-items: center;
-=======
->>>>>>> 2cfe0edb8992be72297ce895a8e2cbf75e887b50
   gap: .625rem;
   flex-direction: column;
   margin: 0 auto;  
@@ -150,6 +147,7 @@ h5, p {
 
   .three-cards {
     flex-direction: column;
+    gap: 1.25rem;
   }
 
   .four-cards .card {
