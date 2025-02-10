@@ -89,7 +89,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
   gap: 3.25rem 2.5rem;
 }
 
@@ -138,6 +138,15 @@
     margin: 0;
   }
   
+}
+
+.article-cards.list > ul > li {
+  padding: 2.5rem 0;
+  border-bottom: .0625rem solid gray;
+}
+
+.article-cards.list > ul > li:last-child {
+  border: none;
 }
 
 /* RESOURCES STYLES */
