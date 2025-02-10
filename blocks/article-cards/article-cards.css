@@ -145,16 +145,16 @@
   border-bottom: .0625rem solid gray;
 }
 
+.article-cards.resources > ul > li {
+  border-bottom: .0625rem solid gray;
+  padding: 2.5rem 0;
+}
+
 .article-cards.list > ul > li:last-child {
   border: none;
 }
 
 /* RESOURCES STYLES */
-
-.article-cards.resources > ul > li {
-  border-bottom: .0625rem solid gray;
-  padding: 2.5rem 0;
-}
 
 .article-cards.resources > ul > li:last-child {
   border: none;
