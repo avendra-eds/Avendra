@@ -7,17 +7,10 @@ h5, p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: .625rem;
+  gap: .63rem;
   margin: 0 auto;  
  
 }
-
-/* .four-cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-self: stretch;
-} */
 
 .card {
   display: flex;
@@ -26,7 +19,7 @@ h5, p {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  border: 1px solid #ddd; 
+  border: .07rem solid #ddd; 
   border-radius: var(--border-tear-drop);
   padding: 2rem 2.3rem;
   background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
@@ -47,7 +40,7 @@ h5, p {
 
 .four-cards .card {
   width: 19.49rem;
-  height: 458.71px;
+  height: 28.67rem;
   padding: 3.2rem 2.4rem  ;
 }
 
@@ -140,10 +133,10 @@ h5, p {
   }
 
   .four-cards .card {
-    max-width: calc(50% - 16px);
-    width: 20.625rem;
-    height: 31.0625rem;
-    padding: 2.7062rem;
+    max-width: calc(50% - 1rem);
+    width: 20.63rem;
+    height: 31.06rem;
+    padding: 2.71rem;
 
   }
 
@@ -179,7 +172,7 @@ h5, p {
   }
 
   .four-cards .card .card-header > h5 {
-    font-size: var(--heading-font-m-tablet);
+    font-size: 1.25rem;
   }
 
   .icon-cardarrow > img {
@@ -196,9 +189,9 @@ h5, p {
 
 @media (width >= 1280px) {
   .four-cards .card {
-    width: 257.273px;
-    height: 386.773px;
-    padding:31.5px 32.5px ;
+    width: 16.08rem;
+    height: 24.17rem;
+    padding: 1.97rem 2.03rem ;
     max-width: 100%;
     align-self: stretch;
   }
@@ -215,10 +208,10 @@ h5, p {
 
 @media (width >= 1440px) {
   .four-cards .card {
-    width: 288.067px;
-    height: 433.067px;
+    width: 18rem;
+    height: 27.07rem;
     flex-shrink: 0;
-    padding: 2.3344rem 2.3563rem;
+    padding: 2.33rem 2.36rem;
   }
 
   .icon-cardarrow > img {
