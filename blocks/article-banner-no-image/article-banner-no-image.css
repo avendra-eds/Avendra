@@ -7,10 +7,11 @@ main .section.article-banner-no-image-container {
 
 .article-banner-no-image-wrapper {
     height: 300px;
+    background-color: gainsboro;
+    height: 417px;
 }
 
 .article-banner-no-image {
-    background-color: gainsboro; /* TO REMOVE */
     position: relative;
 }
 
@@ -48,13 +49,11 @@ main .section.article-banner-no-image-container {
 
 .article-banner-no-image > div {
     position: relative;
-    height: 23rem;
 }
 }
 
 @media (width >= 600px) {
     .article-banner-no-image > div {
-        height: 32.3125rem;
     }
 }
 
