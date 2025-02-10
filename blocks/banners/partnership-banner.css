@@ -1,0 +1,106 @@
+@media (width >= 998px) {
+    .partnership-banner {
+        display: flex;
+        padding: 7.5rem 5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+
+    .partnership-banner > div:last-child {
+        padding: 0 5rem;
+    }
+
+    .partnership-banner > div:first-child > div > h3,
+    .partnership-banner > div:first-child > div > h6 {
+        padding: 0 5rem;
+        width: 100%;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p {
+        display: flex;
+        gap: 3rem;
+        padding: 0 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p > picture img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .columns-container > .columns-wrapper > .partnership-banner {
+        background-image: url("../../assets/lines-background.png");
+        background-size: c;
+    }
+}
+
+@media (width < 998px) {
+    .partnership-banner {
+        display: flex;
+        padding: 2.5rem 0;
+        flex-direction: column;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .partnership-banner > div {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .partnership-banner > div:first-child {
+        padding: 0 2rem;
+    }
+
+    .partnership-banner > div:nth-of-type(2) {
+        padding: 0 2rem;
+    }
+
+    .partnership-banner > div:first-child > div {
+        padding: 0 1rem;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p > picture {
+        display: flex;
+        height: 100%;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p > picture img {
+        width: 100%;
+        max-width: 20.75rem;
+        height: 4.05rem;
+        object-fit: contain;
+    }
+
+    .partnership-banner > div:first-child > div > h3 {
+        font-size: 1.75rem;
+        font-weight: var(--text-bold);
+        line-height: var(--line-height-120);
+    }
+
+    .partnership-banner > div:last-child > .button-container {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .partnership-banner > div:last-child > .button-container > p > .button {
+        display: inline-block;
+        width: 90%;
+        max-width: 100%;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .columns-container > .columns-wrapper > .partnership-banner {
+        background-image: none;
+    }
+}

@@ -1,0 +1,76 @@
+@media (width >= 998px) {
+    .highlighted-banner > div {
+        display: flex;
+        padding: 7.5rem 5rem;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .highlighted-banner > div > div:first-child > picture img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-tear-drop);
+        background-color: var(--background-sky);
+    }
+
+    .highlighted-banner > div > div:last-child {
+        margin: 0 0 1rem;
+    }
+
+    .highlighted-banner > div > div:last-child > h5 {
+        max-width: 39.25rem;
+    }
+
+    .highlighted-banner > div > div:last-child > p {
+        max-width: 38.75rem;
+    }
+
+    .highlighted-banner > div > div:last-child > h5 > em {
+        color: var(--text-sky);
+        font-style: normal;
+    }
+}
+
+@media (width < 998px) {
+    .highlighted-banner > div {
+        display: flex;
+        padding: 2.5rem;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .highlighted-banner > div > div:first-child > picture img {
+        width: 100%;
+        max-width: 31.25rem;
+        margin: 0 auto;
+        border-radius: 2rem 0;
+    }
+
+    .highlighted-banner > div > div:last-child {
+        padding: 1.5rem 0;
+    }
+
+    .highlighted-banner > div > div:last-child > h5 {
+        max-width: 100%;
+        padding: 0 1rem;
+        font-size: var(--heading-font-m);
+    }
+
+    .highlighted-banner > div > div:last-child > h6 {
+        padding: 0 1rem;
+        font-size: var(--heading-font-s);
+    }
+
+    .highlighted-banner > div > div:last-child > p {
+        padding: 0 1rem;
+        font-size: var(--heading-font-s);
+    }
+
+    .highlighted-banner > div > div:last-child > h5 > em {
+        color: var(--text-sky);
+        font-style: normal;
+    }
+}

@@ -1,0 +1,63 @@
+.icon-banner {
+    background-color: var(--background-midnight);
+    padding: 5rem 2.5rem;
+}
+
+.icon-banner > div:last-child > div > h4 {
+    color: var(--text-inverse);
+    line-height: var(--line-height-120);
+    margin: 0;
+}
+
+.icon-banner > div:last-child > div > h4 > em {
+    color: var(--text-sky);
+    font-style: normal;
+}
+
+.icon-banner > div:first-child > div > p > picture img {
+    width: 1.6rem;
+    height: 2.25rem;
+    min-width: 2.5rem;
+    object-fit: contain;
+}
+
+.icon-banner > div:first-child > div > p {
+    display: flex;
+    width: 9.9rem;
+    justify-content: left;
+    align-items: center;
+    gap: 1.89rem;
+}
+
+@media (min-width: 1280px) {
+    .icon-banner {
+        background-color: var(--background-midnight);
+        padding: 7.5rem 5rem;
+    }
+
+    .icon-banner > div:first-child > div > p {
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .icon-banner > div:first-child > div > p > picture img {
+        width: 3.5rem;
+        height: 3.5rem;
+        min-width: 3.5rem;
+        object-fit: contain;
+    }
+
+    .icon-banner > div:last-child > div > h4 {
+        font-size: var(--heading-font-xxl);
+        font-weight: var(--text-light);
+        color: var(--text-inverse);
+        line-height: var(--line-height-120);
+        margin: 0;
+    }
+
+    .icon-banner > div:last-child > div > h4 > em {
+        color: var(--text-sky);
+        font-style: normal;
+    }
+}
