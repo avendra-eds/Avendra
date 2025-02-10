@@ -2,29 +2,15 @@ main .section.carousel-container {
   padding: 0;
 }
 
-.carousel-container {
-  padding: 0;
-}
-
-
-.carousel h1 {
-  color: var(--text-inverse);
-}
-
 
 .carousel-wrapper {
   position: relative;
 }
 
-/* TO REVIEW: Contains the newly added controls */
-.carousel [aria-label="Carousel Slide Controls"] {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  z-index: 10;
-  margin: 0;
+/* MAIN STYLES */
+.carousel h1 {
+  color: var(--text-inverse);
+  font-size: var(--heading-hero-text);
 }
 
 .carousel .carousel-slides,
@@ -55,6 +41,16 @@ main .section.carousel-container {
   position: relative;
   width: 100%;
   min-height: min(50vw, calc(100dvh - var(--header-height)));
+  height: 551px;
+}
+
+@media (width >= 600px) {
+  .carousel .carousel-slide {
+    height: 832px;
+  }
+  .carousel h1 {
+    font-size: 5.5625rem;
+  }
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
@@ -96,7 +92,17 @@ main .section.carousel-container {
   color: white;
   background-color: transparent;
   width: var(--slide-content-width, auto);
-  height: 580px;
+}
+
+/* CAROUSEL SLIDE CONTROLS (Indicators, Navigation Buttons) */
+.carousel [aria-label="Carousel Slide Controls"] {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  z-index: 10;
+  margin: 0;
 }
 
 .carousel .carousel-slide-indicators {
@@ -126,7 +132,6 @@ main .section.carousel-container {
 .carousel .carousel-slide-indicator button:focus-visible {
   background-color: white;
 }
-
 
 /* ARROWS */
 .carousel .carousel-navigation-buttons {
@@ -175,7 +180,7 @@ main .section.carousel-container {
 
 @media (width >= 600px) {
   .carousel .carousel-slide .carousel-slide-content {
-    --slide-content-width: calc((100%) / 2);
+    --slide-content-width: 60%;
     
     margin: 14.3125rem 0 14.3125rem 5rem;
   }
