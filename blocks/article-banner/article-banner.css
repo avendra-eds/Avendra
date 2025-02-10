@@ -1,100 +1,76 @@
+/* MAIN Styles */
 main .section.article-banner-container {
     padding: 0;
     position: relative; 
-    /* margin-top: -150px; TO SHIFT IT UP*/
+    
+    /* margin-top: -150px; TO SHIFT IT UP */
     z-index: 1; 
 }
 
-.article-banner h4, .article-banner p {
-    color: #ffffff;  
-}
-
-.article-banner h4 {
-    margin: 0px;
-    padding: 0px;
-}
-
-.article-banner h6 {
-    margin-bottom: 20px;
-    padding: 0px;
+/* Mobile height */
+.article-banner {
+    height: 23rem;
 }
 
 .article-banner p {
-    margin: 0px;
-    padding: 0px;
+    font-size: var(--body-text);
+    margin: .5rem 0;
+    padding: 0;
+    color: var(--background); 
 }
 
+.article-banner h6 {
+    margin-bottom: 1.25rem;
+    padding: 0;
+    font-weight: var(--text-bold);
+    font-size: var(--body-text);
+}
 
-@media (width <= 600px) {
 .article-banner h4 {
-    font-size: large;
-}  
-
-.article-banner p, .article-banner h6 {
-    font-size: smaller;
+    margin: 0;
+    padding: 0;
+    color: var(--background); 
+    font-size: 1.7769rem;
 }
 
-.article-banner > div {
-    position: relative;
-    height: 23rem;
-}
+.article-banner.no-image p, .article-banner.no-image h4 {
+    color: black;
 }
 
+/* Desktop Styles */
 @media (width >= 600px) {
-    .article-banner > div {
+    .article-banner h4 {
+        font-size: var(--quote-text);
+    }
+
+    .article-banner {
         height: 32.3125rem;
     }
+
+    .article-banner.no-image {
+        height: 28.4375rem;
+    }
 }
-
-/* Background Image */
-.article-banner > div > div:last-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.article-banner > div > div:last-child picture::after {
-    content: "";
-    position: absolute;
-    inset: 0; 
-    background: linear-gradient(to right, black, transparent);
-    pointer-events: none; 
-  }
-
-
-.article-banner > div > div:last-child picture,
-.article-banner > div > div:last-child picture > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.article-banner > div > div:last-child picture img {
-    width: 100%;
-}
-
-/* Texts */
-.article-banner > div > div:first-child {
-    position: absolute;
-    left: 40px;
-    bottom: 60px;
-    z-index: 2;
-  }
 
 @media (width <= 300px) {
     .article-banner h4, .article-banner p {
         font-size: small;
     }
 }
+
+/* Article Data */
+.article-banner > div > div:first-child {
+    position: absolute;
+    left: 2.5rem;
+    bottom: 6rem;
+    z-index: 2;
+  }
+
 @media (width >= 600px) {
     .article-banner > div > div:first-child {
-        left: 80px;
-        bottom: 60px;
-        max-width: 737px;
+        left: 5rem;
+        bottom: 3.75rem;
+        max-width: 70%; /* Arbitrary value based on Figma */
       }  
  }
 
@@ -105,6 +81,30 @@ main .section.article-banner-container {
 .article-banner > div > div:first-child p {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-top: 20px;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+/* Background Image */
+.article-banner > div > div:last-child {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.article-banner > div > div:last-child picture,
+.article-banner > div > div:last-child picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TO REMOVE, gradient */
+.article-banner > div > div:last-child picture::after {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: linear-gradient(to right, black, transparent);
+    pointer-events: none; 
   }
