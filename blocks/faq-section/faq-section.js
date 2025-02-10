@@ -1,14 +1,24 @@
 export default function decorate(block) {
-    //Create a new wrapper div
-    const newWrapper = document.createElement('div');
-    newWrapper.classList.add('faq-content-wrapper'); // Add class to the wrapper
+  // Get the parent element
+  const sectionParent = block.parentNode.parentElement;
 
-    //Select the first two divs (faq-title-wrapper and accordion-wrapper)
-    [...block.children].slice(0, 2).forEach((child) => newWrapper.append(child));
+  // Create a new wrapper div
+  const newWrapper = document.createElement('div');
+  newWrapper.classList.add('faq-content-wrapper'); // Add class to the wrapper
 
-    //Prepend the new wrapper to the block
-    block.prepend(newWrapper);
+  // Get all child elements of the parent
+  const children = Array.from(sectionParent.children);
 
-    //Add a class to the parent block for additional styling
-    block.classList.add('faq-container');
+  // Check if there are at least three children
+  if (children.length >= 2) {
+    // Append the first and second child divs to the new wrapper
+    newWrapper.appendChild(children[0]); // faq-section-wrapper
+    newWrapper.appendChild(children[1]); // accordion-wrapper
+
+    // Insert the new wrapper before the third child if it exists, or at the end
+    sectionParent.insertBefore(newWrapper, children[2] || null);
+  }
+
+  // Add a class to the parent block for additional styling
+  block.classList.add('faq-container');
 }
