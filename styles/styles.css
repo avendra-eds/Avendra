@@ -346,7 +346,7 @@ a.button.secondary:focus,
 button.secondary:hover,
 button.secondary:focus {
   background-color: var(--background-light-sky);
-  border: 2px solid var(--button-hover-sky);
+  border: 0.125rem solid var(--button-hover-sky);
   border-radius: 2.5rem;
   cursor: pointer;
   text-decoration: none;
