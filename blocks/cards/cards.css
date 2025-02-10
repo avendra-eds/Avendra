@@ -7,7 +7,7 @@ h5, p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .625rem;
+  gap: .63rem;
   flex-direction: column;
   margin: 0 auto;  
  
@@ -18,7 +18,7 @@ h5, p {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  border: 1px solid #ddd; 
+  border: .07rem solid #ddd; 
   background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
   background-size: cover;
   background-position: center;
@@ -34,9 +34,8 @@ h5, p {
 .three-cards .card {
   width: 19.57rem;
   height: 21.46rem;
-  border-top-left-radius: 2.47rem;
-  border-bottom-right-radius: 2.47rem;
-  gap: .475rem;
+  border-radius: 2.47rem 0;
+  gap: .48rem;
   padding: 1.14rem 1.89rem;
 }
 
@@ -116,9 +115,8 @@ h5, p {
 
   .three-cards .card {
     width: 32.5rem;
-    height: 35.655rem;
-    border-top-left-radius: 4.1rem;
-    border-bottom-right-radius: 4.1rem;
+    height: 35.66rem;
+    border-radius: var(--border-tear-drop);
     gap: .79rem;
     padding: 1.89rem 3.16rem;
   }
@@ -151,7 +149,7 @@ h5, p {
   }
 
   .four-cards .card {
-    max-width: calc(50% - 16px);
+    max-width: calc(50% - 1rem);
     width: 20.63rem;
     height: 31.06rem;
     padding: 2.71rem;
@@ -160,6 +158,7 @@ h5, p {
   .three-cards .card {
     width: 43rem;
     height: 47.17rem;
+    border-radius: 5.43rem 0;
   }
 
   .three-cards .card-header {
@@ -172,8 +171,8 @@ h5, p {
   }
 
   .card-header > p > picture  > img {
-    width: 5.4269rem;
-    height: 5.4269rem;   
+    width: 5.43rem;
+    height: 5.43rem;   
   }
 
   .four-cards .card .card-header > h5 {
@@ -183,16 +182,15 @@ h5, p {
   .three-cards .card .button-container .icon-cardarrow > img {
     width: 5.34rem;
     height: 5.35rem;
-  }
+  }  
 }
 
 @media (width >= 992px) {  
   .three-cards .card {
     width: 17.18rem;
     height: 18.85rem;
-    border-top-left-radius: 2.17rem;
-    border-bottom-right-radius: 2.17rem;
-    gap: .417rem;
+    border-radius: var(--border-tear-drop);
+    gap: .5rem;
     padding: 1.00rem 1.67rem;
     }
 
@@ -234,23 +232,22 @@ h5, p {
     gap:0.75rem;
   }
 
-  .four-cards .card .card-header > h5 {
-    font-size: var(--heading-font-m-tablet);
-  }  
+  .three-cards .card-header{
+    gap: .5rem;
+  }
 }
 
 @media (width >= 1280px) {
   .three-cards .card {
     width: 22.19rem;
     height: 24.34rem;
-    border-top-left-radius: 2.8rem;
-    border-bottom-right-radius: 2.8rem;
+    border-radius: 2.8rem 0;
     gap: .54rem;
     padding: 1.23rem 2.15rem;
   }
 
   .three-cards .card-header {
-    gap: .6438rem;
+    gap: .64rem;
   }
 
   .icon-cardarrow > img {
@@ -273,9 +270,9 @@ h5, p {
   }
 
   .four-cards .card {
-    width: 257.27px;
-    height: 386.77px;
-    padding:31.5px 32.5px ;
+    width: 16.08rem;
+    height: 24.17rem;
+    padding:1.97rem 2.03rem ;
     max-width: 100%;
     align-self: stretch;
   }
@@ -289,8 +286,7 @@ h5, p {
   .three-cards .card {
     width: 25rem;
     height: 27.43rem;
-    border-top-left-radius: 3.15rem;
-    border-bottom-right-radius: 3.15rem;
+    border-radius: var(--border-tear-drop);
     gap: .61rem;
     padding: 1.45rem 2.43rem;
   }
@@ -305,19 +301,19 @@ h5, p {
   }
 
   .card-header > p > picture  > img {
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 3.13rem;
+    height: 3.13rem;
   }
 
   .three-cards .card .button-container .icon-cardarrow > img {
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 3.13rem;
+    height: 3.13rem;
   }
 
   .four-cards .card {
-    width: 288.067px;
-    height: 433.067px;
+    width: 18rem;
+    height: 27.07rem;
     flex-shrink: 0;
-    padding: 2.3344rem 2.3563rem;
+    padding: 2.33rem 2.36rem;
   } 
 }
