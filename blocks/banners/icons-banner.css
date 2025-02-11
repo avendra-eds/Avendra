@@ -19,6 +19,7 @@
     height: 2.25rem;
     min-width: 2.5rem;
     object-fit: contain;
+    border-radius: 0;
 }
 
 .icon-banner > div:first-child > div > p {
@@ -46,6 +47,8 @@
         height: 3.5rem;
         min-width: 3.5rem;
         object-fit: contain;
+        border-radius: 0;
+
     }
 
     .icon-banner > div:last-child > div > h4 {
@@ -59,5 +62,6 @@
     .icon-banner > div:last-child > div > h4 > em {
         color: var(--text-sky);
         font-style: normal;
+        font-size: var(--heading-font-xxl);
     }
 }
