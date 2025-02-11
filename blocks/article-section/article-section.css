@@ -32,7 +32,6 @@
 
 .quote .left picture > img,
 .text .right picture > img {
-  border-radius:  3.25rem 0;
   width: 100%;
 }
 
