@@ -67,12 +67,9 @@ main .section.article-banner-container {
   }
 
   @media (width >= 1280px) {
-    .article-banner > div > div:last-child {
-      padding: 0 4.43rem 3.875rem;
-    }
-    
     .article-banner h4 {
       font-size: var(--heading-font-l);
+      width: 75%;
     }
   }
 
@@ -86,15 +83,6 @@ main .section.article-banner-container {
     }
   }
     
-  @media (width >= 1440px) {
-    .article-banner > div > div:last-child {
-      padding: 0 5rem 3.875rem;
-    }
-    
-    .article-banner h4 {
-      font-size: var(--heading-font-l);
-    }
-  }
 
 .article-banner > div > div:last-child picture img {
     width: 3rem;
