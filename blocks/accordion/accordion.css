@@ -6,7 +6,7 @@
 .accordion details summary p {
   font-weight: var(--text-medium);
   line-height: var(--line-height-120);
-  width: 90%;
+  width: 80%;
 }
 
 .accordion details div p {
@@ -43,7 +43,7 @@
   content: '';
   position: absolute;
   top: 50%;
-  right: 1.125rem;
+  right: 0;
   transform: translateY(-50%);
   width: 1.5rem;
   height: 1.5rem;
@@ -58,12 +58,9 @@
   background-color: var(--background);
 }
 
-@media (width <= 600px) {
+@media (width >= 600px) {
   .accordion details summary p {
-    width: 73%;
-  }
-
-  .accordion details div p {
     width: 95%;
   }
 }
+
