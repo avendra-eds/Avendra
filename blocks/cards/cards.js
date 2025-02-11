@@ -9,5 +9,15 @@ export default function decorate(block) {
 
     const cardLinkIcon = row.querySelectorAll('div')[2];
     cardLinkIcon.classList.add('card-link-icon');
+
+    const linkElement = row.querySelector('.card-link-icon a');
+    if (linkElement) {
+      const url = linkElement.href;
+      row.addEventListener('click', (event) => {
+        if (!event.target.closest('.card-link-icon')) {
+          window.location.href = url;
+        }
+      });
+    }
   });
 }
