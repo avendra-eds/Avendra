@@ -24,6 +24,11 @@
   --background: white;
   --background-midnight: #011b2b;
   --background-light-sky: #B2DDF5;
+  --overlaycolour: #170C09;
+  
+  /* gradient colors */
+  --background-linear-gradient-midnight: #011b2b;
+  --background-linear-gradient-dark: #170C09;
 
   /* button colors */
   --button-primary: #008fdc;
