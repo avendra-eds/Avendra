@@ -1,84 +1,98 @@
 /* MAIN Styles */
 main .section.article-banner-container {
     padding: 0;
-    position: relative; 
     
-    /* margin-top: -150px; TO SHIFT IT UP */
+    /* margin-top: -150px; TODO in Template: SHIFT IT UP */
     z-index: 1; 
 }
 
-/* Mobile height */
 .article-banner {
     height: 23rem;
 }
+
+.article-banner > div {
+    position: relative; /* Retain positioning context for the absolutely positioned first child */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
 .article-banner p {
     font-size: var(--body-text);
     margin: .5rem 0;
     padding: 0;
-    color: var(--background); 
+    color: var(--text-inverse); 
 }
 
 .article-banner h6 {
     margin-bottom: 1.25rem;
     padding: 0;
-    font-weight: var(--text-bold);
-    font-size: var(--body-text);
 }
 
 .article-banner h4 {
     margin: 0;
     padding: 0;
-    color: var(--background); 
-    font-size: 1.7769rem;
+    color: var(--text-inverse); 
+    font-size: var(--heading-font-m);
 }
 
 .article-banner.no-image p, .article-banner.no-image h4 {
-    color: black;
+    color: var(--text-primary);
 }
+
+/* Article Banner Text */
+.article-banner > div > div:last-child {
+    margin-top: auto;
+    margin-bottom: 2.8rem;
+    margin-left: 3rem;
+    z-index: 2;
+  }
 
 /* Desktop Styles */
 @media (width >= 600px) {
     .article-banner h4 {
-        font-size: var(--quote-text);
+        font-size: var(--heading-font-l);
     }
 
     .article-banner {
-        height: 32.3125rem;
+        height: 32.3rem;
     }
 
     .article-banner.no-image {
-        height: 28.4375rem;
+        height: 28.4rem;
+    }
+    .article-banner > div > div:last-child {
+        margin-top: auto;
+        margin-bottom: 3.8rem;
+        margin-left: 5rem;
+      }
+
+}
+
+@media (width >= 992px) {
+    .article-banner h4 {
+        width: 75%;
     }
 }
 
-@media (width <= 300px) {
-    .article-banner h4, .article-banner p {
+@media (width <= 314px) {
+    .article-banner h4, .article-banner p, .article-banner h6 {
         font-size: small;
     }
+
+    .article-banner {
+        height: 15rem;
+    }
 }
 
-/* Article Data */
-.article-banner > div > div:first-child {
-    position: absolute;
-    left: 2.5rem;
-    bottom: 6rem;
-    z-index: 2;
-  }
 
-@media (width >= 600px) {
-    .article-banner > div > div:first-child {
-        left: 5rem;
-        bottom: 3.75rem;
-        max-width: 70%; /* Arbitrary value based on Figma */
-      }  
- }
-
-.article-banner > div > div:first-child picture img {
+.article-banner > div > div:last-child picture img {
     width: 3rem;
+    border: .0625rem solid var(--text-primary);
+    border-radius: 50%;
 }
 
-.article-banner > div > div:first-child p {
+.article-banner > div > div:last-child p {
     display: flex;
     align-items: center;
     gap: 1.25rem;
@@ -86,22 +100,23 @@ main .section.article-banner-container {
   }
 
 /* Background Image */
-.article-banner > div > div:last-child {
+.article-banner > div > div:first-child {
     position: absolute;
-    inset: 0;
-    z-index: 1;
+    height: 100%;
+    z-index: -1;
     overflow: hidden;
+    width: 100%;
 }
 
-.article-banner > div > div:last-child picture,
-.article-banner > div > div:last-child picture > img {
+.article-banner > div > div:first-child picture,
+.article-banner > div > div:first-child picture > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* TO REMOVE, gradient */
-.article-banner > div > div:last-child picture::after {
+.article-banner > div > div:first-child picture::after {
     content: "";
     position: absolute;
     inset: 0; 
