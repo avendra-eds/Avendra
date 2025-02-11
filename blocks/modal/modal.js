@@ -14,6 +14,13 @@ export async function createModal(contentNodes) {
   const dialog = document.createElement('dialog');
   const dialogContent = document.createElement('div');
   dialogContent.classList.add('modal-content');
+
+  contentNodes.forEach((node) => {
+    if (node.classList && node.classList.contains('video-container')) {
+      dialog.classList.add('dark-background');
+    }
+  });
+
   dialogContent.append(...contentNodes);
   dialog.append(dialogContent);
 
