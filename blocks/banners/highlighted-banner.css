@@ -97,6 +97,9 @@
     .highlighted-banner > div > div:first-child > picture img {
         flex-shrink: 0;
         max-width: 100%;
+        height: 22rem;
+        border-radius: var(--border-tear-drop);
+        object-fit: cover;
     }
 }
 
