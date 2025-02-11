@@ -3,6 +3,9 @@ h5, p {
   padding: 0;
 }
 
+main .cards-container { 
+  padding: 0; 
+}
 
 .cards {
   display: flex;
