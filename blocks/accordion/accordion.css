@@ -6,7 +6,7 @@
 .accordion details summary p {
   font-weight: var(--text-medium);
   line-height: var(--line-height-120);
-  width: 95%;
+  width: 80%;
 }
 
 .accordion details div p {
@@ -58,18 +58,9 @@
   background-color: var(--background);
 }
 
-@media (width <= 600px) {
+@media (width >= 600px) {
   .accordion details summary p {
-    width: 95%;
-  }
-
-  .accordion details div p {
     width: 95%;
   }
 }
 
-@media (width <= 393px) {
-  .accordion details summary p {
-    width: 80%;
-  }
-}
