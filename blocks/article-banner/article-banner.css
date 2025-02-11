@@ -116,11 +116,10 @@ main .section.article-banner-container {
   object-fit: cover;
 }
 
-/* TO REMOVE, gradient */
 .article-banner > div > div:first-child picture::after {
     content: "";
     position: absolute;
     inset: 0; 
-    background: linear-gradient(to right, black, transparent);
+    background: linear-gradient(270deg, rgba(1, 27, 43, 0.00) 0%, #011B2B 100%);
     pointer-events: none; 
   }
