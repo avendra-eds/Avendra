@@ -44,7 +44,7 @@
     max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .partnership-banner > div:nth-of-type(2) > div > p > picture img {
         width: 100%;
         height: 8rem;
@@ -56,7 +56,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
     .partnership-banner {
         display: flex;
         padding: 7.5rem 3rem;
@@ -85,15 +85,9 @@
         height: auto;
         object-fit: contain;
     }
-
-    .columns-container > .columns-wrapper > .partnership-banner {
-        /* background-image: url("../../assets/lines-background.png");
-        background-size: contain;
-        background-repeat: no-repeat; */
-    }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
     .partnership-banner {
         padding: 7.5rem 4rem;
     }
