@@ -295,6 +295,7 @@ a:any-link {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   word-break: break-word;
+  cursor: pointer;
 }
 
 a:hover {
@@ -304,6 +305,7 @@ a:hover {
   text-decoration-skip-ink: auto;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
+  cursor: pointer;
 }
 
 /* buttons */
