@@ -430,7 +430,7 @@ button.tertiary {
 }
 
 a.button.secondary:hover,
-button.secondary:hover {
+button.secondary:hover,
 a.button.tertiary:hover,
 button.tertiary:hover {
   text-decoration: none;
