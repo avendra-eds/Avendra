@@ -23,6 +23,7 @@
   --background: white;
   --background-midnight: #011b2b;
   --background-light-sky: #B2DDF5;
+  --background-black: #000;
 
   /* button colors */
   --button-primary: #008fdc;
@@ -172,7 +173,7 @@ h3 {
   color: var(--text-midnight)
 }
 
-h4 { 
+h4, h4 > em { 
   font-size: var(--heading-font-l); 
   font-weight: var(--text-regular);
   font-style: normal;
@@ -183,12 +184,13 @@ h5 {
   font-weight: var(--text-regular);
 }
 
-h6 { 
+h6, h6 > em { 
   font-size: var(--heading-font-s); 
   font-weight: var(--text-bold);
   text-transform: uppercase;
   font-style: normal;
   color: var(--text-sky);
+
 }
 
 p,
@@ -334,26 +336,26 @@ button:disabled:hover {
   text-decoration: none;
 }
 
-a.button.primary,
-button.primary {
+a.button.secondary,
+button.secondary {
   background-color: var(--button-tertiary);
   color: var(--text-primary);
   cursor: pointer;
 }
 
-a.button.primary:hover,
-a.button.primary:focus,
-button.primary:hover,
-button.primary:focus {
+a.button.secondary:hover,
+a.button.secondary:focus,
+button.secondary:hover,
+button.secondary:focus {
   background-color: var(--background-light-sky);
-  border: 2px solid var(--button-hover-sky);
+  border: 0.125rem solid var(--button-hover-sky);
   border-radius: 2.5rem;
   cursor: pointer;
   text-decoration: none;
 }
 
-a.button.secondary,
-button.secondary {
+a.button.tertiary,
+button.tertiary {
   background-color: var(--button-tertiary);
   border: 1px solid var(--button-primary);
   color: var(--button-secondary);
@@ -374,8 +376,8 @@ button.secondary {
   white-space: nowrap;
 }
 
-a.button.secondary:hover,
-button.secondary:hover {
+a.button.tertiary:hover,
+button.tertiary:hover {
   text-decoration: none;
   cursor: pointer;
   background-color: #EEEFEF;
