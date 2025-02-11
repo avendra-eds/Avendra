@@ -61,7 +61,8 @@ h5, p {
 } 
 
 .card-link-icon a.button:any-link,
-.card-link-icon > p > span {
+.card-link-icon > p > span ,
+.button .icon{
   all:unset
 }
 
@@ -78,7 +79,6 @@ h5, p {
   z-index: -1;
 }
 
-.button .icon,
 .icon-cardarrow > img {
   width: 2.5rem;
   height: 2.5rem;
@@ -118,7 +118,6 @@ h5, p {
     padding: 1.89rem 3.16rem;
   }
 
-  .button .icon,
   .icon-cardarrow > img,
   .card-header > p > picture  > img 
    {
@@ -153,19 +152,18 @@ h5, p {
 
   .three-cards .card-header {
     gap: 1.25rem;
-  }
+  } 
 
-  .button .icon,
-  .icon-cardarrow > img {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .card-header > p > picture  > img ,
-  .button-container .icon-cardarrow > img {
+  .icon-cardarrow > img,
+  .card-header > p > picture  > img {
     width: 5.34rem;
     height: 5.35rem;
   }  
+
+  .four-cards .card .icon-cardarrow > img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 @media (width >= 992px) {  
@@ -176,15 +174,12 @@ h5, p {
     padding: 1.00rem 1.67rem;
     }
 
-  .button-container .icon-cardarrow > img {
+  .icon-cardarrow > img ,
+  .three-cards .card-header > p > picture  > img 
+  .four-cards .card .icon-cardarrow > img {
     width: 2.19rem; 
     height: 2.19rem;
   }
-
-  .three-cards .card-header > p > picture  > img {
-    width: 2.16rem;
-    height: 2.16rem;
-  }  
 
   .four-cards, .three-cards {
     flex-direction: row;
@@ -213,8 +208,9 @@ h5, p {
     padding: 1.23rem 2.15rem;
   }
 
-  .card-header > p > picture  > img,
-  .button-container .icon-cardarrow > img {
+  .icon-cardarrow > img ,
+  .three-cards .card-header > p > picture  > img,
+  .four-cards .card .icon-cardarrow > img {
     width: 2.8rem;
     height: 2.8rem;
   }
@@ -237,8 +233,9 @@ h5, p {
     padding: 1.45rem 2.43rem;
   }
 
-  .card-header > p > picture  > img ,
-  .button-container .icon-cardarrow > img {
+  .icon-cardarrow > img ,
+  .three-cards .card-header > p > picture  > img
+  .four-cards .card .icon-cardarrow > img {
     width: 3.13rem;
     height: 3.13rem;
   }
