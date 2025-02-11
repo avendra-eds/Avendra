@@ -3,14 +3,14 @@ h5, p {
   padding: 0;
 }
 
+
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: .63rem;
   flex-direction: column;
-  margin: 0 auto;  
- 
+  margin: 0 auto;   
 }
 
 .card {
@@ -18,13 +18,14 @@ h5, p {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  border: .07rem solid #ddd; 
+  border-radius: var(--border-tear-drop);
   background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -33,8 +34,7 @@ h5, p {
 
 .three-cards .card {
   width: 19.57rem;
-  height: 21.46rem;
-  border-radius: 2.47rem 0;
+  height: 21.46rem; 
   gap: .48rem;
   padding: 1.14rem 1.89rem;
 }
@@ -78,10 +78,8 @@ h5, p {
   z-index: -1;
 }
 
-.icon-cardarrow > img {
-  width: 2.45rem;
-  height: 2.45rem;
-  cursor: pointer;
+.card-header > p > picture > img{
+  border-radius: 0;
 }
 
 .card-background-image > picture > img {
@@ -90,13 +88,13 @@ h5, p {
   object-fit: cover;
 }
 
-.card-header > p > picture > a > img {
-  width: 2.46rem;
-  height: 2.46rem;
-}
-
-.button-container .icon-cardarrow img {
-  cursor: pointer;
+.button .icon,
+.icon-cardarrow > img, 
+.card-header > p > picture > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  border-radius: 0;
 }
 
 @media (width >= 600px) {
@@ -116,24 +114,17 @@ h5, p {
   .three-cards .card {
     width: 32.5rem;
     height: 35.66rem;
-    border-radius: var(--border-tear-drop);
     gap: .79rem;
     padding: 1.89rem 3.16rem;
   }
 
-  .icon-cardarrow > img {
+  .button .icon,
+  .icon-cardarrow > img,
+  .card-header > p > picture  > img 
+   {
     width: 4rem;
     height: 4rem;
   }
-
-  .card-header > p > picture  > img {
-    width: 4.1rem;
-    height: 4.1rem; 
-  }
-
-  .card-header > h5 {
-    font-size: var(--heading-font-l);
-  } 
 }
 
 @media (width >= 768px) {
@@ -158,28 +149,20 @@ h5, p {
   .three-cards .card {
     width: 43rem;
     height: 47.17rem;
-    border-radius: 5.43rem 0;
   }
 
   .three-cards .card-header {
     gap: 1.25rem;
   }
 
+  .button .icon,
   .icon-cardarrow > img {
     width: 3.5rem;
     height: 3.5rem;
   }
 
-  .card-header > p > picture  > img {
-    width: 5.43rem;
-    height: 5.43rem;   
-  }
-
-  .four-cards .card .card-header > h5 {
-    font-size: var(--heading-font-m);
-  }   
-
-  .three-cards .card .button-container .icon-cardarrow > img {
+  .card-header > p > picture  > img ,
+  .button-container .icon-cardarrow > img {
     width: 5.34rem;
     height: 5.35rem;
   }  
@@ -188,35 +171,20 @@ h5, p {
 @media (width >= 992px) {  
   .three-cards .card {
     width: 17.18rem;
-    height: 18.85rem;
-    border-radius: var(--border-tear-drop);
+    height: 18.85rem;   
     gap: .5rem;
     padding: 1.00rem 1.67rem;
     }
 
-  .icon-cardarrow > img {
-    width: 2.19rem;
+  .button-container .icon-cardarrow > img {
+    width: 2.19rem; 
     height: 2.19rem;
   }
 
-  .card-header > p > picture  > img {
+  .three-cards .card-header > p > picture  > img {
     width: 2.16rem;
     height: 2.16rem;
-  }
-
-  .three-cards .card .card-header > h5 {
-    font-size: 1.25rem;
-  } 
-
-  .card-header > p > picture > a > img {
-    width: 3.25rem;
-    height: 3.25rem;
-  }
-
-  .three-cards .card .button-container .icon-cardarrow > img {
-    width: 2.19rem;
-    height: 2.19rem;
-  }
+  }  
 
   .four-cards, .three-cards {
     flex-direction: row;
@@ -241,30 +209,12 @@ h5, p {
   .three-cards .card {
     width: 22.19rem;
     height: 24.34rem;
-    border-radius: 2.8rem 0;
     gap: .54rem;
     padding: 1.23rem 2.15rem;
   }
 
-  .three-cards .card-header {
-    gap: .64rem;
-  }
-
-  .icon-cardarrow > img {
-    width: 2.75rem;
-    height: 2.75rem;
-  }
-
-  .card-header > p > picture  > img {
-    width: 2.8rem;
-    height: 2.8rem;
-  }
-
-  .three-cards .card .card-header > h5 {
-    font-size: var(--heading-font-m);
-  } 
-
-  .three-cards .card .button-container .icon-cardarrow > img {
+  .card-header > p > picture  > img,
+  .button-container .icon-cardarrow > img {
     width: 2.8rem;
     height: 2.8rem;
   }
@@ -277,35 +227,18 @@ h5, p {
     align-self: stretch;
   }
 
-  .four-cards .card .card-header > h5 {
-    font-size: var(--heading-font-m);
-  }  
 }
 
 @media (width >= 1440px) {
   .three-cards .card {
     width: 25rem;
     height: 27.43rem;
-    border-radius: var(--border-tear-drop);
     gap: .61rem;
     padding: 1.45rem 2.43rem;
   }
 
-  .three-cards .card-header {
-    gap: .73rem;
-  }
-
-  .icon-cardarrow > img {
-    width: 3.13rem;
-    height: 3.13rem;
-  }
-
-  .card-header > p > picture  > img {
-    width: 3.13rem;
-    height: 3.13rem;
-  }
-
-  .three-cards .card .button-container .icon-cardarrow > img {
+  .card-header > p > picture  > img ,
+  .button-container .icon-cardarrow > img {
     width: 3.13rem;
     height: 3.13rem;
   }
