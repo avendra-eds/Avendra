@@ -69,6 +69,7 @@
         align-items: flex-start;
         flex: 1 0 0;
     }
+    
     .simple-banner > div > div:first-child > picture img {
         height: auto;
         flex-shrink: 0;
