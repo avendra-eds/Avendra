@@ -61,6 +61,7 @@ main .section.article-banner-container {
     .article-banner.no-image {
         height: 28.4rem;
     }
+    
     .article-banner > div > div:last-child {
         margin-top: auto;
         margin-bottom: 3.8rem;
