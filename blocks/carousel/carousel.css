@@ -45,9 +45,6 @@ main .section.carousel-container {
 @media (width >= 600px) {
   .carousel .carousel-slide {
     height: 52rem;
-  }
-
-  .carousel .carousel-slide {
     justify-content: center;
   }
 }
@@ -180,6 +177,7 @@ main .section.carousel-container {
 @media (width >= 600px) {
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: 60%;
+    
     margin: 0;
     padding: 14.3rem 0 14.3rem 5rem;
   }
