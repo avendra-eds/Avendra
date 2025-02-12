@@ -12,9 +12,11 @@
 
  @import url('../blocks/custom/article-cards/article-cards.css');
  @import url('../blocks/custom/brand-style.css');
- @import url('../blocks/modal/language-modal.css');
  @import url('../blocks/custom/article-socials.css');
  @import url('../blocks/custom/template-article.css');
+ @import url('../blocks/faq-section/faq-section.css');
+ @import url('../blocks/modal/language-modal.css');
+
  
 :root {
   font-family: Inter, sans-serif;
@@ -55,7 +57,7 @@
   /* heading sizes */
   --heading-hero-text: 3.25rem;
   --heading-font-xxl: 4.209rem;
-  --heading-font-xl: 3.156rem;
+  --heading-font-xl: 1.75rem;
   --heading-font-l: 2.369rem;
   --heading-font-m: 1.777rem;
   --heading-font-s: 1rem;
@@ -90,7 +92,7 @@
   --text-bold: 700;
 
   /* border-radius */
-  --border-tear-drop: 3.25rem 0rem;
+  --border-tear-drop: 1.5rem 0rem;
   --border-corner: 0.75rem;
 }
 
@@ -98,13 +100,28 @@
 @media (width >= 600px) {
   :root {
     --quote-text: 1.77rem;
+    --heading-font-m: 1.77rem;
+  }
+}
+
+@media (width >= 768px) {
+  :root {
+    --border-tear-drop: 3.25rem 0rem;
   }
 }
 
 @media (width >= 992px) {
   :root {
     --heading-hero-text: 5.61rem;
+    --heading-font-xl: 3.156rem;
+    --heading-font-m: 1.25rem;
     --quote-text: 3.5rem;
+  }
+}
+
+@media (width >= 1280px) {
+  :root {
+    --heading-font-m: 1.75rem;
   }
 }
 
@@ -149,7 +166,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.75rem 0;
+  margin-top: 0;
   font-family: var(--heading-font-family);
   line-height: var(--line-height-120);
   scroll-margin: 40px;
@@ -170,7 +187,8 @@ h2 {
 h3 { 
   font-size: var(--heading-font-xl); 
   font-weight: var(--text-bold);
-  color: var(--text-midnight)
+  color: var(--text-midnight);
+  margin-top: 0.75rem;
 }
 
 h4, h4 > em { 
@@ -235,6 +253,10 @@ main img {
   height: auto;
 }
 
+main picture img {
+  border-radius: var(--border-tear-drop);
+}
+
 .icon {
   display: inline-flex;
   width: 1rem;
@@ -253,18 +275,32 @@ main {
 }
 
 main .section {
-  padding: 2.75rem 2.5rem;
+  padding: 2.5rem;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 600px) {
+
+@media (width >= 992px) {
   main .section {
-    padding:  2.75rem 5rem 7.5rem;
+    padding: 7.5rem 3.44rem;
   }
 }
+
+@media (width >= 1280px) {
+  main .section {
+    padding: 7.5rem 4.44rem
+  }
+}
+
+@media (width >= 1440px) {
+  main .section {
+    padding: 7.5rem 5rem
+  }
+}
+
 
 /* section metadata */
 main .section.light,
@@ -283,6 +319,7 @@ a:any-link {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   word-break: break-word;
+  cursor: pointer;
 }
 
 a:hover {
@@ -292,6 +329,7 @@ a:hover {
   text-decoration-skip-ink: auto;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
+  cursor: pointer;
 }
 
 /* buttons */

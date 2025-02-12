@@ -1,5 +1,8 @@
 .modal dialog {
   background-color: var(--background-midnight);
+  width: 100vw;
+  height: 89vh;
+  border-radius: none;
 }
 
 .countries p {
@@ -22,8 +25,10 @@
 }
 
 .countries {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 1.75rem;
   width: 100%;
 }
@@ -35,7 +40,6 @@
 
 .countries li {
   list-style: none;
-  padding-bottom: 0.75rem;
   text-wrap-mode: nowrap;
 }
 
@@ -59,43 +63,56 @@
   line-height: var(--line-height-120);
 }
 
+@media (width >= 393px) {
+  .modal dialog {
+    width: 100vw;
+  }
+}
+
 @media (width >= 600px) {
+  .countries {
+    flex-flow: wrap;
+    flex-direction: row;
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+}
+
+@media (width >= 768px) {
+  .countries {
+    flex-flow: wrap;
+    gap: 5.5rem;
+    width: 95%;
+  }
+}
+
+@media (width >= 992px) {
   .modal dialog {
     background-color: var(--background);
   }
-
+  
   .countries-container > div:first-child > p {
     color: var(--text-primary);
     line-height: var(--line-height-120);
     display: flex;
     align-items: center;
     margin-top: 0;
-    margin-bottom: 2.5rem; 
+    margin-bottom: 1.75rem; 
   }
-
+  
   .countries-container > div:first-child > p > span {
     display: flex;
   }
-
+  
   .countries {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 3.2rem;
     width: 100%;
   }
-
+  
   .countries li > a {
     text-decoration: none;
     color: var(--text-primary);
   }
 }
 
-@media (width >= 992px) {
-  .countries {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.5rem;
-    width: 100%;
-  }
-}
