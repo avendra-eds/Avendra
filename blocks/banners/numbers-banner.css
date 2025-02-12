@@ -16,14 +16,12 @@
     display: flex;
     flex-direction: column;
     align-self: stretch;
-    margin: 0 auto;
 }
 
 .numbers-banner > div:last-child {
     display: flex;
     flex-direction: column;
     align-self: stretch;
-    margin: 0 auto;
     max-width: 18.5rem;
     width: 100%;
     align-items: flex-start;
@@ -71,7 +69,6 @@
         display: flex;
         flex-direction: column;
         align-self: stretch;
-        margin: 0 auto;
         max-width: 25.5rem;
         width: 100%;
         align-items: flex-start;
@@ -88,7 +85,6 @@
         display: flex;
         flex-direction: column;
         align-self: stretch;
-        margin: 0 auto;
         max-width: 35.5rem;
         width: 100%;
         align-items: flex-start;
@@ -118,7 +114,6 @@
     .numbers-banner > div:last-child {
         display: flex;
         flex-direction: row;
-        margin: 0 auto;
         max-width: 80rem;
         width: 100%;
         align-items: flex-start;
