@@ -14,14 +14,10 @@
  @import url('../blocks/custom/article-cards/article-cards.css');
  @import url('../blocks/custom/brand-style.css');
  @import url('../blocks/custom/article-socials.css');
-<<<<<<< HEAD
  @import url('../blocks/article-banner/article-banner.css');
-=======
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
 
->>>>>>> dev
- 
 :root {
   font-family: Inter, sans-serif;
 
@@ -29,15 +25,12 @@
   --background: white;
   --background-midnight: #011b2b;
   --background-light-sky: #B2DDF5;
-<<<<<<< HEAD
   --overlaycolour: #170C09;
   
   /* gradient colors */
   --background-linear-gradient-midnight: #011b2b;
   --background-linear-gradient-dark: #170C09;
-=======
   --background-black: #000;
->>>>>>> dev
 
   /* button colors */
   --button-primary: #008fdc;
