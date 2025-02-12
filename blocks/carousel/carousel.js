@@ -129,6 +129,22 @@ export default async function decorate(block) {
 
   rows.forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
+
+    // Custom: Adding button wrapper for last buttons in carousel slides
+    const contentContainer = slide.querySelector('.carousel-slide-content');
+    if (contentContainer) {
+      const buttonContainers = contentContainer.querySelectorAll('.button-container');
+      if (buttonContainers.length) {
+        const buttonsWrapper = document.createElement('div');
+        buttonsWrapper.classList.add('carousel-slide-buttons-wrapper');
+
+        buttonContainers.forEach((btnContainer) => {
+          buttonsWrapper.appendChild(btnContainer);
+        });
+        contentContainer.appendChild(buttonsWrapper);
+      }
+    }
+
     slidesWrapper.append(slide);
 
     if (slideIndicators) {

@@ -97,7 +97,7 @@ main .section.carousel-container {
 
 .carousel [aria-label="Carousel Slide Controls"] {
   position: absolute;
-  bottom: 4.375rem;
+  bottom: 1.875rem;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
@@ -177,6 +177,11 @@ main .section.carousel-container {
   left: calc(50% - .125rem);
 }
 
+
+.carousel-slide-buttons-wrapper {
+  display: block;
+}
+
 @media (width >= 600px) {
   .carousel .carousel-slide {
     height: 52rem;
@@ -188,8 +193,6 @@ main .section.carousel-container {
   }
 
   .carousel .carousel-slide .carousel-slide-content {
-    --slide-content-width: 60%;
-
     margin: 0;
     padding: 14.3rem 0 14.3rem 5rem;
   }
@@ -205,19 +208,17 @@ main .section.carousel-container {
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
   }
-
-  .carousel-slide-content .button-container {
-    display: block;
-    margin: 0;
-  }
-  
-  .carousel-slide-content .button-container:nth-last-of-type(2),
-  .carousel-slide-content .button-container:nth-last-of-type(2) ~ .button-container {
-    display: inline-block; 
-    vertical-align: middle;
-    margin-bottom: 0;
-  }
-  
 }
 
+@media (width >= 992px) {
+  .carousel-slide-buttons-wrapper {
+    display: flex;
+    gap: 16px;
+  }
+}
 
+@media (width >= 1280px) {
+.carousel .carousel-slide .carousel-slide-content {
+  --slide-content-width: 60%;
+}
+}
