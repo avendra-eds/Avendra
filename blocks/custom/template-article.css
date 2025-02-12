@@ -1,0 +1,16 @@
+.article-section-container {
+  padding-bottom: 0;
+}
+
+.image {
+  width: 100%;
+}
+
+.divider {
+  border-top: 1px solid var(--border-disabled);
+  margin: 1.25rem 0;
+}
+
+.divider p {
+  display: none;
+}

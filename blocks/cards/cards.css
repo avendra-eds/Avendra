@@ -1,27 +1,252 @@
-.cards > ul {
-  list-style: none;
+h5, p {
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+main .cards-container { 
+  padding: 0; 
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .63rem;
+  flex-direction: column;
+  margin: 0 auto;   
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: var(--border-tear-drop);
+  background: linear-gradient(180deg, rgba(1 27 43 / 100%) 0%, rgba(0 19 30 / 0%) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.cards > ul > li img {
+.card:hover {
+  background-image: url("/assets/card-background.svg");
+}
+
+.three-cards .card {
+  width: 19.57rem;
+  height: 21.46rem; 
+  gap: .48rem;
+  padding: 1.14rem 1.89rem;
+}
+
+.four-cards .card {
+  width: 19.49rem;
+  height: 28.67rem;
+  padding: 3.2rem 2.4rem  ;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: .57rem;
+}
+
+.card-header > h5 {
+  color: var(--text-inverse);
+}
+
+.card-link-icon > p {
+  display: flex;
+  justify-content: flex-end;
+} 
+
+.card-link-icon a.button:any-link,
+.card-link-icon > p > span ,
+.button .icon{
+  all:unset
+}
+
+.icon-cardarrow {
+  display: contents;
+}
+
+.card-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  z-index: -1;
+}
+
+.icon-cardarrow > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+}
+
+.card-background-image > picture > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.card-header > p > picture > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0;
+}
+
+@media (width >= 600px) {
+  .four-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .four-cards .card {
+    width: 32.37rem;
+    height: 48.66rem;
+    max-width: 100%;
+    padding:  4.87rem 4.2rem;
+  }
+
+  .three-cards .card {
+    width: 32.5rem;
+    height: 35.66rem;
+    gap: .79rem;
+    padding: 1.89rem 3.16rem;
+  }
+
+  .icon-cardarrow > img,
+  .card-header > p > picture  > img 
+   {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (width >= 768px) {
+  .four-cards {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  .three-cards {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .four-cards .card {
+    max-width: calc(50% - 1rem);
+    width: 20.63rem;
+    height: 31.06rem;
+    padding: 2.71rem;
+  }
+
+  .three-cards .card {
+    width: 43rem;
+    height: 47.17rem;
+  }
+
+  .three-cards .card-header {
+    gap: 1.25rem;
+  } 
+
+  .icon-cardarrow > img,
+  .card-header > p > picture  > img {
+    width: 5.34rem;
+    height: 5.35rem;
+  }  
+
+  .four-cards .card .icon-cardarrow > img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (width >= 992px) {  
+  .three-cards .card {
+    width: 17.18rem;
+    height: 18.85rem;   
+    gap: .5rem;
+    padding: 1.00rem 1.67rem;
+    }
+
+  .icon-cardarrow > img ,
+  .three-cards .card-header > p > picture  > img 
+  .four-cards .card .icon-cardarrow > img {
+    width: 2.19rem; 
+    height: 2.19rem;
+  }
+
+  .four-cards, .three-cards {
+    flex-direction: row;
+  }
+
+  .four-cards .card {
+    width: 12.37rem;
+    height: 18.66rem;
+    padding: 1.38rem 1.44rem;
+  } 
+
+  .card-header {
+    gap:0.75rem;
+  }
+
+  .three-cards .card-header{
+    gap: .5rem;
+  }
+}
+
+@media (width >= 1280px) {
+  .three-cards .card {
+    width: 22.19rem;
+    height: 24.34rem;
+    gap: .54rem;
+    padding: 1.23rem 2.15rem;
+  }
+
+  .icon-cardarrow > img ,
+  .three-cards .card-header > p > picture  > img,
+  .four-cards .card .icon-cardarrow > img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .four-cards .card {
+    width: 16.08rem;
+    height: 24.17rem;
+    padding:1.97rem 2.03rem ;
+    max-width: 100%;
+    align-self: stretch;
+  }
+
+}
+
+@media (width >= 1440px) {
+  .three-cards .card {
+    width: 25rem;
+    height: 27.43rem;
+    gap: .61rem;
+    padding: 1.45rem 2.43rem;
+  }
+
+  .icon-cardarrow > img ,
+  .three-cards .card-header > p > picture  > img
+  .four-cards .card .icon-cardarrow > img {
+    width: 3.13rem;
+    height: 3.13rem;
+  }
+
+  .four-cards .card {
+    width: 18rem;
+    height: 27.07rem;
+    flex-shrink: 0;
+    padding: 2.33rem 2.36rem;
+  } 
 }
