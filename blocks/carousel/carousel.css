@@ -10,7 +10,6 @@ main .section.carousel-container {
 /* MAIN STYLES */
 .carousel h1 {
   color: var(--text-inverse);
-  font-size: var(--heading-hero-text);
 }
 
 .carousel .carousel-slides,
@@ -37,19 +36,19 @@ main .section.carousel-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   position: relative;
   width: 100%;
   min-height: min(50vw, calc(100dvh - var(--header-height)));
-  height: 551px;
+  height: 34.43rem;
 }
 
 @media (width >= 600px) {
   .carousel .carousel-slide {
-    height: 832px;
+    height: 52rem;
   }
-  .carousel h1 {
-    font-size: 5.5625rem;
+
+  .carousel .carousel-slide {
+    justify-content: center;
   }
 }
 
@@ -82,14 +81,14 @@ main .section.carousel-container {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left, transparent, black);
+  background: linear-gradient(to right, var(--background-linear-gradient-dark) 0%, transparent 100%);
   pointer-events: none;
 }
 
 .carousel .carousel-slide .carousel-slide-content {
   z-index: 1;
-  margin: 4.375rem 2.5rem;
-  color: white;
+  padding: 0 2.5rem 1.875rem 1.875rem;
+  color: var(--background-light-sky);
   background-color: transparent;
   width: var(--slide-content-width, auto);
 }
@@ -97,7 +96,7 @@ main .section.carousel-container {
 /* CAROUSEL SLIDE CONTROLS (Indicators, Navigation Buttons) */
 .carousel [aria-label="Carousel Slide Controls"] {
   position: absolute;
-  bottom: 5rem;
+  bottom: 1.875rem;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
@@ -130,7 +129,7 @@ main .section.carousel-container {
 .carousel .carousel-slide-indicator button:disabled,
 .carousel .carousel-slide-indicator button:hover,
 .carousel .carousel-slide-indicator button:focus-visible {
-  background-color: white;
+  background-color: var(--background-light-sky);
 }
 
 /* ARROWS */
@@ -148,8 +147,8 @@ main .section.carousel-container {
 /* stylelint-disable-next-line no-descending-specificity */
 .carousel .carousel-navigation-buttons button {
   position: relative;
-  width: .9375rem;
-  height: .9375rem;
+  width: .93rem;
+  height: .93rem;
   margin: 0;
   border: none;
   border-radius: 0;
@@ -162,14 +161,14 @@ main .section.carousel-container {
 .carousel .carousel-navigation-buttons button::after {
   display: block;
   content: '';
-  border: .125rem solid white;
+  border: .125rem solid var(--background-light-sky);
   border-bottom: 0;
   border-left: 0;
   height: .75rem;
   width: .75rem;
   position: absolute;
   top: 50%;
-  left: calc(50% + 2px);
+  left: calc(50% + .125rem);
   transform: translate(-50%, -50%) rotate(-135deg);
 }
 
@@ -181,8 +180,12 @@ main .section.carousel-container {
 @media (width >= 600px) {
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: 60%;
-    
-    margin: 14.3125rem 0 14.3125rem 5rem;
+    margin: 0;
+    padding: 14.3rem 0 14.3rem 5rem;
+  }
+
+  .carousel [aria-label="Carousel Slide Controls"] {
+    bottom: 5rem;
   }
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
@@ -191,7 +194,7 @@ main .section.carousel-container {
 
   .carousel-slide-content .button-container {
     display: block;
-    margin-bottom: 1rem;
+    margin: 0 1rem 0 0;
   }
   
   .carousel-slide-content .button-container:nth-last-of-type(2),

@@ -30,6 +30,10 @@
   --button-hover-sky: #008fdc;
   --button-hover-midnight:#011b2b;
 
+  /* gradient colors */
+  --background-linear-gradient-midnight: #011b2b;
+  --background-linear-gradient-dark: #170C09;
+
   /* icon colors */
   --icon-primary: #414141;
   --icon-inverse: #fff;
