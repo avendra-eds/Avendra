@@ -8,6 +8,12 @@ main .section.carousel-container {
 
 .carousel h1 {
   color: var(--text-inverse);
+  margin: 0;
+  padding: 0;
+}
+
+.carousel h6 {
+  margin-bottom: 1rem;
 }
 
 .carousel .carousel-slides,
@@ -66,6 +72,7 @@ main .section.carousel-container {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 0;
 }
 
 .carousel .carousel-slide .carousel-slide-image::after {
@@ -90,7 +97,7 @@ main .section.carousel-container {
 
 .carousel [aria-label="Carousel Slide Controls"] {
   position: absolute;
-  bottom: 1.875rem;
+  bottom: 4.375rem;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
@@ -201,7 +208,7 @@ main .section.carousel-container {
 
   .carousel-slide-content .button-container {
     display: block;
-    margin: 0 1rem 0 0;
+    margin: 0;
   }
   
   .carousel-slide-content .button-container:nth-last-of-type(2),
