@@ -1,4 +1,6 @@
 import {
+  sampleRUM,
+  buildBlock,
   loadHeader,
   loadFooter,
   decorateButtons,
@@ -6,11 +8,13 @@ import {
   decorateSections,
   decorateBlocks,
   decorateTemplateAndTheme,
-  waitForFirstImage,
-  loadSection,
-  loadSections,
+  waitForLCP,
+  loadBlocks,
   loadCSS,
+  getMetadata,
 } from './aem.js';
+
+const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
  * load fonts.css and set a session storage flag
@@ -22,6 +26,18 @@ async function loadFonts() {
   } catch (e) {
     // do nothing
   }
+}
+
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
 }
 
 /**
@@ -44,11 +60,15 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
+    document.body.classList.add('breadcrumbs-enabled');
+  }
+
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
+    await waitForLCP(LCP_BLOCKS);
   }
 
   try {
@@ -66,8 +86,10 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc);
+
   const main = doc.querySelector('main');
-  await loadSections(main);
+  await loadBlocks(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
@@ -78,6 +100,10 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+
+  sampleRUM('lazy');
+  sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
+  sampleRUM.observe(main.querySelectorAll('picture > img'));
 }
 
 /**

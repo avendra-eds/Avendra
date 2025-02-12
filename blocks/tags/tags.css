@@ -1,0 +1,13 @@
+.tags-container p {
+  line-height: var(--line-height-120);
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tags p {
+  margin: 0;
+}
