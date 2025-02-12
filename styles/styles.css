@@ -30,6 +30,7 @@
   /* gradient colors */
   --background-linear-gradient-midnight: #011b2b;
   --background-linear-gradient-dark: #170C09;
+  --background-sky: #008fdc;
   --background-black: #000;
 
   /* button colors */
@@ -419,6 +420,22 @@ button.tertiary {
   white-space: nowrap;
 }
 
+@media (width < 992px) {
+  .button-container {
+      margin-top: 1.5rem;
+      text-align: center;
+  }
+
+  .button {
+      display: inline-block;
+      width: 90%;
+      max-width: 100%;
+      padding: 0.75rem 1.5rem;
+  }
+}
+
+a.button.secondary:hover,
+button.secondary:hover,
 a.button.tertiary:hover,
 button.tertiary:hover {
   text-decoration: none;
