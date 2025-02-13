@@ -19,7 +19,7 @@
     flex-shrink: 0;
 }
 
-.feature-banner > div > div:last-child > h4,
+.feature-banner > div > div:last-child > h5,
 .feature-banner > div > div:last-child > h6,
 .feature-banner > div > div:last-child > p:nth-of-type(1) {
     max-width: 19.5rem;
@@ -38,7 +38,7 @@
         width: 100%;
     }
 
-    .feature-banner > div > div:last-child > h4,
+    .feature-banner > div > div:last-child > h5,
     .feature-banner > div > div:last-child > h6,
     .feature-banner > div > div:last-child > p:nth-of-type(1) {
         max-width: 32.5rem;
@@ -53,7 +53,7 @@
         width: 100%;
     }
 
-    .feature-banner > div > div:last-child > h4,
+    .feature-banner > div > div:last-child > h5,
     .feature-banner > div > div:last-child > h6,
     .feature-banner > div > div:last-child > p:nth-of-type(1) {
         max-width: 43.5rem;
@@ -73,12 +73,12 @@
         width: 100%;
     }
 
-    .feature-banner > div > div:last-child > h4 {
+    .feature-banner > div > div:last-child > h5 {
         font-size: 1.75rem;
         font-weight: var(--text-regular);
     }
 
-    .feature-banner > div > div:last-child > h4,
+    .feature-banner > div > div:last-child > h5,
     .feature-banner > div > div:last-child > h6,
     .feature-banner > div > div:last-child > p:nth-of-type(1) {
         margin: 1rem 0;
@@ -105,12 +105,12 @@
         gap: 9.375rem;
     }
 
-    .feature-banner > div > div:last-child > h4 {
+    .feature-banner > div > div:last-child > h5 {
         font-size: var(--heading-font-l);
         font-weight: var(--text-regular);
     }
 
-    .feature-banner > div > div:last-child > h4,
+    .feature-banner > div > div:last-child > h5,
     .feature-banner > div > div:last-child > h6,
     .feature-banner > div > div:last-child > p:nth-of-type(1) {
         margin: 1rem 0;
