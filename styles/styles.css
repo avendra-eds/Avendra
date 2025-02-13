@@ -39,6 +39,7 @@
   --button-tertiary: #fff;
   --button-hover-sky: #008fdc;
   --button-hover-midnight:#011b2b;
+  --button-dots-subtle: #808080;
 
   /* icon colors */
   --icon-primary: #414141;
@@ -107,27 +108,30 @@
   :root {
     --quote-text: 1.77rem;
     --heading-font-m: 1.77rem;
+    --heading-font-xl:1rem;
   }
 }
 
 @media (width >= 768px) {
   :root {
     --border-tear-drop: 3.25rem 0rem;
+    --heading-font-xl:1.34rem;
   }
 }
 
 @media (width >= 992px) {
   :root {
     --heading-hero-text: 5.61rem;
-    --heading-font-xl: 3.156rem;
     --heading-font-m: 1.25rem;
     --quote-text: 3.5rem;
+    --heading-font-xl:1.25rem
   }
 }
 
 @media (width >= 1280px) {
   :root {
     --heading-font-m: 1.75rem;
+    --heading-font-xl:1.81rem;
   }
 }
 
