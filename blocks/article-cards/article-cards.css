@@ -85,7 +85,7 @@ main .article-cards-container {
 }
 
 @media (width >= 768px) {
-  main .section .resources {
+  main.resources {
     width: 30%;
   }
   
@@ -93,7 +93,7 @@ main .article-cards-container {
     gap: 2.75rem
   }
     
-  main .section > .article-cards > .list {
+  main > .article-cards > .list {
     width: 100%;  
   }
 
