@@ -127,12 +127,6 @@ main .section.carousel-container {
   transition: background-color 0.2s;
 }
 
-.carousel .carousel-slide-indicator button:disabled,
-.carousel .carousel-slide-indicator button:hover,
-.carousel .carousel-slide-indicator button:focus-visible {
-  background-color: var(--background)
-}
-
 .carousel .carousel-navigation-buttons {
   position: absolute;
   top: 20%;
@@ -185,7 +179,7 @@ main .section.carousel-container {
 @media (width <= 393px) {
 .carousel-slide-buttons-wrapper {
   display: block;
-  margin: 1.5rem 0; /* ADDED */
+  margin: 1.5rem 0;
 }
 
 .carousel p.button-container {
