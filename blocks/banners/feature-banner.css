@@ -63,6 +63,8 @@
 @media (width >= 992px) {
     .feature-banner {
         margin: 2.75rem 5rem;
+        border-radius: var(--border-corner);
+
     }
 
     .feature-banner > div > div:first-child > picture img {
@@ -88,6 +90,7 @@
 @media (width >= 1280px) {
     .feature-banner {
         margin: 2.75rem 5rem;
+        border-radius: var(--border-corner);
     }
 
     .feature-banner > div > div:first-child > picture img {
