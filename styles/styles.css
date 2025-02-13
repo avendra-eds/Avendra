@@ -17,6 +17,7 @@
  @import url('../blocks/article-banner/article-banner.css');
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
+ @import url('../blocks/sidebar/sidebar.css');
 
 :root {
   font-family: Inter, sans-serif;
@@ -32,6 +33,8 @@
   --background-linear-gradient-dark: #170C09;
   --background-sky: #008fdc;
   --background-black: #000;
+  --background-bright-gray: #EEEFEF;
+  
 
   /* button colors */
   --button-primary: #008fdc;
@@ -81,6 +84,7 @@
   --line-height-92: 92%;
   --line-height-120: 120%;
   --line-height-150: 150%;
+  --line-height-200: 200%;
 
   /* text colors */
   --text-primary: #414141;
