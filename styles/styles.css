@@ -16,6 +16,7 @@
  @import url('../blocks/custom/article-socials.css');
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
+ @import url('../blocks/sidebar/sidebar.css');
 
  
 :root {
@@ -26,6 +27,8 @@
   --background-midnight: #011b2b;
   --background-light-sky: #B2DDF5;
   --background-black: #000;
+  --background-bright-gray: #EEEFEF;
+  
 
   /* button colors */
   --button-primary: #008fdc;
@@ -75,6 +78,7 @@
   --line-height-92: 92%;
   --line-height-120: 120%;
   --line-height-150: 150%;
+  --line-height-200: 200%;
 
   /* text colors */
   --text-primary: #414141;
