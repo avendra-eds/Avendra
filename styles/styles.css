@@ -18,6 +18,7 @@
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
  @import url('../blocks/sidebar/sidebar.css');
+ @import url('../blocks/card-section/card-section.css');
 
 :root {
   font-family: Inter, sans-serif;

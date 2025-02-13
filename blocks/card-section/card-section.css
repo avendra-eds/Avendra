@@ -1,0 +1,16 @@
+.section.header-text-container.cards-container.library-metadata-container {
+    background: url("../../assets/lines-background.svg");
+    background-size: cover; 
+    padding: 1rem;
+    padding-bottom: 4rem;
+    position: relative;
+    z-index: -1;
+}
+
+.section.header2-text-container.cards-container.library-metadata-container {
+    background-color: var(--background-light-sky);
+    background-size: cover; 
+    position: relative;
+    z-index: -1;
+    border-radius: 52px 0px;
+}
