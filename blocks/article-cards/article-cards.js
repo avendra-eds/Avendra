@@ -9,38 +9,42 @@ export default function decorate(block) {
     }
   });
 
-  const articleCardsBody = document.querySelectorAll('.article-card-body');
+  const articleCardsBody = block.querySelectorAll('.article-card-body');
   articleCardsBody.forEach((articleCardBody) => {
     const tagContainer = document.createElement('div');
     tagContainer.classList.add('article-card-tags');
     articleCardBody.appendChild(tagContainer);
-    const pElements = articleCardBody.querySelectorAll('p');
-    pElements.forEach((p) => {
-      if (p.querySelector('em > a') && p.length > 0) {
-        const tags = p.getElementsByClassName('.button-container');
-        tags.forEach((tag) => {
-          tagContainer.append(tag);
-        });
-      } else if (p.querySelector('a')) {
-        p.querySelectorAll('.button').forEach((button) => {
-          const buttonParent = button.parentElement;
-          buttonParent.classList.remove('button-container');
-          button.classList.remove('button');
-          buttonParent.classList.add('article-card-title');
-        });
-      } else if (p.querySelector('em')) {
-        p.querySelector('em').classList.add('article-card-date');
-      }
-    });
+
+    const pTags = articleCardBody.querySelectorAll('.button-container');
+    if (pTags) {
+      pTags.forEach((pTag) => {
+        if (pTag.firstElementChild.nodeName === 'EM') {
+          tagContainer.appendChild(pTag);
+        } else {
+          pTag.classList.remove('button-container');
+          pTag.firstElementChild.classList.remove('button');
+          pTag.classList.add('article-card-title');
+        }
+      });
+    }
+
+    const articleDescription = articleCardBody.querySelector('p:not([class])');
+    if (articleDescription) {
+      articleDescription.classList.add('article-card-description');
+    }
+
+    const articleDate = articleCardBody.querySelector('p > em');
+    if (articleDate) {
+      articleDate.classList.add('article-card-date');
+    }
   });
-  //   if (children.length > dateIndex + 1) {
-  //     const buttonsContainer = document.createElement('div');
-  //     buttonsContainer.className = 'article-card-buttons';
-  //     const extraButtons = children.slice(dateIndex + 1);
-  //     extraButtons.forEach((btn) => {
-  //       buttonsContainer.append(btn);
-  //     });
-  //     body.append(buttonsContainer);
-  //   }
-  // });
+
+  const articleCardImage = block.querySelectorAll('.article-card-image');
+  if (articleCardImage) {
+    articleCardImage.forEach((imageContainer) => {
+      const image = imageContainer.querySelector('picture');
+      const imageLink = imageContainer.querySelector('a');
+      imageLink.appendChild(image);
+    });
+  }
 }
