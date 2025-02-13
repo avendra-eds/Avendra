@@ -1,0 +1,13 @@
+main .article-cards-container {
+  padding: 0;
+}
+
+.article-cards-container {
+  margin-bottom: 2rem;
+}
+
+@media (width >= 768px) {
+  .article-cards-container {
+    margin-bottom: 1.5rem;
+  } 
+}
