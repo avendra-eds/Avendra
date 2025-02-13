@@ -62,7 +62,6 @@
   .accordion details summary p {
     width: 95%;
   }
-
 }
 
 .accordion.sidebar.block details.accordion-item h6{
@@ -72,7 +71,6 @@
 .accordion.sidebar.block details.accordion-item:first-child h6{
   margin-top: 0;
 }
-
 
 .accordion.sidebar.block details.accordion-item a{
   color: var(--text-primary);
@@ -99,3 +97,9 @@
   justify-content: start;
   margin: 0;
 }
+
+.accordion.sidebar.block .accordion-item .accordion-item-body a:hover{
+  color:var(--text-sky); 
+}
+
+

@@ -9,51 +9,47 @@
 
     .sidebar-wrapper{
         display:block;
-        border-radius: 12px;
+        border-radius: 0.75rem;
         background-color: var(--background-bright-gray);
         padding: 2.5rem;
     }
     
     .sidebar-container {
-        width: 29%;  
+        width: 30%;   
+    }
+
+    main .sidebar-container {
+        padding: 0; 
     }
     
     .sidebar > div > div h6{
-        margin-bottom: 0.75rem;  
-    }
-    
-    .sidebar > div > div > p:last-child::after {
-        content: ""; 
-        display:block; 
-        border: 0.063rem solid var(--border-disabled);
-        margin: 2rem 0;
-    }
-    
-    .sidebar > div:last-child > div > p:last-child::after {
-        border: none;
+        margin-bottom: 1rem;  
     }
     
     .sidebar > div >  div > p {
         margin: 0 0 1rem;
+        width: 100%;
     }
     
+    .sidebar > div >  div > p:last-child {
+        margin: 0 0 2rem;
+    }
+
     .sidebar > div >  div:last-of-type > p > a {
         color: var(--text-primary);
         font-weight: var(--text-medium);
-        line-height: var(--line-height-200);
-        text-decoration-line: underline;  
-        background-color: transparent;
-        padding: 0;  
+        text-align: left;
+    }
+
+    .sidebar > div:nth-child(1), .sidebar > div:nth-child(2){
+        border-bottom: 0.0625rem solid var(--border-disabled);
+    }
+
+    .sidebar > div:nth-child(2) h6, .sidebar > div:nth-child(3) h6{
+        padding-top: 2rem;
     }
 
     .sidebar > div >  div:last-of-type > p > a:hover {
-        border-color: transparent;
-        border-radius: 0;
+        color:var(--text-sky); 
     }  
-
-    .sidebar > div >  div:last-of-type > p.button-container{
-        width: 100%;
-        display: grid; 
-        justify-content: start;
-    }
 }
