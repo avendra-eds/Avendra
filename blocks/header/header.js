@@ -126,6 +126,28 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
+  let homeLink = navBrand ? navBrand.querySelector('a[href^="/"]') : null;
+
+  if (!homeLink && navBrand) {
+    // CUSTOM: Added a link to the logo, requires the '/<link>' after the logo in the Document
+    const defaultContent = navBrand.querySelector('.default-content-wrapper');
+    if (defaultContent) {
+      const paragraphs = defaultContent.querySelectorAll('p');
+
+      if (paragraphs.length >= 2 && paragraphs[1].textContent.trim() === '/') {
+        const firstP = paragraphs[0];
+        const anchor = document.createElement('a');
+        anchor.href = '/';
+        while (firstP.firstChild) {
+          anchor.appendChild(firstP.firstChild);
+        }
+        firstP.appendChild(anchor);
+        paragraphs[1].remove();
+        homeLink = anchor;
+      }
+    }
+  }
+
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
