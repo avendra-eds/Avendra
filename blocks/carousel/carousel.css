@@ -102,7 +102,7 @@ main .section.carousel-container {
   transform: translateX(-50%);
   width: fit-content;
   z-index: 10;
-  margin: 0;
+  margin: 2.5rem 0 0;
 }
 
 .carousel .carousel-slide-indicators {
@@ -130,7 +130,7 @@ main .section.carousel-container {
 .carousel .carousel-slide-indicator button:disabled,
 .carousel .carousel-slide-indicator button:hover,
 .carousel .carousel-slide-indicator button:focus-visible {
-  background-color: var(--button-tertiary)
+  background-color: var(--background)
 }
 
 .carousel .carousel-navigation-buttons {
@@ -161,7 +161,7 @@ main .section.carousel-container {
 .carousel .carousel-navigation-buttons button::after {
   display: block;
   content: '';
-  border: .125rem solid var(--button-tertiary);
+  border: .125rem solid var(--border-inverse);
   border-bottom: 0;
   border-left: 0;
   height: .75rem;
@@ -177,9 +177,26 @@ main .section.carousel-container {
   left: calc(50% - .125rem);
 }
 
-
 .carousel-slide-buttons-wrapper {
   display: block;
+  margin: 2.5rem 0;
+}
+
+@media (width <= 393px) {
+.carousel-slide-buttons-wrapper {
+  display: block;
+  margin: 1.5rem 0; /* ADDED */
+}
+
+.carousel p.button-container {
+  margin: 0.75rem 0;
+}
+}
+
+@media (width <= 350px) {
+  .carousel h1 {
+    font-size: var(--heading-font-m);
+  }
 }
 
 @media (width >= 600px) {
@@ -194,7 +211,7 @@ main .section.carousel-container {
 
   .carousel .carousel-slide .carousel-slide-content {
     margin: 0;
-    padding: 14.3rem 0 14.3rem 5rem;
+    padding: 14.3rem 5rem;
   }
 
   .carousel.single .carousel-slide .carousel-slide-content {
@@ -213,7 +230,7 @@ main .section.carousel-container {
 @media (width >= 992px) {
   .carousel-slide-buttons-wrapper {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
   }
 }
 

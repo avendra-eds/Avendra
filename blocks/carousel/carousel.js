@@ -130,7 +130,6 @@ export default async function decorate(block) {
   rows.forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
 
-    // Custom: Adding button wrapper for last buttons in carousel slides
     const contentContainer = slide.querySelector('.carousel-slide-content');
     if (contentContainer) {
       const buttonContainers = contentContainer.querySelectorAll('.button-container');
