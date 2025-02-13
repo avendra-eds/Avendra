@@ -73,9 +73,6 @@
   margin-top: 0;
 }
 
-.accordion.sidebar.block details.accordion-item p.button-container {
-  margin: 0;
-}
 
 .accordion.sidebar.block details.accordion-item a{
   color: var(--text-primary);
@@ -84,8 +81,8 @@
   text-decoration-line: underline;  
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0; 
-  padding: 0;
+  border-radius: 0;
+  padding: 0 .25rem;
 }
 
 .accordion.sidebar.block details.accordion-item[open] {
@@ -94,4 +91,11 @@
 
 .accordion.sidebar.block details:first-child {
   border-top: none;
+}
+
+.accordion.sidebar.block .accordion-item .accordion-item-body > p.button-container{
+  width: 100%;
+  display: grid; 
+  justify-content: start;
+  margin: 0;
 }

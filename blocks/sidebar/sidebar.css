@@ -34,7 +34,7 @@
     }
     
     .sidebar > div >  div > p {
-        margin: 0 0 0.5rem;
+        margin: 0 0 1rem;
     }
     
     .sidebar > div >  div:last-of-type > p > a {
@@ -45,9 +45,15 @@
         background-color: transparent;
         padding: 0;  
     }
-    
+
     .sidebar > div >  div:last-of-type > p > a:hover {
         border-color: transparent;
         border-radius: 0;
     }  
+
+    .sidebar > div >  div:last-of-type > p.button-container{
+        width: 100%;
+        display: grid; 
+        justify-content: start;
+    }
 }
