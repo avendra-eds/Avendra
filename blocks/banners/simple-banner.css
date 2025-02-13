@@ -1,0 +1,74 @@
+.simple-banner {
+    background-color: var(--background-light-sky);
+}
+
+.simple-banner > div > div:first-child > picture img {
+    max-width: 19.74rem;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.simple-banner > div {
+    display: flex;
+    padding: 2.75rem 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    align-self: stretch;
+}
+
+.simple-banner > div > div:last-child > h5 {
+    max-width: 19.5rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (width >= 600px) {
+    .simple-banner > div > div:first-child > picture img {
+        max-width: 32.81rem;
+    }
+
+    .simple-banner > div > div:last-child > h5 {
+        max-width: 32.5rem;
+    }
+}
+
+@media (width >= 768px) {
+    .simple-banner > div > div:first-child > picture img {
+        max-width: 43.47rem;
+    }
+
+    .simple-banner > div > div:last-child > h5 {
+        max-width: 43.06rem;
+    }
+}
+
+@media (width >= 992px) {
+    .simple-banner > div {
+        display: flex;
+        padding: 2.75rem 3.43rem;
+        align-items: center;
+        gap: 2.75rem;
+    }
+
+    .simple-banner > div > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 0 0;
+    }
+
+    .simple-banner > div > div:first-child > picture img {
+        max-width: 100%;
+    }
+
+    .simple-banner > div > div:last-child > h5 {
+        max-width: 100%;
+        font-size: var(--heading-font-l);
+        font-weight: var(--text-regular);
+        font-style: normal;
+        line-height: var(--line-height-120);
+    }
+}

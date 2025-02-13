@@ -1,0 +1,113 @@
+.partnership-banner {
+    display: flex;
+    padding: 2.5rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: stretch;
+}
+
+.partnership-banner > div:nth-of-type(2) > div > p {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0;
+}
+
+.partnership-banner > div:nth-of-type(2) > div > p > picture {
+    display: flex;
+    height: 100%;
+}
+
+.partnership-banner > div:nth-of-type(2) > div > p > picture img {
+    width: 100%;
+    height: 4.5rem;
+    object-fit: contain;
+    border-radius: none;
+}
+
+.partnership-banner > div:first-child > div > h3 {
+    font-size: 1.75rem;
+    font-weight: var(--text-bold);
+    line-height: var(--line-height-120);
+    margin: 0;
+    width: 15rem;
+}
+
+.partnership-banner > div:last-child > .button-container {
+    margin: 0;
+    text-align: center;
+}
+
+.partnership-banner > div:last-child > .button-container > p > .button {
+    display: inline-block;
+    width: 80%;
+    max-width: 100%;
+}
+
+@media (width >= 768px) {
+    .partnership-banner > div:nth-of-type(2) > div > p > picture img {
+        width: 100%;
+        height: 8rem;
+        object-fit: contain;
+        border-radius: 0;
+    }
+
+    .partnership-banner > div:first-child > div > h3 {
+        width: 30rem;
+    }
+}
+
+@media (width >= 992px) {
+    .partnership-banner {
+        display: flex;
+        padding: 7.5rem 3rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+
+    .partnership-banner > div:last-child > .button-container > p > .button {
+        display: inline-block;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p {
+        display: flex;
+        gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
+        justify-content: center;
+        align-items: center;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p > picture img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;
+
+    }
+}
+
+@media (width >= 1280px) {
+    .partnership-banner {
+        padding: 7.5rem 4rem;
+    }
+
+    .partnership-banner > div:first-child > div > h3 {
+        font-size: var(--heading-font-xl);
+        font-weight: var(--text-bold);
+        color: var(--text-midnight);
+        width: 70rem;
+    }
+
+    .partnership-banner > div:nth-of-type(2) > div > p > picture img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+        border-radius: 0;
+
+    }
+}

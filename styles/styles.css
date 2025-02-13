@@ -14,10 +14,11 @@
  @import url('../blocks/custom/brand-style.css');
  @import url('../blocks/custom/article-socials.css');
  @import url('../blocks/custom/template-article.css');
+ @import url('../blocks/article-banner/article-banner.css');
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
+ @import url('../blocks/sidebar/sidebar.css');
 
- 
 :root {
   font-family: Inter, sans-serif;
 
@@ -25,11 +26,19 @@
   --background: white;
   --background-midnight: #011b2b;
   --background-light-sky: #B2DDF5;
+  --overlaycolour: #170C09;
+  
+  /* gradient colors */
+  --background-linear-gradient-midnight: #011b2b;
+  --background-linear-gradient-dark: #170C09;
+  --background-sky: #008fdc;
   --background-black: #000;
+  --background-bright-gray: #EEEFEF;
+  
 
   /* button colors */
   --button-primary: #008fdc;
-  --button-secondary: #011b2b;
+  --button-secondary: #fff;
   --button-tertiary: #fff;
   --button-hover-sky: #008fdc;
   --button-hover-midnight:#011b2b;
@@ -75,6 +84,7 @@
   --line-height-92: 92%;
   --line-height-120: 120%;
   --line-height-150: 150%;
+  --line-height-200: 200%;
 
   /* text colors */
   --text-primary: #414141;
@@ -414,6 +424,22 @@ button.tertiary {
   white-space: nowrap;
 }
 
+@media (width < 992px) {
+  .button-container {
+      margin-top: 1.5rem;
+      text-align: center;
+  }
+
+  .button {
+      display: inline-block;
+      width: 90%;
+      max-width: 100%;
+      padding: 0.75rem 1.5rem;
+  }
+}
+
+a.button.secondary:hover,
+button.secondary:hover,
 a.button.tertiary:hover,
 button.tertiary:hover {
   text-decoration: none;
