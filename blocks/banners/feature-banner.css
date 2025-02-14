@@ -1,0 +1,120 @@
+.feature-banner {
+    background-color: var(--background-light-sky);
+}
+
+.feature-banner > div {
+    display: flex;
+    padding: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    align-self: stretch;
+}
+
+.feature-banner > div > div:first-child > picture img {
+    max-width: 19.5rem;
+    width: 100%;
+    height: auto;
+    align-self: stretch;
+    flex-shrink: 0;
+}
+
+.feature-banner > div > div:last-child > h5,
+.feature-banner > div > div:last-child > h6,
+.feature-banner > div > div:last-child > p:nth-of-type(1) {
+    max-width: 19.5rem;
+    margin: 1rem;
+}
+
+.feature-banner > div > div:last-child {
+    gap: 0.5rem;
+}
+
+@media (width >= 600px) {
+    .feature-banner > div > div:first-child > picture img {
+        max-width: 32.81rem;
+        height: auto;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .feature-banner > div > div:last-child > h5,
+    .feature-banner > div > div:last-child > h6,
+    .feature-banner > div > div:last-child > p:nth-of-type(1) {
+        max-width: 32.5rem;
+    }
+}
+
+@media (width >= 768px) {
+    .feature-banner > div > div:first-child > picture img {
+        max-width: 43.47rem;
+        height: auto;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .feature-banner > div > div:last-child > h5,
+    .feature-banner > div > div:last-child > h6,
+    .feature-banner > div > div:last-child > p:nth-of-type(1) {
+        max-width: 43.5rem;
+    }
+}
+
+@media (width >= 992px) {
+    .feature-banner {
+        margin: 2.75rem 5rem;
+        border-radius: var(--border-corner);
+
+    }
+
+    .feature-banner > div > div:first-child > picture img {
+        max-width: 25rem;
+        height: auto;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .feature-banner > div > div:last-child > h5 {
+        font-size: 1.75rem;
+        font-weight: var(--text-regular);
+    }
+
+    .feature-banner > div > div:last-child > h5,
+    .feature-banner > div > div:last-child > h6,
+    .feature-banner > div > div:last-child > p:nth-of-type(1) {
+        margin: 1rem 0;
+    }
+}
+
+@media (width >= 1280px) {
+    .feature-banner {
+        margin: 2.75rem 5rem;
+        border-radius: var(--border-corner);
+    }
+
+    .feature-banner > div > div:first-child > picture img {
+        max-width: 25rem;
+        height: auto;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .feature-banner > div {
+        display: flex;
+        padding: 2.5rem 6.875rem;
+        align-items: center;
+        gap: 9.375rem;
+    }
+
+    .feature-banner > div > div:last-child > h5 {
+        font-size: var(--heading-font-l);
+        font-weight: var(--text-regular);
+    }
+
+    .feature-banner > div > div:last-child > h5,
+    .feature-banner > div > div:last-child > h6,
+    .feature-banner > div > div:last-child > p:nth-of-type(1) {
+        margin: 1rem 0;
+        width: 33rem;
+    }
+}

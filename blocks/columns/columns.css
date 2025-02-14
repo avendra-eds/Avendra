@@ -3,6 +3,7 @@
 @import url('../banners/partnership-banner.css');
 @import url('../banners/icons-banner.css');
 @import url('../banners/numbers-banner.css');
+@import url('../banners/feature-banner.css');
 
 .columns > div {
     display: flex;
