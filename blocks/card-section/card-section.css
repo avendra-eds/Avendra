@@ -10,7 +10,7 @@
 
 .section.header-text-container.cards-container {
     background: url("../../assets/lines-background.svg");
-    background-size: cover; 
+    background-size: contain; 
     position: relative;
     z-index: -1;
 }
