@@ -49,18 +49,14 @@ function showSlide(block, slideIndex = 0) {
 }
 
 function bindEvents(block) {
-  const slideIndicators = block.querySelector('.card-carousel-slide-indicators');
-  if (!slideIndicators) return;
+  // const slideIndicators = block.querySelector('.card-carousel-slide-indicators');
+  // // if (!slideIndicators) return;
 
-  slideIndicators.querySelectorAll('button').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const slideIndicator = e.currentTarget.parentElement;
-      showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
-    });
-  });
-  // const indicators = block.querySelectorAll('.card-carousel-slide-indicator button');
-  // indicators.forEach((button, idx) => {
-  //   button.addEventListener('click', () => showSlide(block, idx));
+  // // slideIndicators.querySelectorAll('button').forEach((button) => {
+  // //   button.addEventListener('click', (e) => {
+  // //     const slideIndicator = e.currentTarget.parentElement;
+  // //     showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
+  // //   });
   // });
   block.querySelector('.slide-prev').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
@@ -141,14 +137,14 @@ export default async function decorate(block) {
     slideIndicatorsNav.append(slideNavButtons);
     carouselControlsWrapper.append(viewAllButton);
     carouselControlsWrapper.append(slideIndicatorsNav);
-
     block.append(carouselControlsWrapper);
   }
-  (rows).forEach((row, idx) => {
+
+  rows.forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
 
-    if (slideIndicators && idx) {
+    if (slideIndicators) {
       const indicator = document.createElement('li');
       indicator.classList.add('card-carousel-slide-indicator');
       indicator.dataset.targetSlide = idx;
@@ -165,4 +161,15 @@ export default async function decorate(block) {
     bindEvents(block);
     showSlide(block, 0);
   }
+
+  block.querySelectorAll('.card-carousel-slide').forEach((slide) => {
+    const linkElement = slide.querySelector('.button-container a');
+    if (linkElement) {
+      const link = linkElement.href;
+      slide.style.cursor = 'pointer';
+      slide.addEventListener('click', () => {
+        window.location.href = link;
+      });
+    }
+  });
 }
