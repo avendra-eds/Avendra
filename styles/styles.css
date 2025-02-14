@@ -39,7 +39,7 @@
 
   /* button colors */
   --button-primary: #008fdc;
-  --button-secondary: #011b2b;
+  --button-secondary: #fff;
   --button-tertiary: #fff;
   --button-hover-sky: #008fdc;
   --button-hover-midnight:#011b2b;
@@ -126,7 +126,6 @@
   :root {
     --heading-hero-text: 5.61rem;
     --heading-font-xl: 3.156rem;
-    --heading-font-m: 1.25rem;
     --quote-text: 3.5rem;
   }
 }
