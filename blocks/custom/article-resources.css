@@ -1,0 +1,13 @@
+.article-cards-container {
+  margin-bottom: 2rem;
+}
+
+.article-cards-container h5 {
+  margin-bottom: 2rem;
+}
+
+@media (width >= 768px) {  
+  .article-cards-container h5 {
+    margin-bottom: 1.5rem;
+  }
+}
