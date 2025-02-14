@@ -17,6 +17,7 @@
  @import url('../blocks/article-banner/article-banner.css');
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
+ @import url("../blocks/custom/whitepaper-card.css");
 
 :root {
   font-family: Inter, sans-serif;
@@ -66,6 +67,7 @@
   --heading-font-xl: 1.75rem;
   --heading-font-l: 2.369rem;
   --heading-font-m: 1.777rem;
+  --mobile-font-m: 1.25rem;
   --heading-font-s: 1rem;
 
   /* body sizes */
@@ -113,6 +115,7 @@
 @media (width >= 768px) {
   :root {
     --border-tear-drop: 3.25rem 0rem;
+    --heading-font-m: 1.25rem;
   }
 }
 
