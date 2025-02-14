@@ -1,0 +1,40 @@
+.article-socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0.25rem;
+    gap: 2rem;
+}
+
+.article-socials p {
+    margin: 0;
+    padding: 0;
+}
+
+.article-socials .icon {
+    width: 1.75rem;
+    height: 28px;
+}
+
+.article-socials .icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-socials .button-container > p {
+    margin: 0;
+}
+
+.article-socials > div:first-child > img {
+    width: 1.75rem;
+    height: 28px;
+}
+
+
+.button .icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
