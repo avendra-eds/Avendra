@@ -15,6 +15,7 @@
  @import url('../blocks/custom/brand-style.css');
  @import url('../blocks/custom/article-socials.css');
  @import url('../blocks/article-banner/article-banner.css');
+ @import url('../blocks/custom/article-resources.css');
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
  @import url('../blocks/sidebar/sidebar.css');
@@ -405,7 +406,7 @@ a.button.tertiary,
 button.tertiary {
   background-color: var(--button-tertiary);
   border: 1px solid var(--button-primary);
-  color: var(--button-secondary);
+  color: var(--text-primary);
   border-radius: .25rem;
   cursor: pointer;
   display: inline-flex;
