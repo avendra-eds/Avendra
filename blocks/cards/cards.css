@@ -130,6 +130,7 @@ h5, p {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    justify-content: space-between;
   }
 
   .three-cards {
@@ -189,6 +190,9 @@ h5, p {
     height: 18.66rem;
     padding: 1.38rem 1.44rem;
   } 
+  .four-cards {
+    justify-content: space-between;
+  }
 
   .card-header {
     gap:0.75rem;
@@ -205,6 +209,7 @@ h5, p {
     height: 24.34rem;
     gap: .54rem;
     padding: 1.23rem 2.15rem;
+    justify-content: center; 
   }
 
   .icon-cardarrow > img ,
@@ -220,6 +225,7 @@ h5, p {
     padding:1.97rem 2.03rem ;
     max-width: 100%;
     align-self: stretch;
+    justify-content: space-between; 
   }
 
 }
