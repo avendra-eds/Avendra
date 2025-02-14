@@ -19,6 +19,7 @@
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
  @import url('../blocks/sidebar/sidebar.css');
+ @import url('../blocks/card-section/card-section.css');
 
 :root {
   font-family: Inter, sans-serif;
@@ -105,6 +106,7 @@
   /* border-radius */
   --border-tear-drop: 1.5rem 0rem;
   --border-corner: 0.75rem;
+  --border-container: 3.25rem 0;
 }
 
 
