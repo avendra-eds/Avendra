@@ -3,11 +3,7 @@
   h3,h6 {
     margin: 0;
   }
-
-  main .section.card-card-carousel-container {
-    padding: 0;
-  }
-
+  
   /* To be Removed */
   .card-carousel-container {
     background: rgba(1, 27, 43, 1);
@@ -111,6 +107,8 @@
   .card-carousel .card-carousel-slide-indicator button:hover,
   .card-carousel .card-carousel-slide-indicator button:focus-visible {
     background-color: var(--button-tertiary);
+    pointer-events: auto;
+  opacity: 1;
   }
   
   
