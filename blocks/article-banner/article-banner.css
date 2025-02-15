@@ -3,7 +3,11 @@ main .section.article-banner-container {
 }
 
 .article-banner {
-  height: 25rem;
+  height: 30rem;
+}
+
+.article-banner.no-image {
+  height: 14rem;
 }
 
 .article-banner > div {
@@ -82,7 +86,7 @@ main .section.article-banner-container {
 
 @media (width >= 393px) {
   .article-banner {
-    height: 23rem;
+    height: 25rem;
   }
   
   .article-banner > div {
@@ -96,11 +100,11 @@ main .section.article-banner-container {
   
 @media (width >= 600px) {
   .article-banner {
-    height: 32.3rem;
+    height: 23rem;
   }
 
   .article-banner.no-image {
-    height: 28.4rem;
+    height: 20.4rem;
   }
 
   .article-banner > div {
@@ -129,26 +133,34 @@ main .section.article-banner-container {
   }
 
   .article-banner > div > div:last-child {
-    padding: 48px 0 0 57px;
+    padding: 3rem 0 0 3.5rem;
   }
 }
 
 @media (width >= 1280px) {
+  .article-banner {
+    height: 33rem;
+  }
+
   .article-banner > div {
     height: 32.3125rem;
   }
   
   .article-banner > div > div:last-child {
-    padding: 229px 0 0 71px;
+    padding: 14.3rem 0 0 4.4rem;
   }
 }
 
 @media (width >= 1440px) {
+  .article-banner.no-image {
+    height: 30rem;
+  }
+
   .article-banner > div {
     height: 32.5rem;
   }
   
   .article-banner > div > div:last-child {
-    padding: 229px 0 0 80px;
+    padding: 14.3rem 0 0 5rem;
   }
 }

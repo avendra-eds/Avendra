@@ -3,7 +3,11 @@
     justify-content: flex-start;
     align-items: center;
     padding: 0 0.25rem;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.article-socials .button-container {
+    margin: 0;
 }
 
 .article-socials .button-container > p {
@@ -28,4 +32,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (width >= 393px) {
+    .article-socials {
+        gap: 1rem;
+    }
 }

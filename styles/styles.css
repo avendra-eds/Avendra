@@ -19,6 +19,7 @@
  @import url('../blocks/faq-section/faq-section.css');
  @import url('../blocks/modal/language-modal.css');
  @import url('../blocks/sidebar/sidebar.css');
+ @import url('../blocks/article/article.css');
 
 :root {
   font-family: Inter, sans-serif;
@@ -125,13 +126,13 @@
   :root {
     --heading-hero-text: 5.61rem;
     --heading-font-xl: 3.156rem;
-    --quote-text: 3.5rem;
   }
 }
 
 @media (width >= 1280px) {
   :root {
     --heading-font-m: 1.75rem;
+    --quote-text: 3.5rem;
   }
 }
 
@@ -343,10 +344,22 @@ a:hover {
 }
 
 /* buttons */
+
+.button-container {
+  margin: 0;
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.button {
+    display: inline-block;
+    width: 90%;
+    max-width: 100%;
+    padding: 0.75rem 1.5rem;
+}
+
 a.button:any-link,
 button {
-  display: inline-flex;
-  padding: 0.875rem 1.5rem;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -410,7 +423,7 @@ button.tertiary {
   border-radius: .25rem;
   cursor: pointer;
   display: inline-flex;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem;
   align-items: center;
   gap: 0.625rem;
   text-align: center;
@@ -424,18 +437,18 @@ button.tertiary {
   white-space: nowrap;
 }
 
-@media (width < 992px) {
+@media (width > 992px) {
   .button-container {
-      margin-top: 1.5rem;
-      text-align: center;
+    text-align: left;
   }
 
   .button {
-      display: inline-block;
-      width: 90%;
-      max-width: 100%;
-      padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.5rem;
+    display: inline-flex;
+    width: fit-content;
+    text-align: center;
   }
+
 }
 
 a.button.secondary:hover,
