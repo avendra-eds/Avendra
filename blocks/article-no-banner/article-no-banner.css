@@ -1,4 +1,4 @@
-.article-wrapper {
+.article-no-banner-wrapper {
   padding: 2.75rem 2.5rem 2.5rem;
 }
 
@@ -28,7 +28,7 @@
 
 
 @media (width >= 992px) {
-  .article-wrapper {
+  .article-no-banner-wrapper {
     padding: 3.25rem 5rem 2.5rem;
   }
 
