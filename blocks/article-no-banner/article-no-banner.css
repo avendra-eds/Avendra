@@ -1,0 +1,42 @@
+.article-wrapper {
+  padding: 2.75rem 2.5rem 2.5rem;
+}
+
+.article-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.article-section-container {
+  padding-bottom: 0;
+}
+
+.image {
+  width: 100%;
+}
+
+.article-resources-wrapper {
+  padding-top: 2.75rem;
+}
+
+.page-metadata-wrapper, .default-library-metadata-wrapper {
+  display: none;
+}
+
+
+@media (width >= 992px) {
+  .article-wrapper {
+    padding: 3.25rem 5rem 2.5rem;
+  }
+
+  .article-layout {
+    flex-direction: row;
+  }
+
+  .article-resources-wrapper {
+    padding-top: 0;
+  }
+}
