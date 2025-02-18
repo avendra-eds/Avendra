@@ -1,5 +1,16 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
 
+function getSlidesToAdvance(width) {
+  if (width >= 1024) {
+    return 3;
+  } if (width >= 768) {
+    return 2;
+  }
+  return 1;
+}
+
+const slideToAdvanceBy = getSlidesToAdvance(window.innerWidth);
+
 function updateActiveSlide(slide) {
   const block = slide.closest('.card-carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
@@ -18,24 +29,16 @@ function updateActiveSlide(slide) {
     });
   });
 
-  // const indicators = block.querySelectorAll('.card-carousel-slide-indicator');
-  // indicators.forEach((indicator, idx) => {
-  //   if (idx !== slideIndex) {
-  //     indicator.querySelector('button').removeAttribute('disabled');
-  //   } else {
-  //     indicator.querySelector('button').setAttribute('disabled', 'true');
-  //   }
-  // });
-
   const indicators = block.querySelectorAll('.card-carousel-slide-indicator button');
   indicators.forEach((button, idx) => {
-    button.disabled = idx === slideIndex;
+    button.disabled = idx === slideIndex / slideToAdvanceBy;
   });
 }
 
 function showSlide(block, slideIndex = 0) {
   const slides = block.querySelectorAll('.card-carousel-slide');
-  let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
+  const totalGroups = Math.ceil(slides.length / slideToAdvanceBy);
+  let realSlideIndex = slideIndex < 0 ? (totalGroups - 1) * slideToAdvanceBy : slideIndex;
   if (slideIndex >= slides.length) realSlideIndex = 0;
   const activeSlide = slides[realSlideIndex];
 
@@ -49,30 +52,36 @@ function showSlide(block, slideIndex = 0) {
 }
 
 function bindEvents(block) {
-  // const slideIndicators = block.querySelector('.card-carousel-slide-indicators');
-  // // if (!slideIndicators) return;
+  const slideIndicators = block.querySelectorAll('.card-carousel-slide-indicator button');
 
-  // // slideIndicators.querySelectorAll('button').forEach((button) => {
-  // //   button.addEventListener('click', (e) => {
-  // //     const slideIndicator = e.currentTarget.parentElement;
-  // //     showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
-  // //   });
-  // });
+  const slides = Array.from(block.querySelectorAll('.card-carousel-slide'));
+  if (!slideIndicators) return;
+
   block.querySelector('.slide-prev').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
+    showSlide(block, parseInt(block.dataset.activeSlide, 10) - slideToAdvanceBy);
   });
   block.querySelector('.slide-next').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
+    showSlide(block, parseInt(block.dataset.activeSlide, 10) + slideToAdvanceBy);
   });
 
-  // const slideObserver = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //     if (entry.isIntersecting) updateActiveSlide(entry.target);
-  //   });
-  // }, { threshold: 0.5 });
-  // block.querySelectorAll('.card-carousel-slide').forEach((slide) => {
-  //   slideObserver.observe(slide);
-  // });
+  const slideObserver = new IntersectionObserver((entries) => {
+    const visibleSlides = entries.filter((entry) => entry.isIntersecting);
+
+    if (visibleSlides.length > 0) {
+      const firstVisibleSlideIndex = slides.indexOf(visibleSlides[0].target);
+      // eslint-disable-next-line max-len
+      const activeIndex = Math.floor(firstVisibleSlideIndex / slideToAdvanceBy);
+
+      slideIndicators.forEach((btn, idx) => {
+        btn.disabled = idx === activeIndex;
+      });
+
+      block.dataset.activeSlide = activeIndex * slideToAdvanceBy;
+    }
+  }, { threshold: 0.6 });
+  block.querySelectorAll('.card-carousel-slide').forEach((slide) => {
+    slideObserver.observe(slide);
+  });
 }
 
 function createSlide(row, slideIndex, carouselId) {
@@ -131,20 +140,20 @@ export default async function decorate(block) {
     carouselControlsWrapper.classList.add('carousel-controls-wrapper');
 
     const viewAllButton = block.querySelector('div.button-container');
-    viewAllButton.classList.add('viewAllButton');
+    viewAllButton.classList.add('view-all-button');
 
     slideIndicatorsNav.append(slideIndicators);
     slideIndicatorsNav.append(slideNavButtons);
     carouselControlsWrapper.append(viewAllButton);
     carouselControlsWrapper.append(slideIndicatorsNav);
+
     block.append(carouselControlsWrapper);
   }
 
   rows.forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
-
-    if (slideIndicators) {
+    if (slideIndicators && idx % slideToAdvanceBy === 0) {
       const indicator = document.createElement('li');
       indicator.classList.add('card-carousel-slide-indicator');
       indicator.dataset.targetSlide = idx;

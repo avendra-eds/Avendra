@@ -1,14 +1,9 @@
-@import url('../cards/cards.css'); 
+ @import url('../cards/cards.css'); 
 
   h3,h6 {
     margin: 0;
   }
-  
-  /* To be Removed */
-  .card-carousel-container {
-    background: rgba(1, 27, 43, 1);
-  }  
-    
+      
   .card-carousel-wrapper {
     position: relative;
   }
@@ -25,7 +20,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow: scroll clip;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
   
   .card-carousel .card-carousel-slides::-webkit-scrollbar {
@@ -33,9 +28,9 @@
   }
   
   .card-carousel .card-carousel-slide {
-    flex: 0 0 100%;
-    max-width: 19.56rem;
-    width: 100%;
+    flex: 0 0 90%;
+    max-width: 19.48rem;
+    height: 21.51rem;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -73,12 +68,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.88rem;
     z-index: 1;
     background-color: transparent;
     width: var(--slide-content-width, auto);
     min-height: 35vh;
     gap:.44rem;
+    padding: 1.88rem;
   }
 
   .card-carousel .card-carousel-slide-indicators {
@@ -101,16 +96,7 @@
     border: none;
     background: var(--button-dots-subtle);
     transition: background-color 0.2s;
-  }
-  
-  .card-carousel .card-carousel-slide-indicator button:disabled,
-  .card-carousel .card-carousel-slide-indicator button:hover,
-  .card-carousel .card-carousel-slide-indicator button:focus-visible {
-    background-color: var(--button-tertiary);
-    pointer-events: auto;
-  opacity: 1;
-  }
-  
+  } 
   
   .card-carousel .card-carousel-navigation-buttons {
     position: absolute;
@@ -162,11 +148,7 @@
     margin: 0;
     order: 1;
     margin-top: .63rem;
-  }
-
-  .card-carousel-slide-content a.button:any-link{
-    all:unset
-  }
+  } 
   
   .button-container {
     position: absolute;
@@ -188,56 +170,61 @@
     justify-content: center;
   }
 
-  .card-carousel .carousel-controls-wrapper  .viewAllButton {
-    position: relative;
-    order: 2;
-  }
-
-  .viewAllButton {
+  .view-all-button {
     width: 100%;  
   }
 
-  .viewAllButton a.button {
+  .card-carousel .carousel-controls-wrapper  .view-all-button {
+    position: relative;
+    order: 2;
+  }  
+
+  .view-all-button a.button {
     display: block;
-    width: 100%;
     text-align: center;
     height: 1.19rem;
   }
 
-  @media (width >= 600px) {
-    .card-carousel-slides {
-      padding-left: .63rem; 
-    }
+  .card-carousel-slide-content a.button:any-link{
+    all:unset
+  }
 
+  .card-carousel .card-carousel-slide-indicator button:disabled,
+  .card-carousel .card-carousel-slide-indicator button:hover,
+  .card-carousel .card-carousel-slide-indicator button:focus-visible {
+    background-color: var(--button-tertiary);
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  @media (width >= 600px) {
     .card-carousel .card-carousel-slide {
       max-width: 15.63rem;
-      flex: 0 0 calc(100% / 2 - 20px); 
-      width: calc(100% / 2 - 20px);    
+      flex: 0 0 calc(92% / 2 - 1.25rem); 
+      max-height: 17rem;   
     }
 
-    .card-carousel .card-carousel-slide .card-carousel-slide-content {
-      min-height: 27vh;
-    }
-
-    .icon-cardarrow > img {
+    .button-container .icon-cardarrow > img {
       width: 2.13rem;
       height: 2.13rem;
     }
   } 
+
   @media (width >= 768px)  {
-    .card-carousel .card-carousel-slide .card-carousel-slide-content {
-      padding: 1.44rem;
-    }
-    .icon-cardarrow > img {
-      width: 1.875rem;
-      height: 1.875rem;
+    .button-container .icon-cardarrow > img {
+      width: 1.88rem;
+      height: 1.88rem;
     }
   }
+
   @media (width >= 992px) {
+    .card-carousel .card-carousel-slides {
+      gap:2.5rem;
+    }
+    
     .card-carousel .card-carousel-slide {
       max-width: 21.88rem;
-      flex: 0 0 calc(100% / 2 - 20px); 
-      width: calc(100% / 2 - 20px);   
+      flex: 0 0 calc(100% / 2 - 1.25rem); 
       min-height: 24.06rem; 
     }
 
@@ -245,15 +232,18 @@
       flex-direction: row;
     }
 
-    .card-carousel .carousel-controls-wrapper  .viewAllButton {
+    .card-carousel .carousel-controls-wrapper  .view-all-button {
       order: 1;
       margin-right: auto;
       bottom: 0;
       right: 0;
       padding: 0;
+      height: 1.19rem;
+      width: 6.81rem;
+      padding-left: 0;
     }
 
-    .icon-cardarrow > img {
+    .button-container .icon-cardarrow > img {
       width: 2.81rem;
       height: 2.81rem;
     }
@@ -269,7 +259,7 @@
 
     .card-carousel .card-carousel-navigation-buttons {
       margin-left: auto;
-      width: 11.25rem;
+      width: 8.13rem;
     }
 
     .carousel-controls-wrapper .button {
@@ -277,13 +267,7 @@
       height: 1.18rem;
     }
 
-    .card-carousel .carousel-controls-wrapper  .viewAllButton {
-      height: 19px;
-      width: 109px;
-      padding-left: 0px;
-    }
-
-    .viewAllButton a.button {
+    .view-all-button a.button {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -292,14 +276,34 @@
       text-decoration: none; 
   }
 }
+
  @media (width >= 1280px) {
+  .card-carousel .card-carousel-slides {
+    gap:2.25rem;
+  }
+
   .card-carousel .card-carousel-slide {
-    flex: 0 0 calc(97% / 3 - 20px); 
-    width: calc(100% / 3 - 20px);  
+    flex: 0 0 calc(96% / 3 - 2.25rem); 
     min-height: 25rem;  
   }
+
   .card-carousel .card-carousel-slide .card-carousel-slide-content {
     min-height: 25vh;
+  }
+}
+
+@media (width >= 1440px) {
+  .card-carousel .card-carousel-slides {
+    gap: 2.5rem;
+  }
+
+  .card-carousel .card-carousel-slide .card-carousel-slide-content {
+    min-height: 25vh;
+  }
+
+  .icon-cardarrow > img {
+    width: 3.13rem;
+    height: 3.13rem;
   }
 }
 
