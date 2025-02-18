@@ -18,6 +18,13 @@
   width: 100%;
 }
 
+.image p {
+  font-size: var(--caption-text);
+  color: var(--text-secondary);
+  line-height: var(--line-height-150);
+  margin-top: 0.75rem;
+}
+
 .article-resources-wrapper {
   padding-top: 2.75rem;
 }
@@ -36,7 +43,23 @@
     flex-direction: row;
   }
 
+  .article-content {
+    width: 70%;
+  }
+
   .article-resources-wrapper {
     padding-top: 0;
+    width: 40%;
+  }
+}
+
+@media (width >= 1280px) {
+  .article-content {
+    width: 65%;
+  }
+
+  .article-resources-wrapper {
+    padding-top: 0;
+    width: 33%;
   }
 }

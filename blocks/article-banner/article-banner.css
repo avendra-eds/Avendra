@@ -14,6 +14,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -145,11 +146,12 @@
   }
 
   .article-banner > div {
+    justify-content: flex-end;
     height: 22.9rem;
   }
 
   .article-banner > div > div:last-child {
-    padding: 3rem 0 0 5rem;
+    padding: 3rem 3.5rem;
   }
 }
 
@@ -158,25 +160,21 @@
     height: 33rem;
   }
 
-  .article-banner > div {
-    height: 32.3125rem;
-  }
-  
   .article-banner > div > div:last-child {
-    padding: 14.3rem 0 0 5rem;
+    padding: 3rem 4.5rem;
   }
 }
 
 @media (width >= 1440px) {
-  .article-banner.no-image {
-    height: 30rem;
-  }
-
   .article-banner > div {
     height: 32.5rem;
   }
+
+  .article-banner.no-image > div {
+    height: 22.9rem;
+  }
   
   .article-banner > div > div:last-child {
-    padding: 10rem 0 0 5rem;
+    padding: 3rem 5rem;
   }
 }
