@@ -169,4 +169,15 @@ export default async function decorate(block) {
     bindEvents(block);
     showSlide(block, 0);
   }
+
+  block.querySelectorAll('.card-carousel-slide').forEach((slide) => {
+    const link = slide.querySelector('a');
+    if (link) {
+      const url = link.href;
+      slide.style.cursor = 'pointer';
+      slide.addEventListener('click', () => {
+        window.location.href = url;
+      });
+    }
+  });
 }
