@@ -7,7 +7,7 @@
 }
 
 .article-banner.no-image {
-  height: 16rem;
+  height: 20rem;
 }
 
 .article-banner > div {
@@ -85,9 +85,9 @@
   pointer-events: none; 
 }
 
-@media (max-width: 300px) {
+@media (width >= 300px) {
   .article-banner.no-image {
-    height: 20rem;
+    height: 16rem;
   }
 }
 
@@ -107,6 +107,7 @@
   .article-banner > div > div:last-child {
     padding: 0 2.5rem 5rem;
   }
+
   .article-banner > div > div:last-child p {
     flex-wrap: nowrap;
     gap: 1.25rem;
