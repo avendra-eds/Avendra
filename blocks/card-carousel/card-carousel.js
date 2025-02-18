@@ -149,8 +149,7 @@ export default async function decorate(block) {
 
     block.append(carouselControlsWrapper);
   }
-
-  rows.forEach((row, idx) => {
+  (rows).forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
     if (slideIndicators && idx % slideToAdvanceBy === 0) {
@@ -170,15 +169,4 @@ export default async function decorate(block) {
     bindEvents(block);
     showSlide(block, 0);
   }
-
-  block.querySelectorAll('.card-carousel-slide').forEach((slide) => {
-    const linkElement = slide.querySelector('.button-container a');
-    if (linkElement) {
-      const link = linkElement.href;
-      slide.style.cursor = 'pointer';
-      slide.addEventListener('click', () => {
-        window.location.href = link;
-      });
-    }
-  });
 }
