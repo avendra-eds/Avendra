@@ -3,13 +3,9 @@ h5, p {
   padding: 0;
 }
 
-main .cards-container { 
-  padding: 0; 
-}
-
 .cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; 
   align-items: center;
   gap: .63rem;
   flex-direction: column;
@@ -134,6 +130,7 @@ main .cards-container {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    justify-content: space-between;
   }
 
   .three-cards {
@@ -193,6 +190,10 @@ main .cards-container {
     height: 18.66rem;
     padding: 1.38rem 1.44rem;
   } 
+  
+  .four-cards {
+    justify-content: space-between;
+  }
 
   .card-header {
     gap:0.75rem;
@@ -209,6 +210,7 @@ main .cards-container {
     height: 24.34rem;
     gap: .54rem;
     padding: 1.23rem 2.15rem;
+    justify-content: center; 
   }
 
   .icon-cardarrow > img ,
@@ -224,6 +226,7 @@ main .cards-container {
     padding:1.97rem 2.03rem ;
     max-width: 100%;
     align-self: stretch;
+    justify-content: space-between; 
   }
 
 }

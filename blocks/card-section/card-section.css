@@ -1,0 +1,33 @@
+.header-text-wrapper h3,
+.header2-text-wrapper h3 {
+    margin: 0 0 2.5rem;
+}
+
+.header-text-wrapper h6,
+.header2-text-wrapper h6 {
+    margin-bottom: 0.75rem;
+}
+
+.section.header-text-container.cards-container {
+    background: url("../../assets/lines-mobile-background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    position: relative;
+    z-index: -1;
+}
+
+@media (width > 393px) {
+.section.header-text-container.cards-container {
+    background: url("../../assets/lines-background.png");
+    background-size: 100% 100%; 
+}   
+}
+
+.section.header2-text-container.cards-container {
+    background-color: var(--background-light-sky);
+    background-size: cover; 
+    position: relative;
+    z-index: -1;
+    border-radius: var(--border-container);
+}
