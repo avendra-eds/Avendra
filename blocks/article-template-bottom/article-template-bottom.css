@@ -1,0 +1,17 @@
+
+.divider {
+  border-top: 1px solid var(--border-disabled);
+  margin: 1.25rem 0;
+}
+
+p {
+  margin: 1.25rem 0;
+}
+
+.divider p {
+  display: none;
+}
+
+.article-socials .button-container > p {
+  margin: 0;
+}
