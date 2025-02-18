@@ -1,4 +1,4 @@
-.tags-container p {
+.tags-container > p {
   line-height: var(--line-height-120);
 }
 
