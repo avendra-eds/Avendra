@@ -130,7 +130,8 @@
   :root {
     --heading-hero-text: 5.61rem;
     --quote-text: 3.5rem;
-    --heading-font-xl:1.25rem
+    --heading-font-xl:1.25rem;
+    --heading-font-tablet-s: 1.25rem;
   }
 }
 

@@ -130,7 +130,8 @@ h5, p {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1.56rem;
   }
 
   .three-cards {
@@ -140,8 +141,7 @@ h5, p {
 
   .four-cards .card {
     max-width: calc(50% - 1rem);
-    width: 20.63rem;
-    height: 31.06rem;
+    max-height: 35rem;
     padding: 2.71rem;
   }
 
@@ -168,14 +168,19 @@ h5, p {
 
 @media (width >= 992px) {  
   .three-cards .card {
-    width: 17.18rem;
+    min-width: 17.18rem;
+    max-width: calc(32% - 1.25rem);
     height: 18.85rem;   
     gap: .5rem;
     padding: 1.00rem 1.67rem;
     }
 
-  .icon-cardarrow > img ,
-  .three-cards .card-header > p > picture  > img 
+    .card-header > h5 {
+      font-size: var(--heading-font-tablet-s);
+    }
+
+  .icon-cardarrow > img, 
+  .three-cards .card-header > p > picture  > img, 
   .four-cards .card .icon-cardarrow > img {
     width: 2.19rem; 
     height: 2.19rem;
@@ -186,8 +191,8 @@ h5, p {
   }
 
   .four-cards .card {
-    width: 12.37rem;
-    height: 18.66rem;
+    max-width: calc(25% - 1.25rem);
+    max-height: 21.88rem;
     padding: 1.38rem 1.44rem;
   } 
   
@@ -206,11 +211,10 @@ h5, p {
 
 @media (width >= 1280px) {
   .three-cards .card {
-    width: 22.19rem;
+    min-width: 22.19rem;
     height: 24.34rem;
     gap: .54rem;
     padding: 1.23rem 2.15rem;
-    justify-content: center; 
   }
 
   .icon-cardarrow > img ,
@@ -221,10 +225,8 @@ h5, p {
   }
 
   .four-cards .card {
-    width: 16.08rem;
-    height: 24.17rem;
+    max-height: 25rem;
     padding:1.97rem 2.03rem ;
-    max-width: 100%;
     align-self: stretch;
     justify-content: space-between; 
   }
@@ -233,7 +235,7 @@ h5, p {
 
 @media (width >= 1440px) {
   .three-cards .card {
-    width: 25rem;
+    min-width: 25rem;
     height: 27.43rem;
     gap: .61rem;
     padding: 1.45rem 2.43rem;
@@ -247,8 +249,7 @@ h5, p {
   }
 
   .four-cards .card {
-    width: 18rem;
-    height: 27.07rem;
+    max-height: 28.13rem;
     flex-shrink: 0;
     padding: 2.33rem 2.36rem;
   } 
