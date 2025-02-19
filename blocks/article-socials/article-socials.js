@@ -3,15 +3,15 @@ import { fetchPlaceholders } from '/scripts/aem.js';
 export default async function decorate(block) {
 
   const url = window.location.href;
-  const langRegionRegex = /\/([a-z]{2})\/(uk|us)(?=\/|$)/i;
+  
+  // This regex matches any two-letter language followed by any two-letter region,
+  const langRegionRegex = /\/([a-z]{2})\/([a-z]{2})(?=\/|$)/i;
   const match = url.match(langRegionRegex);
-  console.log('match----', match)
+
   if (!match) {
     return
   }
 
-
-  
   const [fullMatch, language, region] = match;
   const placeholders = await fetchPlaceholders(fullMatch);
 
