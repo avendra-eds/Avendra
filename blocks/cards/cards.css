@@ -168,9 +168,10 @@ h5, p {
 
 @media (width >= 992px) {  
   .three-cards .card {
+    flex: 1;
     min-width: 17.18rem;
     max-width: calc(32% - 1.25rem);
-    height: 18.85rem;   
+    max-height: 20rem;   
     gap: .5rem;
     padding: 1.00rem 1.67rem;
     }
@@ -211,8 +212,8 @@ h5, p {
 
 @media (width >= 1280px) {
   .three-cards .card {
-    min-width: 22.19rem;
-    height: 24.34rem;
+    min-width: 23rem;
+    min-height: 25rem;
     gap: .54rem;
     padding: 1.23rem 2.15rem;
   }
@@ -236,7 +237,7 @@ h5, p {
 @media (width >= 1440px) {
   .three-cards .card {
     min-width: 25rem;
-    height: 27.43rem;
+    min-height: 28rem;
     gap: .61rem;
     padding: 1.45rem 2.43rem;
   }
