@@ -17,7 +17,10 @@ export default function decorate(block) {
       newLink.href = url;
       newLink.classList.add('card-background-link');
       row.style.position = 'relative';
-      row.insertBefore(newLink, row.firstChild);
+      while (row.firstChild) {
+        newLink.appendChild(row.firstChild);
+      }
+      row.appendChild(newLink);
     }
   });
 }
