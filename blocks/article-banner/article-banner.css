@@ -1,15 +1,20 @@
-main .section.article-banner-container {
+.article-banner-container {
   padding: 0;
 }
 
 .article-banner {
-  height: 25rem;
+  height: 30rem;
+}
+
+.article-banner.no-image {
+  height: 20rem;
 }
 
 .article-banner > div {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -49,8 +54,9 @@ main .section.article-banner-container {
 
 .article-banner > div > div:last-child p {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.5rem;
   margin-top: 1.25rem;
 }
 
@@ -80,9 +86,19 @@ main .section.article-banner-container {
   pointer-events: none; 
 }
 
+@media (width >= 300px) {
+  .article-banner.no-image {
+    height: 16rem;
+  }
+}
+
 @media (width >= 393px) {
   .article-banner {
-    height: 23rem;
+    height: 25rem;
+  }
+
+  .article-banner.no-image {
+    height: 15rem;
   }
   
   .article-banner > div {
@@ -92,15 +108,20 @@ main .section.article-banner-container {
   .article-banner > div > div:last-child {
     padding: 0 2.5rem 5rem;
   }
+
+  .article-banner > div > div:last-child p {
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
 }
   
 @media (width >= 600px) {
   .article-banner {
-    height: 32.3rem;
+    height: 23rem;
   }
 
   .article-banner.no-image {
-    height: 28.4rem;
+    height: 20.4rem;
   }
 
   .article-banner > div {
@@ -125,21 +146,22 @@ main .section.article-banner-container {
   }
 
   .article-banner > div {
+    justify-content: flex-end;
     height: 22.9rem;
   }
 
   .article-banner > div > div:last-child {
-    padding: 48px 0 0 57px;
+    padding: 3rem 3.5rem;
   }
 }
 
 @media (width >= 1280px) {
-  .article-banner > div {
-    height: 32.3125rem;
+  .article-banner {
+    height: 33rem;
   }
-  
+
   .article-banner > div > div:last-child {
-    padding: 229px 0 0 71px;
+    padding: 3rem 4.5rem;
   }
 }
 
@@ -147,8 +169,12 @@ main .section.article-banner-container {
   .article-banner > div {
     height: 32.5rem;
   }
+
+  .article-banner.no-image > div {
+    height: 22.9rem;
+  }
   
   .article-banner > div > div:last-child {
-    padding: 229px 0 0 80px;
+    padding: 3rem 5rem;
   }
 }
