@@ -1,14 +1,19 @@
 import { fetchPlaceholders } from '/scripts/aem.js';
 
 export default async function decorate(block) {
+
+  const url = window.location.href;
+  const langRegionRegex = /\/([a-z]{2})\/(uk|us)(?=\/|$)/i;
+  const match = url.match(langRegionRegex);
+  console.log('match----', match)
+  if (!match) {
+    return
+  }
+
+
   
-  const isUk =
-    block.classList.contains('uk') ||
-    block.querySelector('.article-socials')?.classList.contains('uk');
-
-  const prefix = isUk ? 'en/uk' : 'en/us';
-
-  const placeholders = await fetchPlaceholders(prefix);
+  const [fullMatch, language, region] = match;
+  const placeholders = await fetchPlaceholders(fullMatch);
 
   // iconName must match placeholder key
   const icons = block.querySelectorAll('img[data-icon-name]');
