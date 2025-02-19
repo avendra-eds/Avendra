@@ -1,11 +1,7 @@
-.whitepaper-card{
+.whitepaper-card {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-}
-
-.whitepaper-card > div > img{
-    width: 100%;
 }
 
 .whitepaper-card > div {
@@ -16,76 +12,96 @@
     gap: 1.5rem;
     padding-right: 1.25rem;
 
-    div:last-child{
+    /* img {
+        width: 15rem;
+        height: 100%;
+    } */
+
+    div:last-child { 
         display: flex;
         flex-direction: column;
         gap: 1.75rem;
         width: 100%;
 
-        p{
+        p {
             margin: 0;
         }
 
-        h5{
+        h5 {
             margin-bottom: 0;
         }
 
-        .button-container{
+        .button-container {
             width: 100%;
         }
     }
 }
 
 @media (width >= 768px) {
-    .whitepaper-card{
+    .whitepaper-card {
         flex-direction: column;
         gap: 2.5rem;
 
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
 
-    .whitepaper-card > div{
+    .whitepaper-card > div {
         flex-direction: column;
         align-items: center;
-
     }
-
-    .whitepaper-card > div > img{
-        width: 16.125rem;
-        height: 16.625rem;
-        object-fit: cover;
-    }
+    
 }
 
 @media (width >= 992px) {
-    .whitepaper-card > div > img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .whitepaper-card{
+    .whitepaper-card {
         flex-direction: row;
         gap: 2.5rem;
+
+        h5 {
+            font-size: var(--mobile-font-m);
+        }
+
+        img {
+            width: 100%;
+            height: 12.8125rem;
+            object-fit: cover;
+        }
     }
 
-    .whitepaper-card > div{
+    .whitepaper-card > div {
         flex-direction: row;
         align-items: center;
     }
 }
 
 @media (width >= 1280px) {
-    .whitepaper-card > div > img{
-        width: 30%;
-        height: auto;
-        object-fit: cover;
+    .whitepaper-card {
+        h5 {
+            font-size: var(--heading-font-m);
+        }
+
+        img {
+            width: 100%;
+            height: 18.6875rem;
+            object-fit: cover;
+        }
     }
 }
 
 @media (width >= 1440px) {
-    .whitepaper-card > div > img{
-        width: 16.125rem;
-        height: 16.625rem;
-        object-fit: cover;
+    .whitepaper-card {
+        h5 {
+            font-size: var(--heading-font-m);
+        }
+
+        img {
+            width: 100%;
+            height: 18.6875rem;
+            object-fit: cover;
+        }
     }
 }
