@@ -10,17 +10,11 @@ export default function decorate(block) {
     const cardLinkIcon = row.querySelectorAll('div')[2];
     cardLinkIcon.classList.add('card-link-icon');
 
-    const cardLink = cardLinkIcon.querySelector('a');
-    if (cardLink) {
-      const url = cardLink.href;
-      const newLink = document.createElement('a');
-      newLink.href = url;
-      newLink.classList.add('card-background-link');
-      row.style.position = 'relative';
-      while (row.firstChild) {
-        newLink.appendChild(row.firstChild);
-      }
-      row.appendChild(newLink);
+    const cardLink = cardBackgroundImage.querySelector('p a');
+    if (cardLink && cardBackgroundImage) {
+      cardLink.classList.add('card-background-link');
+      cardBackgroundImage.parentNode.replaceChild(cardLink, cardBackgroundImage);
+      cardLink.appendChild(cardBackgroundImage);
     }
   });
 }
