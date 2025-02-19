@@ -10,14 +10,14 @@ export default function decorate(block) {
     const cardLinkIcon = row.querySelectorAll('div')[2];
     cardLinkIcon.classList.add('card-link-icon');
 
-    const linkElement = row.querySelector('.card-link-icon a');
-    if (linkElement) {
-      const url = linkElement.href;
-      row.addEventListener('click', (event) => {
-        if (!event.target.closest('.card-link-icon')) {
-          window.location.href = url;
-        }
-      });
+    const cardLink = cardLinkIcon.querySelector('a');
+    if (cardLink) {
+      const url = cardLink.href;
+      const newLink = document.createElement('a');
+      newLink.href = url;
+      newLink.classList.add('card-background-link');
+      row.style.position = 'relative';
+      row.insertBefore(newLink, row.firstChild);
     }
   });
 }
